@@ -1,5 +1,6 @@
 {
 	"name": "kleidi.ca",
+  "author": "Kleidi Bujari <mail@kleidi.ca> (https://kleidi.ca)"
 	"version": "0.0.0",
 	"scripts": {
 		"dev": "svelte-kit dev",
