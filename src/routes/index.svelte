@@ -1,6 +1,7 @@
 <script>
-  import Footer from "./footer/Footer.svelte";
+  import Infobox from "$lib/components/infobox/Infobox.svelte";
 </script>
 
-<h1 class="text-3xl font-bold underline">Welcome to SvelteKit</h1>
-<Footer />  
+<div class='container mx-auto'>
+  <Infobox />
+</div>
