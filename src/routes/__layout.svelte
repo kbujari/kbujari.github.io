@@ -14,9 +14,24 @@
 </main>
 
 <style>
+  @font-face {
+    font-family: 'Fira Sans';
+    src: url(/font/FiraSans-Regular.ttf);
+  }
+
   :global(body) {
     background-color: #1f1f28;
     color: #dcd7ba;
+    font-family: 'Fira Sans', 'sans-serif';
+    text-rendering: optimizeLegibility;
+  }
+
+  :global(.link) {
+    color: #619589;
+  }
+
+  :global(.link:hover) {
+    text-decoration: underline 2px;
   }
 </style>
 
