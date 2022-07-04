@@ -1,7 +1,6 @@
 ---
 title: "Making a High performance Win10 VM with GPU-Passthrough"
 date: "2022-01-15"
-length: "Medium"
 ---
 
 In early 2021, I transitioned my personal computers to Arch Linux and while the experience has been excellent overall, there are a few shortcomings in the software compatibility department, mainly with a few games (League of Legends) and software I need to use for school (Multisim). While these can be "run" using wine, I found that the experience left a lot to be desired, and for school especially, I wanted to make sure I was in an environment supported by my classes.

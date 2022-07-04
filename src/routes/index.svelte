@@ -12,7 +12,7 @@
   </div>
   <div class="flex items-center gap-4">
     {#each ['info', 'blog', 'photos'] as link}
-      <a href="/{link}" class="link text-2xl">{link}</a>
+      <a sveltekit:prefetch href="/{link}" class="link text-2xl">{link}</a>
     {/each}
   </div>
 </div>
