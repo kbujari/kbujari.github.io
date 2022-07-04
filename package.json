@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "svelte-kit dev",
-    "build": "rm -rf build && svelte-kit build",
+    "build": "svelte-kit build && touch build/.nojekyll",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "prepare": "svelte-kit sync",
-    "deploy": "npm run build && npx gh-pages -d build",
+    "deploy": "npm run build && cp -r build docs",
     "lint": "prettier --check --plugin-search-dir=. .",
     "format": "prettier --write --plugin-search-dir=. ."
   },
@@ -16,7 +16,6 @@
     "@sveltejs/adapter-static": "^1.0.0-next.34",
     "@sveltejs/kit": "next",
     "autoprefixer": "^10.4.7",
-    "gh-pages": "^4.0.0",
     "mdsvex": "^0.10.6",
     "postcss": "^8.4.14",
     "prettier": "^2.6.2",
