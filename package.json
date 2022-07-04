@@ -4,11 +4,10 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "svelte-kit dev",
-    "build": "rm -rf build && svelte-kit build && touch build/.nojekyll && echo beta.kleidi.ca > build/CNAME",
+    "build": "svelte-kit build",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "prepare": "svelte-kit sync",
-    "deploy": "rm -rf docs && npm run build && mkdir docs && cp -r build/* docs/",
     "lint": "prettier --check --plugin-search-dir=. .",
     "format": "prettier --write --plugin-search-dir=. ."
   },
