@@ -1,6 +1,6 @@
 # [kleidi.ca](https://kleidi.ca)
 
-Personal website built with sveltekit and tailwindcss, selfhosted and proxied through cloudflare for caching and ddos protection.
+Personal website built with SvelteKit and TailwindCSS, selfhosted and proxied through Cloudflare for caching and DDoS protection.
 
 ## Building
 
