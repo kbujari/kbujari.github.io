@@ -13,7 +13,7 @@ const config = {
     }),
     prerender: {
       default: true
-    },
+    }
   },
   extensions: ['.svelte', '.md'],
   preprocess: [
