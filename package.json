@@ -8,7 +8,7 @@
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "prepare": "svelte-kit sync",
-    "deploy": "rm -rf docs && npm run build && mkdir docs && cp -r build docs",
+    "deploy": "rm -rf docs && npm run build && mkdir docs && cp -r build/* docs/",
     "lint": "prettier --check --plugin-search-dir=. .",
     "format": "prettier --write --plugin-search-dir=. ."
   },
