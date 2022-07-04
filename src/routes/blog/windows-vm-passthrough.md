@@ -38,7 +38,11 @@ Other than that, my experience was pretty standard. Setting up a VM through virt
 
 <br>
 
-![vbios hex dump](/blog/windows-vm-passthrough/gpu-hex.png)
+<div style="display: flex; justify-content: center;">
+
+  ![vbios hex dump](/blog/windows-vm-passthrough/gpu-hex.png)
+
+</div>
 
 Above is my edited vBios file that is passed through to the VM. Usually, when you load into a graphical session, the vBios gets changed as you use the GPU. Because of this, a new vBios is given to the VM to use. Next, to add the GPU alongside any other devices such as a USB controller, I had to get the relevant IOMMU groups. \ Here's an example of what the GPU group looked like on my system: 
 
@@ -70,7 +74,11 @@ Now that I had a working VM, the next goal was to reduce any latency and overhea
 
 <br>
 
-![cpu topography](/blog/windows-vm-passthrough/lstopo.png)
+<div style="display: flex; justify-content: center;">
+
+  ![vbios hex dump](/blog/windows-vm-passthrough/lstopo.png)
+  
+</div>
 
 <br>
 
