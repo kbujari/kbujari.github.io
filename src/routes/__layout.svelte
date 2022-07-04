@@ -30,7 +30,7 @@
   @font-face {
     font-family: 'Fira Sans';
     src: url(/font/FiraSans-Regular.woff2) format('woff2');
-    src: url(/font/FiraSans-Regular.ttf) format('TrueType');
+    /*src: url(/font/FiraSans-Regular.ttf) format('TrueType');*/
   }
 
   :global(body) {
