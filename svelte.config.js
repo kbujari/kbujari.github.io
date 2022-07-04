@@ -9,8 +9,7 @@ const config = {
       out: 'build',
       pages: 'build',
       assets: 'build',
-      fallback: null,
-      precompress: true
+      fallback: null
     }),
     prerender: {
       default: true
