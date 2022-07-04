@@ -1,17 +1,18 @@
 <script>
-  import Infobox from '$lib/components/infobox/Infobox.svelte';
+  import { PaperclipIcon, MailIcon, GithubIcon, LinkedinIcon } from 'svelte-feather-icons'
 </script>
 
-<div class='container mx-auto'>
-  <div class="flex flex-wrap gap-24 justify-center">
-    <img class="rounded-full p-2 border-4 border-[#d27e99] w-96" src="/me.webp" alt="Me">
-
+<div class="h-screen flex flex-col gap-8 justify-center items-center">
+  <p class="text-5xl text-slate-300 font-bold pointer-events-none">kleidi bujari</p>
+  <div class="flex gap-6">
+    <a href="/resume.pdf" target="_blank" rel="noopener me" title="Resume" class="link"><PaperclipIcon size="32" /></a>
+    <a href="mailto:mail@kleidi.ca" target="_blank" rel="noopener me" title="Email" class="link"><MailIcon size="32" /></a>
+    <a href="https://github.com/kbzt" target="_blank" rel="noopener me" title="Github" class="link"><GithubIcon size="32" /></a>
+    <a href="https://linkedin.com/in/kleidib/" target="_blank" rel="noopener me" title="Linkedin" class="link"><LinkedinIcon size="32" /></a>
   </div>
-
-  <div class="text-center mb-16">
-    <h1 class="text-3xl font-semibold mb-2">Looking for the <a class="link " href="/blog/">blog?</a></h1>
-    <p>I post about my projects, cool things I find and more.</p>
+  <div class="flex items-center gap-4">
+    {#each ['info', 'blog', 'photos'] as link}
+      <a href="/{link}" class="link text-2xl">{link}</a>
+    {/each}
   </div>
-
-  <Infobox />
 </div>
