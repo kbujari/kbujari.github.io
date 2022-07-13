@@ -40,9 +40,10 @@
   }
 
   :global(.link) {
-    color: rgb(203 213 225);
+    color: rgb(203, 213, 225);
     transition: color 150ms;
     text-decoration: underline;
+    font-weight: bold;
   }
 
   :global(.link:hover) {
@@ -69,9 +70,10 @@
   }
 
   :global(.post-data a) {
-    color: rgb(203 213 225);
+    color: rgb(203, 213, 225);
     transition: color 150ms;
     text-decoration: underline;
+    font-weight: bold;
   }
 
   :global(.post-data a:hover) {

@@ -17,8 +17,6 @@ Feel free to use anything mentioned here for yourself and be sure to follow alon
 
 ## Hardware & Specifics
 
-<br>
-
 **CPU:** AMD Ryzen 7 3700x <br>
 **RAM:** 16GB DDR4 3600MHz <br>
 **GPU:** EVGA RTX 2080 XC Gaming <br> 
@@ -34,8 +32,6 @@ Other than that, my experience was pretty standard. Setting up a VM through virt
 <br>
 
 ## GPU Passthrough 
-
-<br>
 
 <div style="display: flex; justify-content: center;">
 
@@ -67,8 +63,6 @@ This is accomplished with scripts that are triggered by the VM starting and stop
 
 ## Optimization
 
-<br>
-
 Now that I had a working VM, the next goal was to reduce any latency and overhead from virtualising Windows. Since I planned to play some competitive games that don't run on linux, it was important to me to make it feel like I was playing on bare metal. The main things I used for this were CPU Pinning and HugePages [(Arch Wiki)](https://wiki.archlinux.org/title/KVM#Enabling_huge_pages). CPU pinning manually allocates certain threads to the VM so the host doesn't use them as well, introducing latency. This is configured on a per-CPU basis since every processor has it's own architechture. In my case, the Ryzen 7 3700x has the following layout: 
 
 <br>
@@ -91,7 +85,5 @@ The last major optimization I included was HugePages. Without going into too muc
 <br>
 
 ## Hyper-V
-
-<br>
 
 Hyper-V is a virtualization platform on Windows, and it's normally used in this case to hide the nature of the host to the guest machine. In other words, you can use it to hide the fact that you are using a VM to circumvent some anti-cheats and other software restrictions. I chose not to use it in my setup due to the performance hit as well as not really needing it for anything I use Windows for. Note that games like Valorant have been updated to automatically flag Hyper-V users, but it can work for other titles with a similar anti-cheat. 

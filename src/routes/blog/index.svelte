@@ -31,7 +31,7 @@
     {#each posts as post}
       {#if post.meta.date.substring(0, post.meta.date.indexOf('-')) === year}
         <a sveltekit:prefetch href={post.path}>
-          <div class="flex items-center justify-between border border-slate-300 rounded p-3 mb-2">
+          <div class="flex items-center justify-between border border-slate-600 hover:border-slate-400 duration-300 rounded p-3 mb-2">
             <p class="w-full font-bold">{post.meta.title}</p>
             <div class="flex flex-col items-center whitespace-nowrap ml-4">
               <p>{post.meta.date}</p>
