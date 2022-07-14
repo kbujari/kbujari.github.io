@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "svelte-kit dev",
-    "build": "svelte-kit build && rm static/gallery/*.webp && for file in static/gallery/*.jpg; do echo compressing $file into webp; cwebp -quiet -q 50 $file -o $file.webp; done",
+    "build": "svelte-kit build && bash build.sh",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "prepare": "svelte-kit sync",
