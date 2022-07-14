@@ -3,6 +3,8 @@
   export let alt
 
   import { onMount } from 'svelte'
+  import { fade } from 'svelte/transition'
+  import { DownloadIcon } from 'svelte-feather-icons'
   import Hoverable from './Hoverable.svelte'
 
   let loaded = false
@@ -16,24 +18,25 @@
 </script>
 
 <Hoverable let:hovering={active}>
-  <img {src} {alt} class:loaded bind:this={thisImage} loading="lazy" />
-  {#if active}
-    <p>neato</p>
-  {/if}
+  <div class="relative cont">
+    <img {src} {alt} class:loaded class="" bind:this={thisImage} loading="lazy" />
+    {#if active}
+      <div class="absolute top-4 left-4" in:fade={{ duration: 150 }} out:fade={{ duration: 100 }}>
+        <button on:click={() => window.open(src.substring(0, src.length - 5), '_blank')} class="link bg-slate-700 p-2 rounded outline outline-2">
+          <DownloadIcon strokeWidth="1.5" size="26" />
+        </button>
+      </div>
+    {/if}
+  </div>
 </Hoverable>
 
 <style>
   img {
     opacity: 0;
-    transition: opacity 1200ms ease-out;
-    transition: filter 0.1s;
+    transition: opacity 1.5s ease-out;
   }
 
   img.loaded {
     opacity: 1;
-  }
-
-  img:hover {
-    filter: brightness(50%);
   }
 </style>
