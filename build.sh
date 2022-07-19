@@ -5,8 +5,8 @@ if which cwebp 2>/dev/null; then
   rm static/gallery/*.webp
   for file in static/gallery/*.jpg; do 
     echo compressing $file into webp 
-    cwebp -quiet -q 50 $file -o $file.webp 
+    cwebp -quiet -q 20 $file -o $file.webp 
   done
 else
-  echo "cwebp conversion tool not found, using existing photos"
+  echo "cwebp conversion tool not found, using existing photos."
 fi

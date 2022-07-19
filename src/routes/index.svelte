@@ -2,7 +2,7 @@
   import { PaperclipIcon, MailIcon, GithubIcon, LinkedinIcon } from 'svelte-feather-icons'
 </script>
 
-<div class="h-screen flex flex-col gap-8 justify-center items-center">
+<div class="h-screen absolute inset-0 flex flex-col gap-8 justify-center items-center">
   <p class="text-5xl text-slate-300 font-bold pointer-events-none">kleidi bujari</p>
   <div class="flex gap-6">
     <a href="/resume.pdf" target="_blank" rel="noopener" title="Resume" class="link"><PaperclipIcon size="32" /></a>

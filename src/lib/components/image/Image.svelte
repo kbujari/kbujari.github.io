@@ -18,7 +18,7 @@
 </script>
 
 <Hoverable let:hovering={active}>
-  <div class="relative cont">
+  <div class="relative">
     <img {src} {alt} class:loaded class="" bind:this={thisImage} loading="lazy" />
     {#if active}
       <div class="absolute top-4 left-4" in:fade={{ duration: 150 }} out:fade={{ duration: 100 }}>
