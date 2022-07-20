@@ -3,10 +3,10 @@
   "author": "Kleidi Bujari <mail@kleidi.ca> (https://kleidi.ca)",
   "version": "0.0.0",
   "scripts": {
-    "dev": "svelte-kit dev",
+    "dev": "vite dev",
     "build": "rm -rf build && sh build.sh && vite build",
     "package": "svelte-kit package",
-    "preview": "svelte-kit preview",
+    "preview": "vite preview",
     "prepare": "svelte-kit sync",
     "lint": "prettier --check --plugin-search-dir=. .",
     "format": "prettier --write --plugin-search-dir=. ."
@@ -22,7 +22,8 @@
     "svelte": "^3.44.0",
     "svelte-feather-icons": "^4.0.0",
     "svelte-preprocess": "^4.10.7",
-    "tailwindcss": "^3.1.4"
+    "tailwindcss": "^3.1.4",
+    "vite": "^3.0.2"
   },
   "type": "module"
 }
