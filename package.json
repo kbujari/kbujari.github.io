@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "svelte-kit dev",
-    "build": "rm -rf build && svelte-kit build && bash build.sh",
+    "build": "rm -rf build && bash build.sh && svelte-kit build",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "prepare": "svelte-kit sync",
