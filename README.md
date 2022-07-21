@@ -13,6 +13,11 @@ To generate the static site to `build/`, clone the repo and run:
 ```sh
 npm run build
 ```
+If libwebp is detected as installed, the webp images used will be created and compressed locally, otherwise falling back to existing copies. 
+
+If you decide to add more images to your version, make sure to let cwebp (installed with libwebp) run so that the webp images are generated accordingly.
+
+<br>
 
 You can preview the production build with: 
 
