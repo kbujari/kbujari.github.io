@@ -19,10 +19,10 @@
 
 <Hoverable let:hovering={active}>
   <div class="relative">
-    <img {src} {alt} class:loaded class="" bind:this={thisImage} loading="lazy" />
+    <img {src} {alt} class:loaded bind:this={thisImage} loading="lazy" />
     {#if active}
       <div class="absolute top-4 left-4" in:fade={{ duration: 150 }} out:fade={{ duration: 100 }}>
-        <button on:click={() => window.open(src.substring(0, src.length - 5), '_blank')} class="link bg-slate-700 p-2 rounded outline outline-2">
+        <button class:loaded on:click={() => window.open(src.substring(0, src.length - 5), '_blank')} class="link bg-slate-700 p-2 rounded outline outline-2">
           <DownloadIcon strokeWidth="1.5" size="26" />
         </button>
       </div>
@@ -31,12 +31,12 @@
 </Hoverable>
 
 <style>
-  img {
+  img, button{
     opacity: 0;
     transition: opacity 1.5s ease-out;
   }
 
-  img.loaded {
+  img.loaded, button.loaded{
     opacity: 1;
   }
 </style>
