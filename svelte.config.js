@@ -1,6 +1,7 @@
 import adapter from '@sveltejs/adapter-static'
-import preprocess from 'svelte-preprocess'
+import sveltePreprocess from 'svelte-preprocess'
 import { mdsvex } from 'mdsvex'
+import autoprefixer from 'autoprefixer'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -17,14 +18,13 @@ const config = {
   },
   extensions: ['.svelte', '.md'],
   preprocess: [
-    preprocess({
-      postcss: true
+    sveltePreprocess({
+      postcss: {
+        plugins: autoprefixer
+      }
     }),
     mdsvex({
-      extensions: ['.md'],
-      layout: {
-        blog: 'src/routes/blog/_post.svelte'
-      }
+      extensions: ['.md']
     })
   ]
 }

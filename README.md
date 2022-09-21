@@ -1,26 +1,38 @@
-# [kleidi.ca](https://kleidi.ca)
+# create-svelte
 
-Personal website built with SvelteKit and TailwindCSS, selfhosted and proxied through Cloudflare for caching and DDoS protection.
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-## Dependencies
+## Creating a project
 
-- libwebp (optional) [>= 1.2.3-1]
+If you're seeing this, you've probably already done this step. Congrats!
+
+```bash
+# create a new project in the current directory
+npm create svelte@latest
+
+# create a new project in my-app
+npm create svelte@latest my-app
+```
+
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
 ## Building
 
-To generate the static site to `build/`, clone the repo and run: 
+To create a production version of your app:
 
-```sh
+```bash
 npm run build
 ```
-If libwebp is detected as installed, the webp images used will be created and compressed locally, otherwise falling back to existing copies. 
 
-If you decide to add more images to your version, make sure to let cwebp (installed with libwebp) run so that the webp images are generated accordingly.
+You can preview the production build with `npm run preview`.
 
-<br>
-
-You can preview the production build with: 
-
-```sh
-npm run preview
-```
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
