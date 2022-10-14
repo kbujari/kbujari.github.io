@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite dev --host",
-    "build": "rm -rf build && sh scripts/build.sh && vite build",
+    "build": "rm -rf build && sh scripts/compress_images.sh && vite build",
     "preview": "vite preview --host",
     "lint": "prettier --check --plugin-search-dir=. . && eslint .",
     "format": "prettier --write --plugin-search-dir=. ."
