@@ -6,3 +6,31 @@
   font-family: 'Fira Sans';
   src: url(/font/FiraSans-Regular.woff2) format('woff2');
 }
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  @apply bg-black text-slate-100;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+@layer utilities {
+  .link {
+    @apply text-slate-300 hover:text-slate-50 font-bold underline transition;
+  }
+
+  .post-data a {
+    @apply link;
+  }
+
+  .post-data ol {
+    @apply list-decimal pl-5;
+  }
+
+  .cont {
+    @apply max-w-4xl mx-auto mt-12 p-6 leading-normal text-lg;
+  }
+}
