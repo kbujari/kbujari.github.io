@@ -19,7 +19,7 @@
 
 <Hoverable let:hovering={active}>
   <div class="relative">
-    <img {src} {alt} class:loaded bind:this={thisImage} loading="lazy" />
+    <img {src} {alt} class:loaded bind:this={thisImage} loading="lazy" class="w-full aspect-auto" />
     {#if active}
       <div class="absolute top-4 left-4" in:fade={{ duration: 150 }} out:fade={{ duration: 100 }}>
         <button class:loaded on:click={() => window.open(src.substring(0, src.length - 5), '_blank')} class="link bg-slate-700 p-2 rounded outline outline-2">

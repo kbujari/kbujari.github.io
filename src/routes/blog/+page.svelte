@@ -1,5 +1,5 @@
 <script>
-  import Header from '$lib/components/text/Header.svelte'
+  import Title from '$lib/components/text/Title.svelte'
   export let data
 
   let years = []
@@ -16,9 +16,9 @@
 </svelte:head>
 
 <div class="cont">
-  <Header text="Blog" size="4" />
+  <Title text="Blog" size="4" />
   {#each years as year}
-    <Header text={year} />
+    <Title text={year} />
     {#each data.posts as post}
       <a sveltekit:prefetch href={post.path}>
         <div class="flex items-center justify-between border border-slate-600 hover:border-slate-400 duration-300 rounded p-3 mb-2">

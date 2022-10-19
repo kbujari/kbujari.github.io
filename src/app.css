@@ -30,7 +30,11 @@ body {
     @apply list-decimal pl-5;
   }
 
+  .blurify {
+    @apply transition blur-sm duration-300;
+  }
+
   .cont {
-    @apply max-w-4xl mx-auto mt-12 p-6 leading-normal text-lg;
+    @apply max-w-4xl mx-auto p-6 leading-normal text-lg;
   }
 }

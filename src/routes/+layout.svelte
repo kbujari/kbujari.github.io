@@ -13,11 +13,11 @@
 </svelte:head>
 
 {#key data.currentRoute}
-  <main in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }}>
-    {#if data.currentRoute != '/'}
-      <Sidebar bind:menuActive />
-      <Header bind:sidebar={menuActive} />
-    {/if}
+  {#if data.currentRoute != '/'}
+    <Header bind:sidebar={menuActive} />
+    <Sidebar bind:menuActive />
+  {/if}
+  <main class="container z-0" in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }} class:blurify={menuActive}>
     <slot />
   </main>
 {/key}
