@@ -5,7 +5,7 @@
 </script>
 
 <div class="flex items-center justify-between">
-  <p class="font-bold text-3xl mb-4 pointer-events-none text-slate-400">
+  <p class="text-3xl mb-4 pointer-events-none text-slate-400 border-b-4 border-neutral-700">
     {text}
   </p>
   {#if size === '4'}

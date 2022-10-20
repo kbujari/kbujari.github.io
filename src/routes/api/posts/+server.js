@@ -1,4 +1,4 @@
-import { fetchPosts } from '$lib/utils'
+import { fetchPosts } from '$lib/utils/getPosts.js'
 import { json } from '@sveltejs/kit'
 
 export const GET = async () => {

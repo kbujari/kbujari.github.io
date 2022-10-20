@@ -1,8 +1,8 @@
 <script>
-  import '../app.css'
+  import Header from '$lib/components/Header.svelte'
+  import Sidebar from '$lib/components/Sidebar.svelte'
   import { fade } from 'svelte/transition'
-  import Header from '$lib/components/header/Header.svelte'
-  import Sidebar from '$lib/components/sidebar/Sidebar.svelte'
+  import '../app.css'
 
   export let data
   let menuActive = false
@@ -17,7 +17,7 @@
     <Header bind:sidebar={menuActive} />
     <Sidebar bind:menuActive />
   {/if}
-  <main class="container z-0" in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }} class:blurify={menuActive}>
+  <main class="container z-0 mt-24 font-body" in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }} class:blurify={menuActive}>
     <slot />
   </main>
 {/key}

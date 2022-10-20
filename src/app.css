@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Fira Sans';
+  font-family: 'Fira-Sans';
   src: url(/font/FiraSans-Regular.woff2) format('woff2');
 }
 
-html {
-  width: 100%;
-  height: 100%;
+@font-face {
+  font-family: 'Fira-Code';
+  src: url(/font/FiraCode-Regular.woff2) format('woff2');
 }
 
 body {
@@ -19,7 +19,7 @@ body {
 
 @layer utilities {
   .link {
-    @apply text-slate-300 hover:text-slate-50 font-bold underline transition;
+    @apply text-slate-300 hover:text-white font-bold underline decoration-2 underline-offset-4 transition;
   }
 
   .post-data a {
@@ -31,10 +31,10 @@ body {
   }
 
   .blurify {
-    @apply transition blur-sm duration-300;
+    @apply transition blur-sm cursor-default duration-300;
   }
 
-  .cont {
-    @apply max-w-4xl mx-auto p-6 leading-normal text-lg;
+  .container {
+    @apply leading-normal text-lg;
   }
 }

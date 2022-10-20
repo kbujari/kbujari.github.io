@@ -1,5 +1,6 @@
 <script>
-  import Title from '$lib/components/text/Title.svelte'
+  import Title from '$lib/components/Title.svelte'
+
   export let data
 
   let years = []

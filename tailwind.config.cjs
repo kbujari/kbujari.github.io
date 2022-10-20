@@ -3,12 +3,12 @@ module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     container: {
-      center: true
+      center: true,
+      padding: '0.75rem'
     },
-    extend: {
-      fontFamily: {
-        'app-font': ['Fira Sans']
-      }
+    fontFamily: {
+      body: ['Fira-Sans', 'sans-serif'],
+      title: ['Fira-Code', 'monospace']
     }
   },
   plugins: []
