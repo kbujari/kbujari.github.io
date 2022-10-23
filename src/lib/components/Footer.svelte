@@ -8,13 +8,15 @@
   const year = new Date().getFullYear()
 </script>
 
-<div class="w-full border-t border-slate-600 mt-12 pt-12 flex flex-col items-center">
+<div class="w-full border-t border-neutral-700 mt-12 pt-12 flex flex-col items-center">
+  <!--
   <div class="flex justify-evenly w-full">
     {#each links as link}
       <a href={link.href} class="text-xl link">{link.text}</a>
     {/each}
   </div>
-  <div class="my-16">
+  -->
+  <div>
     <p>Kleidi Bujari - {year}</p>
   </div>
 </div>

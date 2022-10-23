@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '0.75rem'
+      padding: '0.5rem'
     },
     fontFamily: {
       body: ['Fira-Sans', 'sans-serif'],

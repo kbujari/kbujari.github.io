@@ -1,19 +1,10 @@
 <script>
-  import { ArrowLeftCircleIcon } from 'svelte-feather-icons'
   export let text
-  export let size = '2'
+  export let isBig = false
+
+  const styling = isBig ? "text-4xl border-b-2 border-neutral-700 mb-2" : "text-3xl"
 </script>
 
-<div class="flex items-center justify-between">
-  <p class="text-3xl mb-4 pointer-events-none text-slate-400 border-b-4 border-neutral-700">
-    {text}
-  </p>
-  {#if size === '4'}
-    <a sveltekit:prefetch href="../" class="link">
-      <ArrowLeftCircleIcon size="36" strokeWidth="1.5" />
-    </a>
-  {/if}
-</div>
-{#if size === '4'}
-  <hr class="mb-4" />
-{/if}
+<p class="{styling} font-semibold pb-2 mt-6 pointer-events-none text-slate-400">
+  {text}
+</p>

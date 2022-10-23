@@ -22,6 +22,10 @@ body {
     @apply text-slate-300 hover:text-white font-bold underline decoration-2 underline-offset-4 transition;
   }
 
+  .post-data p {
+    @apply mb-6;
+  }
+
   .post-data a {
     @apply link;
   }
@@ -30,11 +34,15 @@ body {
     @apply list-decimal pl-5;
   }
 
+  .post-data p > img {
+    @apply inset-0;
+  }
+
   .blurify {
     @apply transition blur-sm cursor-default duration-300;
   }
 
   .container {
-    @apply leading-normal text-lg;
+    @apply leading-normal text-base;
   }
 }

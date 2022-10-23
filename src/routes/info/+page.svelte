@@ -7,7 +7,7 @@
 </svelte:head>
 
 <div class="container">
-  <Title text="About" size="4" />
+  <Title text="About" isBig={true} />
   <p>I'm a Computer Engineering student in Toronto, Canada passionate about operating system design, computer hardware, and online security/privacy. In my free time, I'm usually spending too much time ricing my unix setups or working on optimizing a very overkill home server.</p>
   <Title text="Contact" />
   <p>
