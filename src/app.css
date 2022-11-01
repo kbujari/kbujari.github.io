@@ -43,6 +43,6 @@ body {
   }
 
   .container {
-    @apply leading-normal text-base;
+    @apply leading-normal text-base md:text-lg;
   }
 }
