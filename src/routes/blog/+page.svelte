@@ -16,19 +16,17 @@
   <title>Blog - KB</title>
 </svelte:head>
 
-<div class="cont">
-  <Title text="Blog" isBig={true} />
-  {#each years as year}
-    <Title text={year} />
-    {#each data.posts as post}
-      <a sveltekit:prefetch href={post.path}>
-        <div class="flex items-center justify-between border-2 border-neutral-600 hover:border-neutral-200 duration-300 rounded p-3 mb-2">
-          <p class="w-full font-bold">{post.meta.title}</p>
-          <div class="flex flex-col items-center whitespace-nowrap ml-4">
-            <p>{post.meta.date}</p>
-          </div>
+<Title text="Blog" isBig={true} />
+{#each years as year}
+  <Title text={year} />
+  {#each data.posts as post}
+    <a sveltekit:prefetch href={post.path}>
+      <div class="flex items-center justify-between border border-neutral-600 hover:border-neutral-200 duration-300 rounded p-3 mb-2">
+        <p class="w-full font-bold">{post.meta.title}</p>
+        <div class="flex flex-col items-center whitespace-nowrap ml-4">
+          <p>{post.meta.date}</p>
         </div>
-      </a>
-    {/each}
+      </div>
+    </a>
   {/each}
-</div>
+{/each}

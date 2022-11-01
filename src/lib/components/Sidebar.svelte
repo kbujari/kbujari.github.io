@@ -17,11 +17,11 @@
 {#if menuActive}
   <aside class="fixed z-20 top-0 w-72 h-full bg-black" use:clickOutside on:outclick={() => (menuActive = false)} in:fly={{ x: -200, duration: 350 }} out:fade={{ duration: 150 }}>
     <div class="flex flex-col w-full h-full p-4" transition:fly={{ y: 15, duration: 350, delay: 300 }}>
-      <button class="self-end link" on:click={() => (menuActive = false)}>
+      <button class="self-end icon" on:click={() => (menuActive = false)}>
         <XIcon strokeWidth="2" size="32" />
       </button>
       {#each routes as route}
-        <a class="w-full link p-2 border-b border-neutral-700 font-title text-xl" href={route.src} on:click={() => (menuActive = false)}>
+        <a class="w-full route p-2 border-b border-neutral-700 font-title text-xl" href={route.src} on:click={() => (menuActive = false)}>
           <div>
             {route.name}
           </div>

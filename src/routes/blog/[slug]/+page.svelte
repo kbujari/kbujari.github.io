@@ -1,7 +1,6 @@
 <script>
   import { fade } from 'svelte/transition'
   import { ArrowUpIcon } from 'svelte-feather-icons'
-  import Footer from '$lib/components/Footer.svelte'
 
   export let data
   let y

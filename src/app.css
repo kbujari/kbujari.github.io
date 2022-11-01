@@ -13,17 +13,29 @@
 }
 
 body {
-  @apply bg-black text-slate-100;
+  @apply bg-black text-slate-300;
   font-family: 'Fira Sans', sans-serif;
 }
 
 @layer utilities {
   .link {
-    @apply text-slate-300 hover:text-white font-bold underline decoration-2 underline-offset-4 transition;
+    @apply text-emerald-600 hover:text-emerald-400 font-bold underline decoration-2 underline-offset-4 transition;
+  }
+
+  .route {
+    @apply text-slate-300 hover:text-white font-bold underline decoration-2 underline-offset-4 text-xl transition font-title;
+  }
+
+  .icon {
+    @apply text-slate-300 hover:text-white transition duration-300;
   }
 
   .post-data p {
     @apply mb-6;
+  }
+
+  .post-data h2 {
+    @apply text-xl md:text-2xl mb-2 md:mb-4 font-title text-slate-100 font-bold;
   }
 
   .post-data a {
@@ -32,10 +44,6 @@ body {
 
   .post-data ol {
     @apply list-decimal pl-5;
-  }
-
-  .post-data p > img {
-    @apply inset-0;
   }
 
   .blurify {

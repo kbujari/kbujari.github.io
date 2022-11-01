@@ -25,14 +25,3 @@
     {/if}
   </main>
 {/key}
-
-<style>
-  :global(h2) {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    margin-top: 6px;
-    margin-bottom: 4px;
-    color: rgb(148 163 184);
-    font-weight: 700;
-  }
-</style>

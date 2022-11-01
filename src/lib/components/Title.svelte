@@ -2,9 +2,9 @@
   export let text
   export let isBig = false
 
-  const styling = isBig ? "text-4xl border-b-2 border-neutral-700 mb-2" : "text-3xl"
+  const styling = isBig ? 'text-3xl md:text-4xl mb-2 text-white' : 'text-xl md:text-2xl text-slate-100'
 </script>
 
-<p class="{styling} font-semibold pb-2 mt-6 pointer-events-none text-slate-400">
+<p class="{styling} font-body font-bold pb-2 mt-6 pointer-events-none" id={text}>
   {text}
 </p>
