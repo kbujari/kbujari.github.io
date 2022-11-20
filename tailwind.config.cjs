@@ -4,18 +4,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'app-bg': '#1f1f28',
-        'app-fg': '#dcd7ba'
+        'app-bg': '#171717',
+        'app-fg': '#d4d4d4'
       }
     },
     container: {
       center: true,
-      padding: '0.5rem'
+      padding: '1rem'
     },
     fontFamily: {
       body: ['Fira-Sans', 'sans-serif'],
-      title: ['Fira-Code', 'monospace']
+      title: ['monospace']
     }
   },
-  plugins: []
 }

@@ -6,14 +6,14 @@
   export let sidebar = false
 </script>
 
-<header class="fixed z-10 top-0 bg-black px-2 w-full h-16 flex items-center border-b border-neutral-700" class:blurify={sidebar} out:fade={{ duration: 150 }}>
+<header class="fixed z-10 top-0 bg-app-bg px-2 w-full h-16 flex items-center border-b border-neutral-700" class:blurify={sidebar} out:fade={{ duration: 150 }}>
   <div class="container w-full flex justify-between items-center gap-8">
     <button class="hover:text-white transition md:hidden" on:click={() => (sidebar = !sidebar)}>
       <MenuIcon strokeWidth="1.5" size="36" />
     </button>
     <a class="border-2 rounded px-1 py-0.5 font-title font-bold leading-none" href="/">KB</a>
     <div class="hidden md:flex grow justify-start gap-12 items-center">
-      {#each ['Info', 'Blog', 'Photos'] as route}
+      {#each ['Info', 'Blog', 'Projects', 'Photos'] as route}
         <a href={'/' + route.toLowerCase()} class="route">{route}</a>
       {/each}
     </div>

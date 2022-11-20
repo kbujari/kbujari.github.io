@@ -7,14 +7,8 @@
   src: url(/font/FiraSans-Regular.woff2) format('woff2');
 }
 
-@font-face {
-  font-family: 'Fira-Code';
-  src: url(/font/FiraCode-Regular.woff2) format('woff2');
-}
-
 body {
-  @apply bg-black text-slate-300;
-  font-family: 'Fira Sans', sans-serif;
+  @apply bg-app-bg text-slate-300;
 }
 
 @layer utilities {
@@ -23,7 +17,7 @@ body {
   }
 
   .route {
-    @apply text-slate-300 hover:text-white font-bold underline decoration-2 underline-offset-4 text-xl transition font-title;
+    @apply text-slate-300 hover:text-white font-bold underline decoration-2 underline-offset-4 md:text-xl text-2xl transition font-title;
   }
 
   .icon {
@@ -35,7 +29,7 @@ body {
   }
 
   .post-data h2 {
-    @apply text-xl md:text-2xl mb-2 md:mb-4 font-title text-slate-100 font-bold;
+    @apply text-xl md:text-xl mb-2 md:mb-4 font-title text-stone-300 font-bold;
   }
 
   .post-data a {

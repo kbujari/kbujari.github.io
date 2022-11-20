@@ -1,5 +1,5 @@
 <script>
-  import { PaperclipIcon, MailIcon, GithubIcon, LinkedinIcon } from 'svelte-feather-icons'
+  import { PaperclipIcon, MailIcon, GithubIcon } from 'svelte-feather-icons'
 
   export let isSmall = true
   let iconSize
@@ -10,7 +10,6 @@
     { href: '/resume.pdf', title: 'Resume', component: PaperclipIcon },
     { href: 'mailto:mail@kleidi.ca', title: 'Email', component: MailIcon },
     { href: 'https://github.com/kbzt', title: 'Github Account', component: GithubIcon },
-    { href: 'https://linkedin.com/in/kleidib', title: 'Linkedin Account', component: LinkedinIcon }
   ]
 </script>
 

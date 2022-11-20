@@ -10,7 +10,11 @@
 </script>
 
 <svelte:head>
-  <link rel="shortcut icon" href="/icon.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="/key.svg" type="image/x-icon" />
+  <meta name="author" content="Kleidi Bujari">
+  <meta name="keywords" content="blog portfolio resume software engineer computer">
+  <meta property="og:site_name" content="Kleidi Bujari">
+  <meta property="locale" content="en_US">
 </svelte:head>
 
 {#key data.currentRoute}
@@ -18,7 +22,7 @@
     <Header bind:sidebar={menuActive} />
     <Sidebar bind:menuActive />
   {/if}
-  <main class="container z-0 my-24 font-body" in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }} class:blurify={menuActive}>
+  <main class="container z-0 my-24 font-body" in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 50 }} class:blurify={menuActive}>
     <slot />
     {#if data.currentRoute != '/'}
       <Footer />

@@ -19,7 +19,7 @@
 
 <svelte:window bind:scrollY={y} />
 
-<p class="text-3xl text-center font-title m-4">{data.title}</p>
+<p class="text-3xl text-center font-title font-bold m-4">{data.title}</p>
 <p class="text-center m-4">Published: {data.date}</p>
 <div class="post-data">
   {#if y > 800}

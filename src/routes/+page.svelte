@@ -10,8 +10,8 @@
   <p class="text-5xl text-slate-300 font-bold pointer-events-none">kleidi bujari</p>
   <IconLinks isSmall={false} />
   <div class="flex items-center gap-4">
-    {#each ['info', 'blog', 'photos'] as link}
-      <a href="/{link}" class="route">{link}</a>
+    {#each ['Info', 'Blog', 'Projects'] as link}
+      <a href="/{link.toLowerCase()}" class="route">{link}</a>
     {/each}
   </div>
 </div>
