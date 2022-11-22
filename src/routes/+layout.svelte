@@ -11,10 +11,10 @@
 
 <svelte:head>
   <link rel="shortcut icon" href="/key.svg" type="image/x-icon" />
-  <meta name="author" content="Kleidi Bujari">
-  <meta name="keywords" content="blog portfolio resume software engineer computer">
-  <meta property="og:site_name" content="Kleidi Bujari">
-  <meta property="locale" content="en_US">
+  <meta name="author" content="Kleidi Bujari" />
+  <meta name="keywords" content="blog portfolio resume software engineer computer" />
+  <meta property="og:site_name" content="Kleidi Bujari" />
+  <meta property="locale" content="en_US" />
 </svelte:head>
 
 {#key data.currentRoute}

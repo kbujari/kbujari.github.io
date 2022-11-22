@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'app-bg': '#171717',
+        'app-bg': '#000',
         'app-fg': '#d4d4d4'
       }
     },
@@ -16,5 +16,5 @@ module.exports = {
       body: ['Fira-Sans', 'sans-serif'],
       title: ['monospace']
     }
-  },
+  }
 }

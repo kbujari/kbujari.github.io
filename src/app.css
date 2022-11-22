@@ -8,12 +8,12 @@
 }
 
 body {
-  @apply bg-app-bg text-slate-300;
+  @apply bg-app-bg text-app-fg;
 }
 
 @layer utilities {
   .link {
-    @apply text-emerald-600 hover:text-emerald-400 font-bold underline decoration-2 underline-offset-4 transition;
+    @apply text-blue-500 hover:text-blue-300 font-bold underline decoration-2 underline-offset-4 transition;
   }
 
   .route {
@@ -29,7 +29,7 @@ body {
   }
 
   .post-data h2 {
-    @apply text-xl md:text-xl mb-2 md:mb-4 font-title text-stone-300 font-bold;
+    @apply text-2xl mb-2 md:mb-4 font-title text-slate-300 font-bold;
   }
 
   .post-data a {
@@ -38,6 +38,10 @@ body {
 
   .post-data ol {
     @apply list-decimal pl-5;
+  }
+
+  .post-data img {
+    @apply mx-auto rounded;
   }
 
   .blurify {

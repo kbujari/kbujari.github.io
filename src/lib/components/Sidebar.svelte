@@ -10,7 +10,7 @@
     { name: 'Home', src: '/' },
     { name: 'Info', src: '/info' },
     { name: 'Blog', src: '/blog' },
-    { name: 'Projects', src: '/projects'},
+    { name: 'Projects', src: '/projects' },
     { name: 'Photos', src: '/photos' }
   ]
 </script>

@@ -22,7 +22,7 @@ const config = {
     }),
     mdsvex({
       extensions: ['.md'],
-      smartypants: true,
+      smartypants: true
     })
   ]
 }
