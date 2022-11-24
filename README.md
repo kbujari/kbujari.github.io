@@ -1,4 +1,4 @@
-[![build](https://github.com/kbzt/kleidi.ca/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/kbzt/kleidi.ca/actions/workflows/node.js.yml) [![license](https://img.shields.io/github/license/kbzt/kleidi.ca)](https://opensource.org/licenses/MIT)
+[![build](https://github.com/kbzt/kleidi.ca/actions/workflows/build.yml/badge.svg)](https://github.com/kbzt/kleidi.ca/actions/workflows/build.yml) [![license](https://img.shields.io/github/license/kbzt/kleidi.ca)](https://opensource.org/licenses/MIT)
 
 # ![kleidi.ca](https://kleidi.ca)
 
