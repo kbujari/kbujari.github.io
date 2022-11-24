@@ -1,6 +1,0 @@
-pipeline:
-  build:
-    image: node:alpine
-    commands:
-      - npm ci
-      - npm run build
