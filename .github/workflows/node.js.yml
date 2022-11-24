@@ -1,20 +1,20 @@
-name: Node.js CI
+name: CI/Build
 
 on:
   push:
     branches: [ "main", "dev" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "dev" ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js 18.x
+    - name: Using latest Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: 18.x
+        node-version: latest
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
