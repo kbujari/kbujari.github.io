@@ -19,8 +19,8 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div class="bg-cover bg-center bg-no-repeat h-64 md:h-96 p-8 flex justify-center items-center" style="background-image: linear-gradient(0deg, #00000090 60%, #ffffff01 100%), url({data.imgurl});">
-  <p class="text-4xl text-center font-title font-bold">{data.title}</p>
+<div class="bg-cover bg-center bg-no-repeat h-64 md:h-96 p-8" style="background-image: linear-gradient(0deg, #00000090 60%, #ffffff01 100%), url({data.imgurl});">
+  <p class="text-4xl my-auto text-center font-title font-bold">{data.title}</p>
 </div>
 <div class="border rounded border-neutral-700 my-8 p-4 flex items-center justify-center md:justify-between">
   <p>Published: {data.date}</p>
