@@ -8,23 +8,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
     
-    - name: Using latest Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: latest
-        cache: 'npm'
+      - name: Using latest Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: latest
+          cache: 'npm'
         
-    - name: Setup libcwebp for image conversions
-    - run: |
-        sudo apt-get update
-        sudo apt-get install -y libwebp-dev
+      - name: Setup libcwebp for image conversions
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebp-dev
         
-    - name: Clean install node dependcies
-    - run: npm ci
+      - name: Clean install node dependcies
+      - run: npm ci
     
-    - name: Build
-    - run: npm run build --if-present
+      - name: Build
+      - run: npm run build --if-present
