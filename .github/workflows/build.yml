@@ -21,7 +21,7 @@ jobs:
       - name: Setup libcwebp for image conversions
         run: |
           sudo apt-get update
-          sudo apt-get install -y libwebp-dev     
+          sudo apt-get install -y libwebp-dev cwebp   
           
       - name: Clean install node dependcies
         run: npm ci  
