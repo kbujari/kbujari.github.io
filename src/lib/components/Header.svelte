@@ -11,7 +11,7 @@
     <button class="hover:text-white transition md:hidden" on:click={() => (sidebar = !sidebar)}>
       <MenuIcon strokeWidth="1.5" size="36" />
     </button>
-    <a class="border-2 rounded px-1 py-0.5 font-title font-bold leading-none" href="/">KB</a>
+    <a class="route" href="/">kleidi.ca</a>
     <div class="hidden md:flex grow justify-start gap-12 items-center">
       {#each ['Info', 'Blog', 'Projects', 'Photos'] as route}
         <a href={'/' + route.toLowerCase()} class="route">{route}</a>
