@@ -27,6 +27,24 @@ Other than that, my experience was pretty standard. Setting up a VM through virt
 
 Above is my edited vBios file that is passed through to the VM. Usually, when you load into a graphical session, the vBios gets changed as you use the GPU. Because of this, a new vBios is given to the VM to use. Next, to add the GPU alongside any other devices such as a USB controller, I had to get the relevant IOMMU groups. Here's an example of what the GPU group looked like on my system:
 
+```
+$ lspci -k
+
+07:00.0 VGA compatible controller NVIDIA Corporation TU104 GeForce RTX 2080 Rev. A (rev al)
+        Subsystem: eVga.com. Corp. Device 2182
+        Kernel driver in use nvidia
+07:00.1 Audio device NVIDIA Corporation TU104 HD Audio Controller (rev al)
+        Subsystem: eVga.com. Corp. Device 2182
+        Kernel driver in use snd_hda_intel
+07:00.2 USB controller: NVIDIA Corporation TU104 USB 3.1 Host Controller (rev al)
+        Subsystem: eVga.com. Corp. Device 2182
+        Kernel driver in use xhci_hcd
+07:00.3 Serial bus controller NVIDIA Corporation TU104 USB Type-C UCSI Controller (rev al)
+        Subsystem: eVga.com. Corp. Device 2182
+        Kernel driver in use nvidia-gpu
+
+```
+
 These were added to the xml file containing all the information for the VM.
 
 Now that the normal setup is done, we can move on to specifics in a single GPU setup. The idea is for this process is generally as follows:
@@ -34,8 +52,6 @@ Now that the normal setup is done, we can move on to specifics in a single GPU s
 1. Stop the host display server
 2. Unload all GPU drivers
 3. Load the vfio kernel modules in their place
-
-<br>
 
 This is accomplished with scripts that are triggered by the VM starting and stopping. Naturally, start.sh handles startup, with the IOMMU groups sourced from kvm.conf. Lucky for me, you only need to edit the vBios file on Nvidia GPUs. Most documention said this was only required for pascal series (eg. GTX 1070), however, I was unable to get the VM to properly boot without this step. Keep that in mind if you plan on having a similar setup.
 

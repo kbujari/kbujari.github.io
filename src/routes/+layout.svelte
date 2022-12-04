@@ -12,9 +12,12 @@
 <svelte:head>
   <link rel="shortcut icon" href="/key.svg" type="image/x-icon" />
   <meta name="author" content="Kleidi Bujari" />
+  <meta name="description" content="Blog, portfolio, and personal website for Kleidi Bujari" />
   <meta name="keywords" content="blog portfolio resume software engineer computer" />
-  <meta property="og:site_name" content="Kleidi Bujari" />
+  <meta property="og:site_name" content="Kleidi Bujari - Personal Website" />
   <meta property="locale" content="en_US" />
+  <meta name="theme-color" content="#000" />
+  <meta name="color-scheme" content="normal" />
 </svelte:head>
 
 {#key data.currentRoute}

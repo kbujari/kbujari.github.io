@@ -13,7 +13,7 @@ body {
 
 @layer utilities {
   .link {
-    @apply text-blue-500 hover:text-blue-300 font-bold underline decoration-2 underline-offset-4 transition;
+    @apply text-emerald-500 hover:text-emerald-700 font-bold underline decoration-2 underline-offset-4 transition;
   }
 
   .route {
@@ -37,7 +37,7 @@ body {
   }
 
   .post-data ol {
-    @apply list-decimal pl-5;
+    @apply list-decimal pl-5 mb-6;
   }
 
   .post-data img {

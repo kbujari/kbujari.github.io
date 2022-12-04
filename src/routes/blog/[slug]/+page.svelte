@@ -1,6 +1,7 @@
 <script>
   import { fade } from 'svelte/transition'
   import { ArrowUpIcon } from 'svelte-feather-icons'
+  import './code-highlight.css'
 
   export let data
   let y
