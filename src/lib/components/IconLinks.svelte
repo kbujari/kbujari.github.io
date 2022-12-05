@@ -9,7 +9,7 @@
   const options = [
     { href: '/resume.pdf', title: 'Resume', component: PaperclipIcon },
     { href: 'mailto:mail@kleidi.ca', title: 'Email', component: MailIcon },
-    { href: 'https://github.com/kleidib', title: 'Github Account', component: GithubIcon }
+    { href: 'https://github.com/kbzt', title: 'Github Account', component: GithubIcon }
   ]
 </script>
 

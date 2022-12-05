@@ -16,6 +16,6 @@
 </p>
 <Title text="Website" />
 <p>
-  This site is built with SvelteKit/TailwindCSS and prerendered to be lightweight and speedy. Feel free to view the <a href="https://github.com/kleidib/kleidi.ca" target="_blank" rel="noreferrer" title="Source" class="link">source code</a>
+  This site is built with SvelteKit/TailwindCSS and prerendered to be lightweight and speedy. Feel free to view the <a href="https://github.com/kbzt/kleidi.ca" target="_blank" rel="noreferrer" title="Source" class="link">source code</a>
   and leave a star if you'd like. If you're interested, the two fonts used are <a href="https://github.com/bBoxType/FiraSans" target="_blank" rel="noreferrer" class="link">Fira Sans</a> and standard monospace.
 </p>
