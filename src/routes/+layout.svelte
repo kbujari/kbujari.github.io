@@ -10,10 +10,12 @@
 </script>
 
 <svelte:head>
-  <link rel="shortcut icon" href="/key.svg" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta name="author" content="Kleidi Bujari" />
   <meta name="description" content="Blog, portfolio, and personal website for Kleidi Bujari" />
-  <meta name="keywords" content="blog portfolio resume software engineer computer" />
   <meta property="og:site_name" content="Kleidi Bujari - Personal Website" />
   <meta property="locale" content="en_US" />
   <meta name="theme-color" content="#000" />

@@ -8,7 +8,7 @@
 }
 
 body {
-  @apply bg-app-bg text-app-fg antialiased;
+  @apply bg-app-bg text-app-fg-300 antialiased;
 }
 
 @layer utilities {
@@ -22,26 +22,6 @@ body {
 
   .icon {
     @apply text-slate-300 hover:text-white transition duration-300;
-  }
-
-  .post-data p {
-    @apply mb-6;
-  }
-
-  .post-data h2 {
-    @apply text-2xl mb-2 md:mb-4 font-title text-slate-300 font-bold;
-  }
-
-  .post-data a {
-    @apply link;
-  }
-
-  .post-data ol {
-    @apply list-decimal pl-5 mb-6;
-  }
-
-  .post-data img {
-    @apply mx-auto rounded;
   }
 
   .blurify {
