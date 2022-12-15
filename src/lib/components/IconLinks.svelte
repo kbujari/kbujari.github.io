@@ -1,16 +1,16 @@
 <script>
-  import { PaperclipIcon, MailIcon, GithubIcon } from 'svelte-feather-icons'
+  import { PaperclipIcon, MailIcon, GithubIcon } from 'svelte-feather-icons';
 
-  export let isSmall = true
-  let iconSize
+  export let isSmall = true;
+  let iconSize;
 
-  isSmall ? (iconSize = '24') : (iconSize = '32')
+  isSmall ? (iconSize = '24') : (iconSize = '32');
 
   const options = [
     { href: '/resume.pdf', title: 'Resume', component: PaperclipIcon },
     { href: 'mailto:mail@kleidi.ca', title: 'Email', component: MailIcon },
     { href: 'https://github.com/kbzt', title: 'Github Account', component: GithubIcon }
-  ]
+  ];
 </script>
 
 <div class="flex p-2" class:gap-2={isSmall} class:gap-8={!isSmall}>

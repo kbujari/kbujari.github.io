@@ -1,15 +1,15 @@
 <script>
-  export let title
-  export let date
-  export let img
-  export let path
-  export let tags
+  export let title;
+  export let date;
+  export let img;
+  export let path;
+  export let tags;
 </script>
 
 <a href={path} class="border border-neutral-700 rounded p-4 w-full hover:text-white">
   <div class="flex flex-col md:flex-row gap-4 md:gap-8">
     <div class="basis-2/5">
-      <img src={img} alt="blog post descriptor" class="rounded object-cover h-64 w-full">
+      <img src={img} alt="blog post descriptor" class="rounded object-cover h-64 w-full" />
     </div>
     <div class="basis-3/5">
       <p class="transition font-title font-bold text-2xl mb-2">{title}</p>

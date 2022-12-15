@@ -1,14 +1,13 @@
 <script>
-  import IconLinks from '$lib/components/IconLinks.svelte'
-  import { MenuIcon } from 'svelte-feather-icons'
-  import { fade } from 'svelte/transition'
-
-  export let sidebar = false
+  import { fade } from 'svelte/transition';
+  import IconLinks from '$lib/components/IconLinks.svelte';
+  import { MenuIcon } from 'svelte-feather-icons';
+  import { aside } from '$lib/utils/stores.js';
 </script>
 
-<header class="fixed z-10 top-0 bg-app-bg px-2 w-full h-16 flex items-center border-b border-neutral-700" class:blurify={sidebar} out:fade={{ duration: 150 }}>
+<header class="fixed z-10 top-0 bg-app-bg px-2 w-full h-16 flex items-center border-b border-neutral-700" class:blurify={$aside} out:fade={{ duration: 150 }}>
   <div class="container w-full flex justify-between items-center gap-8">
-    <button class="hover:text-white transition md:hidden" on:click={() => (sidebar = !sidebar)}>
+    <button class="hover:text-white transition md:hidden" on:click={aside.toggle}>
       <MenuIcon strokeWidth="1.5" size="36" />
     </button>
     <a class="route" href="/">kleidi.ca</a>

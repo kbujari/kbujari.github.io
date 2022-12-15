@@ -1,6 +1,6 @@
 <script>
-  import IconLinks from '$lib/components/IconLinks.svelte'
-  import { ArrowRightCircleIcon } from 'svelte-feather-icons'
+  import IconLinks from '$lib/components/IconLinks.svelte';
+  import { ArrowRightCircleIcon } from 'svelte-feather-icons';
 </script>
 
 <svelte:head>
@@ -14,7 +14,7 @@
     <a href="/info" class="route">
       <div class="flex items-center gap-4">
         <p>Enter Site</p>
-        <ArrowRightCircleIcon strokeWidth='2' size='48' />
+        <ArrowRightCircleIcon strokeWidth="2" size="48" />
       </div>
     </a>
   </div>

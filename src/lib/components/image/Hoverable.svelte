@@ -1,12 +1,12 @@
 <script>
-  let hovering
+  let hovering;
 
   function enter() {
-    hovering = true
+    hovering = true;
   }
 
   function leave() {
-    hovering = false
+    hovering = false;
   }
 </script>
 

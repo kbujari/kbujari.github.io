@@ -1,17 +1,17 @@
 <script>
-  import { fade } from 'svelte/transition'
-  import { ArrowUpIcon } from 'svelte-feather-icons'
-  import './code-highlight.css'
+  import { fade } from 'svelte/transition';
+  import { ArrowUpIcon } from 'svelte-feather-icons';
+  import './code-highlight.css';
 
-  export let data
-  let y
+  export let data;
+  let y;
 
   const toTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
-    })
-  }
+    });
+  };
 </script>
 
 <svelte:head>

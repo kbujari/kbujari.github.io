@@ -1,17 +1,17 @@
 <script>
-  import IntersectionObserver from './IntersectionObserver.svelte'
-  import Image from './Image.svelte'
-  import { onMount } from 'svelte'
+  import IntersectionObserver from './IntersectionObserver.svelte';
+  import Image from './Image.svelte';
+  import { onMount } from 'svelte';
 
-  export let src
-  export let alt
+  export let src;
+  export let alt;
 
-  let nativeLoading = false
+  let nativeLoading = false;
   onMount(() => {
     if ('loading' in HTMLImageElement.prototype) {
-      nativeLoading = true
+      nativeLoading = true;
     }
-  })
+  });
 </script>
 
 <IntersectionObserver once={true} let:intersecting>

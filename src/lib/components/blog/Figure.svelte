@@ -1,6 +1,6 @@
 <script>
-  export let src
-  let type = src.endsWith('png') ? 'image/png' : 'image/jpeg'
+  export let src;
+  let type = src.endsWith('png') ? 'image/png' : 'image/jpeg';
 </script>
 
 <div class="flex justify-center w-full">

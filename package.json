@@ -1,31 +1,32 @@
 {
   "name": "kleidi.ca",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "vite dev --host",
+    "dev": "vite dev",
     "build": "rm -rf build && vite build",
-    "preview": "vite preview --host",
-    "lint": "prettier --check --plugin-search-dir=. . && eslint .",
-    "format": "prettier --write --plugin-search-dir=. ."
+    "preview": "vite preview",
+    "test": "vitest",
+    "lint": "prettier --plugin-search-dir . --check . && eslint .",
+    "format": "prettier --plugin-search-dir . --write ."
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "next",
-    "@sveltejs/adapter-static": "^1.0.0-next.39",
-    "@sveltejs/kit": "next",
-    "autoprefixer": "^10.4.12",
-    "eslint": "^8.16.0",
-    "eslint-config-prettier": "^8.3.0",
+    "@sveltejs/adapter-auto": "^1.0.0",
+    "@sveltejs/adapter-static": "^1.0.0",
+    "@sveltejs/kit": "^1.0.0",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-svelte3": "^4.0.0",
     "mdsvex": "^0.10.6",
-    "postcss": "^8.4.16",
-    "prettier": "^2.6.2",
-    "prettier-plugin-svelte": "^2.7.0",
-    "svelte": "^3.44.0",
+    "prettier": "^2.8.0",
+    "prettier-plugin-svelte": "^2.8.1",
+    "svelte": "^3.54.0",
     "svelte-feather-icons": "^4.0.0",
-    "svelte-preprocess": "^4.10.7",
-    "tailwindcss": "^3.1.8",
-    "vite": "^3.0.4"
+    "svelte-preprocess": "^5.0.0",
+    "tailwindcss": "^3.2.4",
+    "vite": "^4.0.0",
+    "vitest": "^0.25.3"
   },
   "type": "module"
 }

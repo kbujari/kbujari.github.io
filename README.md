@@ -1,21 +1,38 @@
-[![build](https://github.com/kbzt/kleidi.ca/actions/workflows/build.yml/badge.svg)](https://github.com/kbzt/kleidi.ca/actions/workflows/build.yml) [![license](https://img.shields.io/github/license/kbzt/kleidi.ca)](https://opensource.org/licenses/MIT)
+# create-svelte
 
-# [kleidi.ca](https://kleidi.ca)
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-All in one personal website, portfolio, blog, and more built with SvelteKit and TailwindCSS. Prerendered as a static site to be lightweight and speedy.
+## Creating a project
+
+If you're seeing this, you've probably already done this step. Congrats!
+
+```bash
+# create a new project in the current directory
+npm create svelte@latest
+
+# create a new project in my-app
+npm create svelte@latest my-app
+```
+
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
 ## Building
 
-The site is built with `npm` and `node >= 18.x`, but can also be done with `yarn` or `pnpm`. Make sure to make the necessary adjustments. To convert all images to the webp format at build, make sure to have `libcwebp` installed, or at least the `cwebp` binary in your system path.
+To create a production version of your app:
 
-To run locally:
 ```bash
-npm install
-npm run dev
-```
-
-To output a production build to the `build` directory:
-```bash
-npm install
 npm run build
 ```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

@@ -1,20 +1,20 @@
 <script>
-  export let src
-  export let alt
+  export let src;
+  export let alt;
 
-  import { onMount } from 'svelte'
-  import { fade } from 'svelte/transition'
-  import { DownloadIcon } from 'svelte-feather-icons'
-  import Hoverable from './Hoverable.svelte'
+  import { onMount } from 'svelte';
+  import { fade } from 'svelte/transition';
+  import { DownloadIcon } from 'svelte-feather-icons';
+  import Hoverable from './Hoverable.svelte';
 
-  let loaded = false
-  let thisImage
+  let loaded = false;
+  let thisImage;
 
   onMount(() => {
     thisImage.onload = () => {
-      loaded = true
-    }
-  })
+      loaded = true;
+    };
+  });
 </script>
 
 <Hoverable let:hovering={active}>
