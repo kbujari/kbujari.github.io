@@ -13,7 +13,7 @@
     <a class="route" href="/">kleidi.ca</a>
     <div class="hidden md:flex grow justify-start gap-12 items-center">
       {#each ['Info', 'Blog', 'Projects', 'Photos'] as route}
-        <a href={'/' + route.toLowerCase()} class="route">{route}</a>
+        <a href={'/' + route.toLowerCase()} data-sveltekit-prefetch class="route">{route}</a>
       {/each}
     </div>
     <div class="hidden md:block">

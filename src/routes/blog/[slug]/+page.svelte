@@ -33,7 +33,7 @@
 </div>
 <div class="post-data">
   {#if y > 800}
-    <div class="bg-black rounded-full p-2 border-2 bottom-6 right-6 fixed hover:cursor-pointer" on:keydown={toTop} on:click={toTop} in:fade out:fade={{ duration: 150 }}>
+    <div class="bg-app-bg rounded-full p-2 border-2 bottom-6 right-6 fixed hover:cursor-pointer" on:keydown={toTop} on:click={toTop} in:fade out:fade={{ duration: 150 }}>
       <ArrowUpIcon size="36" strokeWidth="1.5" />
     </div>
   {/if}

@@ -8,12 +8,12 @@
 }
 
 body {
-  @apply bg-app-bg text-app-fg;
+  @apply bg-app-bg text-app-fg antialiased;
 }
 
 @layer utilities {
   .link {
-    @apply text-emerald-500 hover:text-emerald-700 font-bold underline decoration-2 underline-offset-4 transition;
+    @apply text-cyan-200 hover:text-cyan-600 font-bold underline decoration-2 underline-offset-4 transition;
   }
 
   .route {

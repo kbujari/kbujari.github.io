@@ -27,7 +27,7 @@ Other than that, my experience was pretty standard. Setting up a VM through virt
 
 Above is my edited vBios file that is passed through to the VM. Usually, when you load into a graphical session, the vBios gets changed as you use the GPU. Because of this, a new vBios is given to the VM to use. Next, to add the GPU alongside any other devices such as a USB controller, I had to get the relevant IOMMU groups. Here's an example of what the GPU group looked like on my system:
 
-```
+```sh
 $ lspci -k
 
 07:00.0 VGA compatible controller NVIDIA Corporation TU104 GeForce RTX 2080 Rev. A (rev al)
