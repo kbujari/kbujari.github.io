@@ -3,7 +3,7 @@
   import { clickOutside } from '$lib/utils/click_outside.js';
   import { XIcon } from 'svelte-feather-icons';
   import { fly, fade } from 'svelte/transition';
-  import { aside } from '$lib/utils/stores.js';
+  import { aside } from '$lib/stores/ui-states.js';
 
   const routes = [
     { name: 'Home', src: '/' },

@@ -7,10 +7,6 @@
   src: url(/font/FiraSans-Regular.woff2) format('woff2');
 }
 
-body {
-  @apply bg-app-bg text-app-fg-300 antialiased;
-}
-
 @layer utilities {
   .link {
     @apply text-cyan-200 hover:text-cyan-600 font-bold underline decoration-2 underline-offset-4 transition;

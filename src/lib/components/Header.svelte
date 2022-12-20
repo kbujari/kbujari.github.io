@@ -2,7 +2,7 @@
   import { fade } from 'svelte/transition';
   import IconLinks from '$lib/components/IconLinks.svelte';
   import { MenuIcon } from 'svelte-feather-icons';
-  import { aside } from '$lib/utils/stores.js';
+  import { aside } from '$lib/stores/ui-states.js';
 </script>
 
 <header class="fixed z-10 top-0 bg-app-bg w-full h-16 flex items-center border-b border-neutral-700" class:blurify={$aside} out:fade={{ duration: 150 }}>
