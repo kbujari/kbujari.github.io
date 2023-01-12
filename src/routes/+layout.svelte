@@ -1,5 +1,5 @@
 <script>
-  import { aside } from '$lib/stores/ui-states.js';
+  import { aside } from '$lib/utils/stores.js';
   import { fade } from 'svelte/transition';
   import Header from '$lib/components/Header.svelte';
   import Footer from '$lib/components/Footer.svelte';

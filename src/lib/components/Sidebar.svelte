@@ -3,15 +3,7 @@
   import { clickOutside } from '$lib/utils/click_outside.js';
   import { XIcon } from 'svelte-feather-icons';
   import { fly, fade } from 'svelte/transition';
-  import { aside } from '$lib/stores/ui-states.js';
-
-  const routes = [
-    { name: 'Home', src: '/' },
-    { name: 'Info', src: '/info' },
-    { name: 'Blog', src: '/blog' },
-    { name: 'Projects', src: '/projects' },
-    { name: 'Photos', src: '/photos' }
-  ];
+  import { aside, routes } from '$lib/utils/stores.js';
 </script>
 
 {#if $aside}
@@ -20,7 +12,7 @@
       <button class="self-end icon" on:click={aside.toggle}>
         <XIcon strokeWidth="2" size="32" />
       </button>
-      {#each routes as route}
+      {#each $routes as route}
         <a class="w-full route p-2 border-b border-neutral-700 font-title text-xl" data-sveltekit-prefetch href={route.src} on:click={aside.toggle}>
           <div>
             {route.name}

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 
 module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
@@ -8,7 +8,7 @@ module.exports = {
     screens: {
       sm: '640px',
       md: '768px',
-      lg: '1024px',
+      lg: '1024px'
     },
     extend: {
       colors: {
@@ -36,11 +36,11 @@ module.exports = {
               color: theme('colors.neutral.300'),
               backgroundColor: theme('colors.neutral.900'),
               borderRadius: '0.25rem',
-              padding: '2px',
+              padding: '2px'
             },
             img: {
               borderRadius: '0.25rem',
-              margin: 'auto',
+              margin: 'auto'
             },
             strong: { color: theme('colors.neutral.100') }
           }
