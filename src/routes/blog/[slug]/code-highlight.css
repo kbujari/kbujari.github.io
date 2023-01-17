@@ -5,8 +5,8 @@
  * Ported for PrismJS by Simon Jespersen [https://github.com/simjes]
  */
 
-code[class*="language-"],
-pre[class*="language-"] {
+code[class*='language-'],
+pre[class*='language-'] {
 	background: #000;
 	color: #ffffff;
 	font-family: monospace; /* this is the default */
@@ -28,33 +28,33 @@ pre[class*="language-"] {
 	hyphens: none;
 }
 
-code[class*="language-"]::-moz-selection,
-code[class*="language-"] ::-moz-selection,
-pre[class*="language-"]::-moz-selection,
-pre[class*="language-"] ::-moz-selection {
+code[class*='language-']::-moz-selection,
+code[class*='language-'] ::-moz-selection,
+pre[class*='language-']::-moz-selection,
+pre[class*='language-'] ::-moz-selection {
 	background: #eb64b927;
 	color: inherit;
 }
 
-code[class*="language-"]::selection,
-code[class*="language-"] ::selection,
-pre[class*="language-"]::selection,
-pre[class*="language-"] ::selection {
+code[class*='language-']::selection,
+code[class*='language-'] ::selection,
+pre[class*='language-']::selection,
+pre[class*='language-'] ::selection {
 	background: #eb64b927;
 	color: inherit;
 }
 
 /* Properties specific to code blocks */
-pre[class*="language-"] {
+pre[class*='language-'] {
 	padding: 1em; /* this is standard */
 	margin: 0.5em 0; /* this is the default */
 	overflow: auto; /* this is standard */
 	border-radius: 0.25em;
-  border: 2px solid #404040;
+	border: 2px solid #404040;
 }
 
 /* Properties specific to inline code */
-:not(pre) > code[class*="language-"] {
+:not(pre) > code[class*='language-'] {
 	padding: 0.2em 0.3em;
 	border-radius: 0.5rem;
 	white-space: normal; /* this is standard */

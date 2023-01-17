@@ -1,14 +1,14 @@
 <script>
-  import Title from '$lib/components/Title.svelte';
+	import Title from '$lib/components/Title.svelte';
 
-  const allPhotoFiles = import.meta.glob('/static/gallery/*.webp');
-  const iterablePhotos = Object.entries(allPhotoFiles);
+	//const allPhotoFiles = import.meta.glob('/static/gallery/*.webp');
+	//const iterablePhotos = Object.entries(allPhotoFiles);
 
-  const staticLength = '/static'.length;
+	//const staticLength = '/static'.length;
 </script>
 
 <svelte:head>
-  <title>Gallery - KB</title>
+	<title>Gallery - KB</title>
 </svelte:head>
 
 <Title text="Gallery" isBig={true} />
