@@ -3,28 +3,28 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: 'Fira-Sans';
-	src: url(/font/FiraSans-Regular.woff2) format('woff2');
+  font-family: 'Fira-Sans';
+  src: url(/font/FiraSans-Regular.woff2) format('woff2');
 }
 
 @layer utilities {
-	.link {
-		@apply text-cyan-200 hover:text-cyan-600 font-bold underline decoration-2 underline-offset-4 transition;
-	}
+  .link {
+    @apply text-cyan-200 hover:text-cyan-600 font-bold underline decoration-2 underline-offset-4 transition;
+  }
 
-	.route {
-		@apply text-slate-300 hover:text-white font-bold underline decoration-2 underline-offset-4 md:text-xl text-2xl transition font-title;
-	}
+  .route {
+    @apply text-slate-300 hover:text-white font-bold underline decoration-2 underline-offset-4 md:text-xl text-2xl transition font-title;
+  }
 
-	.icon {
-		@apply text-slate-300 hover:text-white transition duration-300;
-	}
+  .icon {
+    @apply text-slate-300 hover:text-white transition duration-300;
+  }
 
-	.blurify {
-		@apply transition blur-sm cursor-default duration-300;
-	}
+  .blurify {
+    @apply transition blur-sm cursor-default duration-300;
+  }
 
-	.container {
-		@apply leading-normal text-base md:text-lg;
-	}
+  .container {
+    @apply leading-normal text-base md:text-lg;
+  }
 }

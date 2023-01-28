@@ -1,13 +1,19 @@
-export async function load({ params }) {
-	const post = await import(`../${params.slug}.md`);
-	const { title, date, imgurl, topics } = post.metadata;
-	const content = post.default;
+import { error } from '@sveltejs/kit';
 
-	return {
-		content,
-		title,
-		date,
-		imgurl,
-		topics
-	};
-}
+export const load = async ({ params }) => {
+  try {
+    const post = await import(`../${params.slug}.md`);
+    const { title, date, imgurl, topics } = post.metadata;
+    const content = post.default;
+
+    return {
+      content,
+      title,
+      date,
+      imgurl,
+      topics
+    };
+  } catch (err) {
+    throw error(err, 404);
+  }
+};
