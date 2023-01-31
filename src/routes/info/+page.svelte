@@ -9,9 +9,6 @@
 <Title text="Info" isBig={true} />
 <p>I'm a Computer Engineering student in Toronto, Canada passionate about operating systems, robotics, circuit design, and online security/privacy. In my free time, I'm usually spending too much time ricing my unix setups or working on a very overkill home server (blog post coming soon once I settle on a setup I like).</p>
 
-<br />
-
-<p>I love Open-Source Software, it's easily been the best resource for learning ever since I started messing with computers and it holds a special place in my heart.</p>
 <Title text="Contact" />
 <p>
   The best way to reach me is by email at

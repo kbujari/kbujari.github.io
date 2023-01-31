@@ -14,7 +14,7 @@
   ];
 </script>
 
-<div class="flex p-2" class:gap-2={isSmall} class:gap-8={!isSmall}>
+<div class="flex" class:gap-2={isSmall} class:gap-8={!isSmall}>
   {#each options as option}
     <a href={option.href} target="_blank" rel="noreferrer" title={option.title} class="icon">
       <svelte:component this={option.component} size={iconSize} strokeWidth="2" />
