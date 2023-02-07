@@ -13,7 +13,7 @@
         <X strokeWidth="2" size="32" />
       </button>
       {#each $routes as route}
-        <a class="w-full route p-2 border-b border-neutral-700 font-title text-xl" data-sveltekit-prefetch href={route.src} on:click={aside.toggle}>
+        <a class="w-full route p-2 border-b border-neutral-700 font-title text-xl" href={route.src} on:click={aside.toggle}>
           <div>
             {route.name}
           </div>
