@@ -27,13 +27,15 @@
 <div class="my-8 flex flex-col items-start justify-center gap-4">
   <div class="flex items-center gap-4">
     <CalendarDays size="36" strokeWidth="1.5" />
-    <p>{data.date}</p>
+    <p class="rounded border p-1 border-neutral-700 pointer-events-none">{data.date}</p>
   </div>
-  <div class="flex flex-wrap gap-4 items-center">
+  <div class="flex gap-4 items-center">
     <Tags size="36" strokeWidth="1.5" />
-    {#each data.topics.split(' ') as tag}
-      <p class="rounded border p-1 border-neutral-700 pointer-events-none">{tag}</p>
-    {/each}
+    <div class="flex items-center gap-2 flex-wrap">
+      {#each data.topics.split(' ') as tag}
+        <p class="rounded border p-1 border-neutral-700 pointer-events-none">{tag}</p>
+      {/each}
+    </div>
   </div>
 </div>
 
