@@ -1,15 +1,14 @@
 <script>
-  import { aside } from '$lib/utils/stores.js';
-  import { fade } from 'svelte/transition';
+  import { fly } from 'svelte/transition';
+  import { cubicOut } from 'svelte/easing'
   import Header from '$lib/components/Header.svelte';
   import Footer from '$lib/components/Footer.svelte';
   import Sidebar from '$lib/components/Sidebar.svelte';
   import '../app.css';
 
-  export let data;
+  $: time = (data.path != '/') ? 750 : 0;
 
-  const _in = { duration: 150, delay: 150 };
-  const _out = { duration: 100 };
+  export let data;
 </script>
 
 {#key data.path}
@@ -17,7 +16,7 @@
     <Header />
     <Sidebar />
   {/if}
-  <main class="container z-0 my-20 font-body" in:fade={_in} out:fade={_out} class:blurify={$aside}>
+  <main class="container z-0 my-20 font-body" in:fly={{ duration: time, delay: 150, y: 25, easing: cubicOut }}>
     <slot />
     {#if data.path != '/'}
       <Footer />

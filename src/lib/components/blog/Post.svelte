@@ -6,7 +6,7 @@
   export let tags;
 </script>
 
-<a data-sveltekit-prefetch href={path} class="border border-neutral-700 rounded p-4 w-full hover:text-white">
+<a href={path} class="border border-neutral-700 rounded p-4 w-full hover:text-white">
   <div class="flex flex-col md:flex-row gap-4 md:gap-8">
     <div class="basis-2/5">
       <img src={img} alt="blog post descriptor" class="rounded object-cover h-64 w-full" />
