@@ -10,6 +10,14 @@ module.exports = {
       md: '768px',
       lg: '1024px'
     },
+    container: {
+      center: true,
+      padding: '1rem'
+    },
+    fontFamily: {
+      body: ['Fira-Sans', 'sans-serif'],
+      title: ['monospace']
+    },
     extend: {
       colors: {
         'app-bg': colors.black,
@@ -46,14 +54,6 @@ module.exports = {
           }
         }
       })
-    },
-    container: {
-      center: true,
-      padding: '1rem'
-    },
-    fontFamily: {
-      body: ['Fira-Sans', 'sans-serif'],
-      title: ['monospace']
     }
   },
   plugins: [require('@tailwindcss/typography')]

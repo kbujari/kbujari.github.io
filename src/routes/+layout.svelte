@@ -1,12 +1,12 @@
 <script>
   import { fly } from 'svelte/transition';
-  import { cubicOut } from 'svelte/easing'
+  import { cubicOut } from 'svelte/easing';
   import Header from '$lib/components/Header.svelte';
   import Footer from '$lib/components/Footer.svelte';
   import Sidebar from '$lib/components/Sidebar.svelte';
   import '../app.css';
 
-  $: time = (data.path != '/') ? 750 : 0;
+  $: time = data.path != '/' ? 750 : 0;
 
   export let data;
 </script>

@@ -20,10 +20,6 @@
     @apply text-slate-300 hover:text-white transition duration-300;
   }
 
-  .blurify {
-    @apply transition blur-sm cursor-default duration-300;
-  }
-
   .container {
     @apply leading-normal text-base md:text-lg;
   }
