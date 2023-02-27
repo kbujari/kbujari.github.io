@@ -17,4 +17,4 @@ opt-level = 1
 opt-level = 3
 ```
 
-Without any real downsides other than a longer initial build when using a high opt-level like 3, you now have more efficient code for use with your program.
+Without any real downsides other than a longer initial build when using a high opt-level like 3, you now have faster and more efficient dev builds for your code.

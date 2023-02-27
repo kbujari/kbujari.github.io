@@ -1,11 +1,12 @@
 export const fetchPosts = async () => {
-  const allFiles = import.meta.glob('/src/routes/blog/*.md');
+  const allFiles = import.meta.glob('/src/routes/blog/posts/*.md');
   const iterables = Object.entries(allFiles);
 
   const allPosts = await Promise.all(
     iterables.map(async ([path, resolver]) => {
       const { metadata } = await resolver();
-      const postPath = path.slice(11, -3);
+      const postPath = '/blog/' + path.slice('/src/routes/blog/posts/'.length, -3);
+      // const postPath = path.slice('/src/routes/'.length, -3);
 
       return {
         meta: metadata,

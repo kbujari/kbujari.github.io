@@ -39,11 +39,11 @@
   </div>
 </div>
 
-<div class="prose md:prose-lg max-w-none prose-a:link">
+<article class="prose md:prose-lg max-w-none prose-a:link">
   <svelte:component this={data.content} />
   {#if y > 800}
     <div class="bg-app-bg icon rounded-full p-2 border-2 bottom-6 right-6 fixed hover:cursor-pointer" on:keydown={toTop} on:click={toTop} in:fade out:fade={{ duration: 150 }}>
       <ArrowUp size="36" strokeWidth="1.5" />
     </div>
   {/if}
-</div>
+</article>
