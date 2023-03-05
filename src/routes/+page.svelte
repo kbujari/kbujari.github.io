@@ -2,7 +2,6 @@
   import IconLinks from '$lib/components/IconLinks.svelte';
   import { ArrowRightCircleIcon } from 'lucide-svelte';
   import { fade } from 'svelte/transition';
-
 </script>
 
 <svelte:head>
