@@ -17,6 +17,9 @@
 
 <svelte:head>
   <title>{data.title} - KB</title>
+  <meta property="og:title" content={data.title}>
+  <meta property="og:description" content={data.title}>
+  <meta property="og:image" content={data.imgurl}>
 </svelte:head>
 
 <svelte:window bind:scrollY={y} />
