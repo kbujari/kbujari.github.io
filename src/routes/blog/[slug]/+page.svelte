@@ -1,6 +1,7 @@
 <script>
   import { fade } from 'svelte/transition';
-  import { ArrowUp, CalendarDays, Tags } from 'lucide-svelte';
+  import { ArrowUp } from 'lucide-svelte';
+  import Tags from '$lib/components/blog/Tags.svelte';
   import './code-highlight.css';
 
   export let data;
@@ -24,20 +25,7 @@
   <p class="text-4xl text-center font-title font-bold">{data.title}</p>
 </div>
 
-<div class="my-8 flex flex-col items-start justify-center gap-4">
-  <div class="flex items-center gap-4">
-    <CalendarDays size="36" strokeWidth="1.5" />
-    <p class="rounded border p-1 border-neutral-700 pointer-events-none">{data.date}</p>
-  </div>
-  <div class="flex gap-4 items-center">
-    <Tags size="36" strokeWidth="1.5" />
-    <div class="flex items-center gap-2 flex-wrap">
-      {#each data.topics.split(' ') as tag}
-        <p class="rounded border p-1 border-neutral-700 pointer-events-none">{tag}</p>
-      {/each}
-    </div>
-  </div>
-</div>
+<Tags tags={data.topics.split(' ')} date={data.date} />
 
 <article class="prose md:prose-lg max-w-none prose-a:link">
   <svelte:component this={data.content} />
