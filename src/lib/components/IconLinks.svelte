@@ -1,5 +1,5 @@
 <script>
-  import { Paperclip, Mail, Github, Linkedin } from 'lucide-svelte';
+  import { Scroll, Mail, Github, Linkedin } from 'lucide-svelte';
 
   export let isSmall = true;
   let iconSize;
@@ -7,7 +7,7 @@
   isSmall ? (iconSize = '24') : (iconSize = '32');
 
   const options = [
-    { href: '/resume.pdf', title: 'Resume', component: Paperclip },
+    { href: '/resume.pdf', title: 'Resume', component: Scroll },
     { href: 'mailto:mail@kleidi.ca', title: 'Email', component: Mail },
     { href: 'https://github.com/kbzt', title: 'Github', component: Github },
     { href: 'https://www.linkedin.com/in/kleidib', title: 'LinkedIn', component: Linkedin }
