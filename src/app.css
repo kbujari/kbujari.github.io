@@ -9,18 +9,18 @@
 
 @layer utilities {
   .link {
-    @apply text-cyan-200 hover:text-cyan-600 font-bold underline decoration-2 underline-offset-4 transition;
+    @apply font-bold text-cyan-200 underline decoration-2 underline-offset-4 transition hover:text-cyan-600;
   }
 
   .route {
-    @apply text-slate-300 hover:text-white font-bold underline decoration-2 underline-offset-4 md:text-xl text-2xl transition font-title;
+    @apply font-title text-2xl font-bold text-slate-300 underline decoration-2 underline-offset-4 transition hover:text-white md:text-xl;
   }
 
   .icon {
-    @apply text-slate-300 hover:text-white transition duration-300;
+    @apply text-slate-300 transition duration-300 hover:text-white;
   }
 
   .container {
-    @apply leading-normal text-base md:text-lg;
+    @apply text-base leading-normal md:text-lg;
   }
 }
