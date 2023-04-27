@@ -1,7 +1,6 @@
 ---
 title: 'Making a high performance Windows 10 VM'
 date: '2022-01-15'
-imgurl: '/blog/windows-vm-passthrough/networks.jpg.webp'
 topics: 'VFIO Gaming Virtualization Medium'
 ---
 
@@ -23,7 +22,7 @@ Other than that, my experience was pretty standard. Setting up a VM through virt
 
 ## GPU Passthrough
 
-![vbios hex dump](/blog/windows-vm-passthrough/gpu-hex.png)
+![vbios hex dump](/src/lib/assets/blog/windows-vm-passthrough/gpu-hex.png)
 
 Above is my edited vBios file that is passed through to the VM. Usually, when you load into a graphical session, the vBios gets changed as you use the GPU. Because of this, a new vBios is given to the VM to use. Next, to add the GPU alongside any other devices such as a USB controller, I had to get the relevant IOMMU groups. Here's an example of what the GPU group looked like on my system:
 
@@ -59,7 +58,7 @@ This is accomplished with scripts that are triggered by the VM starting and stop
 
 Now that I had a working VM, the next goal was to reduce any latency and overhead from virtualising Windows. Since I planned to play some competitive games that don't run on linux, it was important to me to make it feel like I was playing on bare metal. The main things I used for this were CPU Pinning and HugePages [(Arch Wiki)](https://wiki.archlinux.org/title/KVM#Enabling_huge_pages). CPU pinning manually allocates certain threads to the VM so the host doesn't use them as well, introducing latency. This is configured on a per-CPU basis since every processor has it's own architechture. In my case, the Ryzen 7 3700x has the following layout:
 
-![vbios hex dump](/blog/windows-vm-passthrough/lstopo.png)
+![vbios hex dump](/src/lib/assets/blog/windows-vm-passthrough/lstopo.png)
 
 <br>
 
