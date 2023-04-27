@@ -35,7 +35,7 @@
 
 <div class="relative h-64 bg-white md:h-96">
   <Img src={cover} alt="" class="h-full w-full object-cover brightness-50" />
-  <p class="absolute top-1/2 left-1/2 w-2/3 -translate-x-1/2 -translate-y-1/2 text-center font-title text-4xl font-bold">{data.title}</p>
+  <p class="absolute left-1/2 top-1/2 w-2/3 -translate-x-1/2 -translate-y-1/2 text-center font-title text-4xl font-bold">{data.title}</p>
 </div>
 
 <Tags tags={data.topics.split(' ')} date={data.date} />

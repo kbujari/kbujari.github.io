@@ -14,7 +14,6 @@
 </svelte:head>
 
 <Title text="Gallery" isBig={true} />
-<p>Coming soon.</p>
 <div class="xl:columns-3 mt-4 columns-1 gap-4 md:columns-2">
   {#each Object.values(pictures) as p}
     <Img src={p} alt="" class="mb-4" />
