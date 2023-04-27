@@ -6,19 +6,19 @@
   import Sidebar from '$lib/components/Sidebar.svelte';
   import '../app.css';
 
-  $: time = data.path != '/' ? 750 : 0;
+  $: is_root = data.path != '/';
 
   export let data;
 </script>
 
 {#key data.path}
-  {#if data.path != '/'}
+  {#if is_root}
     <Header />
     <Sidebar />
   {/if}
-  <main class="container z-0 my-20 font-body" in:fly={{ duration: time, delay: 150, y: 25, easing: cubicOut }}>
+  <main class="container z-0 my-20 font-body" in:fly={{ duration: is_root ? 750 : 0, delay: 150, y: 25, easing: cubicOut }}>
     <slot />
-    {#if data.path != '/'}
+    {#if is_root}
       <Footer />
     {/if}
   </main>

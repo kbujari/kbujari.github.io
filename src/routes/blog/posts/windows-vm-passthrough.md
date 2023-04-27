@@ -1,7 +1,6 @@
 ---
 title: 'Making a high performance Windows 10 VM'
 date: '2022-01-15'
-imgurl: '/blog/windows-vm-passthrough/networks.jpg.webp'
 topics: 'VFIO Gaming Virtualization Medium'
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: 'Enabling Rust compiler optimizations for dev builds'
 date: '2023-02-01'
-imgurl: '/blog/optimize-rust-deps/rocket.jpg.webp'
 topics: 'Rust Short'
 ---
 
