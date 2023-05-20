@@ -14,6 +14,5 @@ export const aside = createAside();
 export const routes = readable([
   { name: 'Home', src: '/' },
   { name: 'Info', src: '/info' },
-  { name: 'Blog', src: '/blog' },
-  { name: 'Photos', src: '/photos' }
+  { name: 'Blog', src: '/blog' }
 ]);

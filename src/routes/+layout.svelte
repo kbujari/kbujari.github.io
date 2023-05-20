@@ -16,7 +16,15 @@
     <Header />
     <Sidebar />
   {/if}
-  <main class="container z-0 my-20 font-body" in:fly={{ duration: is_root ? 750 : 0, delay: 150, y: 25, easing: cubicOut }}>
+  <main
+    class="container z-0 my-20 font-body"
+    in:fly={{
+      duration: is_root ? 750 : 0,
+      delay: 150,
+      y: 25,
+      easing: cubicOut
+    }}
+  >
     <slot />
     {#if is_root}
       <Footer />

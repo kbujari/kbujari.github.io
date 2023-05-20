@@ -9,7 +9,7 @@
 
 @layer utilities {
   .link {
-    @apply font-bold text-cyan-200 underline decoration-2 underline-offset-4 transition hover:text-cyan-600;
+    @apply font-bold text-[#98bb6c] underline decoration-2 underline-offset-4 transition hover:text-[#76946a];
   }
 
   .route {

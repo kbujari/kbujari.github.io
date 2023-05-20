@@ -5,8 +5,8 @@ export const fetchPosts = async () => {
   const allPosts = await Promise.all(
     iterables.map(async ([path, resolver]) => {
       const { metadata } = await resolver();
-      const postPath = '/blog/' + path.slice('/src/routes/blog/posts/'.length, -3);
-      // const postPath = path.slice('/src/routes/'.length, -3);
+      const postPath =
+        '/blog/' + path.slice('/src/routes/blog/posts/'.length, -3);
 
       return {
         meta: metadata,

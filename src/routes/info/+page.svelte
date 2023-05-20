@@ -7,16 +7,44 @@
 </svelte:head>
 
 <Title text="Info" isBig={true} />
-<p>I'm a Computer Engineering student in Toronto, Canada passionate about operating systems, robotics, circuit design, and online security/privacy. In my free time, I'm usually spending too much time ricing my unix setups or working on a very overkill home server (blog post coming soon once I settle on a setup I like).</p>
+<p>
+  I'm a Computer Engineering student in Toronto, CA interested in
+  online privacy, cryptography, and RF communications. The majority of my
+  free time is spent hacking on personal projects mainly involving networks
+  and Rust, otherwise I'll be working out or playing basketball.
+</p>
 
 <Title text="Contact" />
 <p>
   The best way to reach me is by email at
-  <a href="mailto:mail@kleidi.ca" target="_blank" rel="noreferrer" title="Email" class="link">mail@kleidi.ca</a>. Also check out my
-  <a href="/resume.pdf" target="_blank" rel="noreferrer" title="Resume" class="link">resume</a>.
+  <a
+    href="mailto:mail@kleidi.ca"
+    target="_blank"
+    rel="noreferrer"
+    title="Email"
+    class="link">mail@kleidi.ca</a
+  >.
 </p>
-<Title text="Website" />
+
+<Title text="Disclaimer" />
 <p>
-  This site is built with SvelteKit/TailwindCSS and prerendered to be lightweight and speedy. Feel free to view the <a href="https://github.com/kbzt/kleidi.ca" target="_blank" rel="noreferrer" title="Source" class="link">source code</a>
-  and leave a star if you'd like. If you're interested, the two fonts used are <a href="https://github.com/bBoxType/FiraSans" target="_blank" rel="noreferrer" class="link">Fira Sans</a> and standard monospace.
+  Any opinons here are my own and do not reflect those of my employer or
+  school. Feel free to use anything on this site for reference, but please give
+  credit when appropriate.
+  <br /><br />
+
+  This site is built using SvelteKit and is
+  <a
+    href="https://github.com/kbzt/kleidi.ca"
+    target="_blank"
+    rel="noreferrer"
+    title="Source"
+    class="link">open source</a
+  >. If you're interested, the two fonts used are
+  <a
+    href="https://github.com/bBoxType/FiraSans"
+    target="_blank"
+    rel="noreferrer"
+    class="link">Fira Sans</a
+  > and standard monospace.
 </p>

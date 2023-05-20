@@ -20,7 +20,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        'app-bg': colors.black,
+        'app-bg': '#16161d',
         'app-fg': colors.neutral
       },
       typography: (theme) => ({
