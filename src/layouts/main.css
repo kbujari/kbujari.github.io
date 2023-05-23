@@ -22,7 +22,7 @@
 
   .link {
     @apply font-title font-bold
-    text-zinc-300 decoration-2 decoration-dashed
+    text-zinc-300 decoration-dashed decoration-2
     underline-offset-4 transition hover:underline;
   }
 

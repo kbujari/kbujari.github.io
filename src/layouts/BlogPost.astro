@@ -7,8 +7,8 @@ type Props = CollectionEntry<'blog'>['data'];
 const { title, pubDate, updatedDate } = Astro.props;
 ---
 
-<article class="prose-lg prose-a:link prose-img:mx-auto prose-h2:font-title">
-  <h1 class="">{title}</h1>
+<article class='prose-a:link prose-lg prose-h2:font-title prose-img:mx-auto'>
+  <h1 class=''>{title}</h1>
   <FormattedDate date={pubDate} />
   {
     updatedDate && (
