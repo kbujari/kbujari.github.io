@@ -20,7 +20,7 @@ const { href, title, pubDate, description } = Astro.props;
         <Icon pack='lucide' name='clock' size='24' />
         <FormattedDate date={pubDate} />
       </span>
-      <p>{description}</p>
+      <p class="line-clamp-3">{description}</p>
     </div>
   </li>
 </a>

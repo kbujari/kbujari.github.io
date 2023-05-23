@@ -21,7 +21,7 @@
   }
 
   .link {
-    @apply font-title font-bold
+    @apply font-title
     text-zinc-300 decoration-dashed decoration-2
     underline-offset-4 transition hover:underline;
   }
