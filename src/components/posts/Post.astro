@@ -16,7 +16,7 @@ const { href, title, pubDate, description } = Astro.props;
   <li class='flex flex-col gap-2'>
     <h1 class='link text-xl font-bold'>{title}</h1>
     <div>
-      <span class='flex items-center gap-1'>
+      <span class='flex items-center gap-2'>
         <Icon pack='lucide' name='clock' size='24' />
         <FormattedDate date={pubDate} />
       </span>
