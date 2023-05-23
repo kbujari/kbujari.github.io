@@ -3,8 +3,8 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  content: ['./src/**/*.{html,js,svelte,ts}'],
-  theme: {
+	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	theme: {
     screens: {
       sm: '640px',
       md: '768px',
@@ -15,46 +15,15 @@ module.exports = {
       padding: '1rem'
     },
     fontFamily: {
-      body: ['Fira-Sans', 'sans-serif'],
-      title: ['monospace']
+      body: ['ibm-plex-sans', 'sans-serif'],
+      title: ['ibm-plex-mono', 'monospace']
     },
     extend: {
       colors: {
-        'app-bg': '#16161d',
-        'app-fg': colors.neutral
+        'app-bg': '#0d0d0d',
+        'app-fg': '#a5a2a2'
       },
-      typography: (theme) => ({
-        DEFAULT: {
-          css: {
-            color: theme('colors.neutral.300'),
-            h1: {
-              fontFamily: 'monospace',
-              fontWeight: '800',
-              color: theme('colors.red.400')
-            },
-            h2: {
-              fontFamily: 'monospace',
-              fontWeight: '700',
-              color: theme('colors.neutral.200')
-            },
-            'ol li::marker': {
-              color: theme('colors.neutral.100')
-            },
-            blockquote: {
-              color: theme('colors.neutral.300'),
-              backgroundColor: theme('colors.neutral.900'),
-              borderRadius: '0.25rem',
-              padding: '2px'
-            },
-            img: {
-              borderRadius: '0.25rem',
-              margin: 'auto'
-            },
-            strong: { color: theme('colors.neutral.100') }
-          }
-        }
-      })
-    }
+    },
   },
-  plugins: [require('@tailwindcss/typography')]
-};
+  plugins: [require('@tailwindcss/typography')],
+}

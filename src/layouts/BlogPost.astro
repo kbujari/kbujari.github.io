@@ -1,0 +1,22 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import FormattedDate from '../components/FormattedDate.astro';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, pubDate, updatedDate } = Astro.props;
+---
+
+<article class="prose-lg prose-a:link prose-img:mx-auto prose-h2:font-title">
+  <h1 class="">{title}</h1>
+  <FormattedDate date={pubDate} />
+  {
+    updatedDate && (
+      <div class='last-updated-on'>
+        Last updated on <FormattedDate date={updatedDate} />
+      </div>
+    )
+  }
+  <hr />
+  <slot />
+</article>

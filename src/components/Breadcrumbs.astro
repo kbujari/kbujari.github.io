@@ -1,0 +1,46 @@
+---
+import { Icon } from 'astro-icon';
+
+// Normalize current URL and split into array
+const currentUrlPath = Astro.url.pathname.replace(/\/+$/, '');
+const breadcrumbList = currentUrlPath.split('/').slice(1);
+
+// if breadcrumb is Home > Posts > 1 <etc>
+// replace Posts with Posts (page number)
+// breadcrumbList[0] === "posts" &&
+// breadcrumbList.splice(0, 2, `Posts (page ${breadcrumbList[1] || 1})`);
+---
+
+<nav class='font-title' aria-label='breadcrumb'>
+  <ul class='flex items-center gap-1'>
+    <li>
+      <a href='/' class='link text-lg'>Home</a>
+    </li>
+    <span aria-hidden='true'>
+      <Icon pack='lucide' name='arrow-right' size='20' />
+    </span>
+    {
+      breadcrumbList.map((breadcrumb, index) =>
+        index + 1 === breadcrumbList.length ? (
+          <li>
+            <span class='text-lg capitalize' aria-current='page'>
+              {/* make the last part lowercase in Home > Tags > some-tag */}
+              {breadcrumb}
+            </span>
+          </li>
+        ) : (
+          <>
+            <li>
+              <a href={`/${breadcrumb}`} class='link text-lg capitalize'>
+                {breadcrumb}
+              </a>
+            </li>
+            <span aria-hidden='true'>
+              <Icon pack='lucide' name='arrow-right' size='20' />
+            </span>
+          </>
+        )
+      )
+    }
+  </ul>
+</nav>

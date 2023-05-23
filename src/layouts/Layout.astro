@@ -1,0 +1,61 @@
+---
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import { SITE } from '@consts';
+import './main.css';
+
+export interface Props {
+  title: string;
+  author?: string;
+  description?: string;
+}
+
+const {
+  title = SITE.title,
+  author = SITE.author,
+  description = SITE.description
+} = Astro.props;
+
+let show_path = Astro.url.pathname === '/';
+---
+
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <meta property='locale' content='en_US' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+
+    <title>{`${title} | Kleidi Bujari`}</title>
+    <meta name='author' content={author} />
+    <meta name='description' content={description} />
+
+    <link
+      rel='preload'
+      href='/fonts/ibm-plex-sans-regular.woff2'
+      as='font'
+      type='font/woff2'
+      crossorigin
+    />
+    <link
+      rel='preload'
+      href='/fonts/ibmplexmono-medium.woff2'
+      as='font'
+      type='font/woff2'
+      crossorigin
+    />
+    <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
+    <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
+    <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
+    <link rel='manifest' href='/site.webmanifest' />
+  </head>
+  <body class='container bg-app-bg font-body text-app-fg antialiased'>
+    <Header />
+    {!show_path && <Breadcrumbs />}
+    <main class='my-12'>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

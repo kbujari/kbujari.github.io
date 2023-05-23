@@ -1,0 +1,29 @@
+---
+import { Icon } from 'astro-icon';
+import { LINKS } from '@consts';
+
+const year = new Date().getFullYear();
+---
+
+<footer
+  class='mb-12 flex flex-col items-center justify-between gap-8 border-t border-neutral-700 pt-8 md:flex-row md:gap-0'
+>
+  <p class='text-sm md:text-lg'>
+    Copyright &copy; {year} Kleidi Bujari. All rights reserved.
+  </p>
+  <div class='flex gap-2'>
+    {
+      LINKS.map((link) => (
+        <a
+          href={link.href}
+          target='_blank'
+          rel='noreferrer'
+          title={link.title}
+          class='link'
+        >
+          <Icon pack='lucide' name={link.icon} size='24' />
+        </a>
+      ))
+    }
+  </div>
+</footer>
