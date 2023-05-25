@@ -6,15 +6,15 @@ import { getCollection } from 'astro:content';
 import { Icon } from 'astro-icon';
 
 const posts = (await getCollection('blog'))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 3);
+.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+.slice(0, 3);
 ---
 
 <Layout title='Home'>
   <section class='border-b border-neutral-700'>
     <h1 class='mb-6 flex items-center gap-2 font-title text-3xl text-zinc-300'>
       Kleidi Bujari
-      <a href='/rss.xml' target='_blank'>
+      <a href='/rss.xml' target='_blank' aria-label="rss feed">
         <Icon pack='lucide' name='rss' size='24' />
       </a>
     </h1>
@@ -24,14 +24,16 @@ const posts = (await getCollection('blog'))
   <section>
     <ul class='flex flex-col gap-6'>
       {
-        posts.map((post) => (
+      posts.map((post) => (
+        <li>
           <Post
             href={`/posts/${post.slug}`}
             title={post.data.title}
             pubDate={post.data.pubDate}
             description={post.data.description}
           />
-        ))
+        </li>
+      ))
       }
     </ul>
   </section>

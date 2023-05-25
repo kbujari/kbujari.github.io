@@ -12,15 +12,13 @@ export interface Props {
 const { href, title, pubDate, description } = Astro.props;
 ---
 
-<a {href}>
-  <li class='flex flex-col gap-2'>
-    <h1 class='link text-xl font-bold'>{title}</h1>
-    <div>
-      <span class='flex items-center gap-2'>
-        <Icon pack='lucide' name='clock' size='24' />
-        <FormattedDate date={pubDate} />
-      </span>
-      <p class="line-clamp-3">{description}</p>
-    </div>
-  </li>
+<a {href} class='flex flex-col gap-2'>
+  <h1 class='link text-xl font-bold'>{title}</h1>
+  <div>
+    <span class='flex items-center gap-2'>
+      <Icon pack='lucide' name='clock' size='24' />
+      <FormattedDate date={pubDate} />
+    </span>
+    <p class="line-clamp-3">{description}</p>
+  </div>
 </a>
