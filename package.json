@@ -26,7 +26,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "github:tailwindcss/typography",
     "prettier": "^2.8.8",
-    "prettier-plugin-astro": "^0.9.0",
+    "prettier-plugin-astro": "^0.10.0",
     "prettier-plugin-tailwindcss": "^0.3.0",
     "svgo": "^2.8.0"
   }
