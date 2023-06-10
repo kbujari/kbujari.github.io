@@ -28,6 +28,6 @@
     "prettier": "^2.8.8",
     "prettier-plugin-astro": "^0.10.0",
     "prettier-plugin-tailwindcss": "^0.3.0",
-    "svgo": "^2.8.0"
+    "svgo": "^3.0.2"
   }
 }
