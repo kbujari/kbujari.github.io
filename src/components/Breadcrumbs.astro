@@ -23,8 +23,7 @@ const breadcrumbList = currentUrlPath.split('/').slice(1);
       breadcrumbList.map((breadcrumb, index) =>
         index + 1 === breadcrumbList.length ? (
           <li>
-            <span class='text-lg capitalize line-clamp-1' aria-current='page'>
-              {/* make the last part lowercase in Home > Tags > some-tag */}
+            <span class='line-clamp-1 text-lg capitalize' aria-current='page'>
               {breadcrumb}
             </span>
           </li>

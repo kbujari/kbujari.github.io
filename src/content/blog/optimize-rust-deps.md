@@ -1,5 +1,5 @@
 ---
-title: 'Enabling Rust compiler optimizations for dev builds'
+title: 'Improving Rust dev builds'
 description: 'Quick tip for Rust development builds to apply optimizations to cargo dependencies, making use of incremental compilations.'
 pubDate: 'Feb 1 2022'
 ---

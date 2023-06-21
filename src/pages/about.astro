@@ -1,6 +1,8 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Title from '@components/Title.astro';
+
+const year = new Date().getFullYear();
 ---
 
 <Layout title='About'>
@@ -13,25 +15,16 @@ import Title from '@components/Title.astro';
   </p>
 
   <Title text='Contact' />
-  <p>
-    The best way to reach me is by email at
-    <a
-      href='mailto:mail@kleidi.ca'
-      target='_blank'
-      rel='noreferrer'
-      title='Email'
-      class='link'>mail@kleidi.ca</a
-    >.
-  </p>
+  <p>The best way to reach me is by email: mail at kleidi dot ca</p>
 
   <Title text='Disclaimer' />
   <p>
     Any opinons here are my own and do not reflect those of my employer or
     school. Feel free to use anything on this site for reference, but please
-    give credit when appropriate.
+    give credit when appropriate. &copy; {year} All rights reserved.
     <br /><br />
 
-    This site is built using Astro and is
+    This site is built using AstroJS and is
     <a
       href='https://github.com/kbzt/kleidi.ca'
       target='_blank'

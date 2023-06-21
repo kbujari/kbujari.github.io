@@ -1,23 +1,39 @@
 ---
 import { CollectionEntry, getCollection } from 'astro:content';
-import BlogPost from '../../layouts/BlogPost.astro';
 import Layout from '@layouts/Layout.astro';
+import FormattedDate from '@components/FormattedDate.astro';
 
-export async function getStaticPaths() {
+export const getStaticPaths = async () => {
   const posts = await getCollection('blog');
   return posts.map((post) => ({
     params: { slug: post.slug },
     props: post
   }));
-}
-type Props = CollectionEntry<'blog'>;
+};
 
+type Props = CollectionEntry<'blog'>;
 const post = Astro.props;
+
+const prose_opts = [
+  'prose-a:link',
+  'prose-h2:font-title',
+  'prose-h2:font-bold',
+  'prose-img:mx-auto',
+  'prose-ol:list-decimal',
+  'prose-ul:list-disc'
+].join(' ');
+
 const { Content } = await post.render();
 ---
 
 <Layout title={post.data.title}>
-  <BlogPost {...post.data}>
+  <div class='mb-8 border-b border-app-fg'>
+    <h1 class='text-5xl'>{post.data.title}</h1>
+    <h1 class='text-app-faded my-4 text-lg'>
+      <FormattedDate date={post.data.pubDate} />
+    </h1>
+  </div>
+  <article class={prose_opts + ' prose-lg'}>
     <Content />
-  </BlogPost>
+  </article>
 </Layout>

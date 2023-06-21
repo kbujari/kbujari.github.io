@@ -2,15 +2,15 @@ import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 import { SITE } from '../consts';
 
-export async function get(context) {
+export const get = async () => {
   const posts = await getCollection('blog');
   return rss({
-    title: SITE.title,
+    title: 'RSS Feed | Kleidi Bujari',
     description: SITE.description,
-    site: context.site,
+    site: SITE.website,
     items: posts.map((post) => ({
       ...post.data,
       link: `/posts/${post.slug}/`
     }))
   });
-}
+};
