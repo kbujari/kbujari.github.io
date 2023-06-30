@@ -1,0 +1,35 @@
+---
+import FormattedDate from "@components/FormattedDate.astro";
+import { getCollection } from "astro:content";
+import { Icon } from "astro-icon";
+
+export interface Props {
+  take?: number;
+}
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const { take = posts.length } = Astro.props;
+---
+
+<div class="flex flex-col gap-6">
+  {
+    posts.slice(0, take).map((post) => (
+      <a
+        href={`/posts/${post.slug}`}
+        class="flex flex-col gap-1 rounded border border-neutral-700 p-4"
+      >
+        <span class="link text-xl">{post.data.title}</span>
+        <div>
+          <span class="text-medium flex items-center gap-2">
+            <Icon name="clarity:date-line" size="24" />
+            <FormattedDate date={post.data.pubDate} />
+          </span>
+        </div>
+        <p class="mb-0 line-clamp-3">{post.data.description}</p>
+      </a>
+    ))
+  }
+</div>

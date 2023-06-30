@@ -1,32 +1,38 @@
 ---
-import { Icon } from 'astro-icon';
-import { LINKS } from '@consts';
+import { Icon } from "astro-icon";
+import { LINKS } from "@consts";
+
+const year = new Date().getFullYear();
 ---
 
 <footer
-  class='mb-12 flex items-center justify-between border-t border-neutral-700 pt-8'
+  class="mb-12 flex flex-row items-center justify-between gap-4 border-t border-neutral-700 pb-6 pt-8"
 >
-  <div class='flex items-center gap-2'>
-    <a href='/rss.xml' class='link'><p>rss</p></a>
-    <p>/</p>
-    <a href='/sitemap-0.xml' class='link'><p>sitemap</p></a>
-    <p>/</p>
-    <a href='/resume.pdf' class='link'><p>resume</p></a>
+  <div class="flex basis-1/5 gap-2">
+    <a href="/rss.xml" class="link">rss</a>
+    <span>/</span>
+    <a href="/sitemap-0.xml" class="link">sitemap</a>
   </div>
 
-  <p class='flex gap-2'>
+  <!--
+  <div class="justify-self-end">
+    <span>&copy; {year} Kleidi Bujari</span>
+  </div>
+  -->
+
+  <div class="flex basis-1/5 justify-end gap-2">
     {
       LINKS.map((link) => (
         <a
           href={link.href}
-          target='_blank'
-          rel='noreferrer'
+          target="_blank"
+          rel="noreferrer"
           title={link.title}
-          class='link'
+          class="link"
         >
-          <Icon pack='lucide' name={link.icon} size='24' />
+          <Icon pack="lucide" name={link.icon} size="24" />
         </a>
       ))
     }
-  </p>
+  </div>
 </footer>

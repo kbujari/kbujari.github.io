@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: latest
-          cache: 'npm'
+          cache: "npm"
 
       - name: Clean install node dependcies
         run: npm ci

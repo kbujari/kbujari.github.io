@@ -1,45 +1,38 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from "astro-icon";
 
-// Normalize current URL and split into array
-const currentUrlPath = Astro.url.pathname.replace(/\/+$/, '');
-const breadcrumbList = currentUrlPath.split('/').slice(1);
-
-// if breadcrumb is Home > Posts > 1 <etc>
-// replace Posts with Posts (page number)
-// breadcrumbList[0] === "posts" &&
-// breadcrumbList.splice(0, 2, `Posts (page ${breadcrumbList[1] || 1})`);
+const list = Astro.url.pathname.replace(/\/+$/, "").split("/").slice(1);
 ---
 
-<nav class='font-title' aria-label='breadcrumb'>
-  <ul class='flex items-center gap-1'>
+<nav class="font-title mt-4" aria-label="breadcrumb">
+  <menu class="flex items-center gap-1">
     <li>
-      <a href='/' class='link text-lg'>Home</a>
+      <a href="/" class="link text-lg">Home</a>
     </li>
-    <span aria-hidden='true'>
-      <Icon pack='lucide' name='arrow-right' size='20' />
+    <span aria-hidden="true">
+      <Icon pack="lucide" name="arrow-right" size="20" />
     </span>
     {
-      breadcrumbList.map((breadcrumb, index) =>
-        index + 1 === breadcrumbList.length ? (
+      list.map((breadcrumb, index) =>
+        index + 1 === list.length ? (
           <li>
-            <span class='line-clamp-1 text-lg capitalize' aria-current='page'>
+            <span class="line-clamp-1 text-lg capitalize" aria-current="page">
               {breadcrumb}
             </span>
           </li>
         ) : (
           <>
             <li>
-              <a href={`/${breadcrumb}`} class='link text-lg capitalize'>
+              <a href={`/${breadcrumb}`} class="link text-lg capitalize">
                 {breadcrumb}
               </a>
             </li>
-            <span aria-hidden='true'>
-              <Icon pack='lucide' name='arrow-right' size='20' />
+            <span aria-hidden="true">
+              <Icon pack="lucide" name="arrow-right" size="20" />
             </span>
           </>
         )
       )
     }
-  </ul>
+  </menu>
 </nav>

@@ -3,9 +3,9 @@
 
 export const SITE = {
   website: import.meta.env.SITE,
-  author: 'Kleidi Bujari',
-  description: 'Minimal blog, portfolio and personal website.',
-  title: 'Kleidi Bujari'
+  author: "Kleidi Bujari",
+  description: "Minimal blog, portfolio and personal website.",
+  title: "Kleidi Bujari",
 };
 
 // prettier-ignore

@@ -1,26 +1,10 @@
 ---
-import Layout from '@layouts/Layout.astro';
-import Post from '@components/posts/Post.astro';
-import { getCollection } from 'astro:content';
-
-const posts = (await getCollection('blog')).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+import Layout from "@layouts/Layout.astro";
+import Posts from "@components/Posts.astro";
 ---
 
-<Layout title={'Posts'}>
+<Layout title={"Posts"}>
   <section>
-    <ul class='flex flex-col gap-6'>
-      {
-        posts.map((post) => (
-          <Post
-            href={`/posts/${post.slug}`}
-            title={post.data.title}
-            pubDate={post.data.pubDate}
-            description={post.data.description}
-          />
-        ))
-      }
-    </ul>
+    <Posts />
   </section>
 </Layout>

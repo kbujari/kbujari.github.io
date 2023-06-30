@@ -1,12 +1,9 @@
 ---
-import Layout from '@layouts/Layout.astro';
-import Title from '@components/Title.astro';
-
-const year = new Date().getFullYear();
+import Layout from "@layouts/Layout.astro";
 ---
 
-<Layout title='About'>
-  <Title text='Info' />
+<Layout title="About">
+  <h2>Info</h2>
   <p>
     I'm a Computer Engineering student in Toronto, CA interested in online
     privacy, cryptography, and RF communications. The majority of my free time
@@ -14,23 +11,23 @@ const year = new Date().getFullYear();
     otherwise I'll be working out or playing basketball.
   </p>
 
-  <Title text='Contact' />
+  <h2>Contact</h2>
   <p>The best way to reach me is by email: mail at kleidi dot ca</p>
 
-  <Title text='Disclaimer' />
+  <h2>Disclaimer</h2>
   <p>
     Any opinons here are my own and do not reflect those of my employer or
     school. Feel free to use anything on this site for reference, but please
-    give credit when appropriate. &copy; {year} All rights reserved.
+    give credit when appropriate.
     <br /><br />
 
     This site is built using AstroJS and is
     <a
-      href='https://github.com/kbzt/kleidi.ca'
-      target='_blank'
-      rel='noreferrer'
-      title='Source'
-      class='link'>open-source</a
+      href="https://github.com/kbzt/kleidi.ca"
+      target="_blank"
+      rel="noreferrer"
+      title="Source"
+      class="link">open-source</a
     >.
   </p>
 </Layout>
