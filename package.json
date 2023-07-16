@@ -27,7 +27,7 @@
     "@tailwindcss/typography": "github:tailwindcss/typography",
     "prettier": "^3.0.0",
     "prettier-plugin-astro": "^0.11.0",
-    "prettier-plugin-tailwindcss": "^0.3.0",
+    "prettier-plugin-tailwindcss": "^0.4.1",
     "svgo": "2.8.0"
   }
 }
