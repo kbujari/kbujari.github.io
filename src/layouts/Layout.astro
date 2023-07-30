@@ -17,7 +17,8 @@ const {
   description = SITE.description,
 } = Astro.props;
 
-let show_path = Astro.url.pathname === "/";
+// Not shown for now
+let show_path = true/* Astro.url.pathname === "/" */;
 ---
 
 <!DOCTYPE html>

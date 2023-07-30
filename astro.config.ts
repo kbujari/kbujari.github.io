@@ -12,8 +12,14 @@ const config: AstroUserConfig = {
   markdown: {
     shikiConfig: { theme: 'vitesse-dark', wrap: false }
   },
-  experimental: { assets: true },
-  integrations: [mdx(), sitemap(), tailwind(), robotsTxt(), compress()]
+  experimental: {
+    assets: true,
+    viewTransitions: true
+  },
+  redirects: {
+    '/gh': 'https://github.com/kbujari',
+  },
+  integrations: [mdx(), sitemap(), tailwind(), robotsTxt(), compress({ img: false })]
 };
 
 export default defineConfig(config);

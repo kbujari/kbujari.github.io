@@ -37,8 +37,14 @@
   }
 
   .link {
-    @apply font-mono font-bold
-    text-neutral-300 decoration-dashed decoration-2
-    underline-offset-4 transition hover:underline;
+    @apply bg-emerald-200/5 underline
+    text-emerald-200 underline-offset-2 hover:bg-emerald-200/10 ;
+  }
+
+  .route {
+    @apply font-mono font-bold hover:underline
+    decoration-2 underline-offset-4 decoration-dashed
+    text-neutral-300;
+
   }
 }

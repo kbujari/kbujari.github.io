@@ -2,16 +2,16 @@
 import { Icon } from "astro-icon";
 import { LINKS } from "@consts";
 
-const year = new Date().getFullYear();
+// const year = new Date().getFullYear();
 ---
 
 <footer
   class="mb-12 flex flex-row items-center justify-between gap-4 border-t border-neutral-700 pb-6 pt-8"
 >
   <div class="flex basis-1/5 gap-2">
-    <a href="/rss.xml" class="link">rss</a>
+    <a href="/rss.xml" class="route">rss</a>
     <span>/</span>
-    <a href="/sitemap-0.xml" class="link">sitemap</a>
+    <a href="/sitemap-0.xml" class="route">sitemap</a>
   </div>
 
   <!--
@@ -28,7 +28,7 @@ const year = new Date().getFullYear();
           target="_blank"
           rel="noreferrer"
           title={link.title}
-          class="link"
+          class="route"
         >
           <Icon pack="lucide" name={link.icon} size="24" />
         </a>

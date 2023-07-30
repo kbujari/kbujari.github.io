@@ -4,32 +4,25 @@ import { Icon } from "astro-icon";
 const list = Astro.url.pathname.replace(/\/+$/, "").split("/").slice(1);
 ---
 
-<nav class="font-title mt-4" aria-label="breadcrumb">
+<nav class=" mt-4 line-clamp-1" aria-label="breadcrumb">
   <menu class="flex items-center gap-1">
-    <li>
-      <a href="/" class="link text-lg">Home</a>
-    </li>
-    <span aria-hidden="true">
-      <Icon pack="lucide" name="arrow-right" size="20" />
-    </span>
+    <span aria-hidden="true">/</span>
     {
       list.map((breadcrumb, index) =>
         index + 1 === list.length ? (
           <li>
-            <span class="line-clamp-1 text-lg capitalize" aria-current="page">
+            <span class="line-clamp-1" aria-current="page">
               {breadcrumb}
             </span>
           </li>
         ) : (
           <>
             <li>
-              <a href={`/${breadcrumb}`} class="link text-lg capitalize">
+              <a href={`/${breadcrumb}`}>
                 {breadcrumb}
               </a>
             </li>
-            <span aria-hidden="true">
-              <Icon pack="lucide" name="arrow-right" size="20" />
-            </span>
+            <span aria-hidden="true">/</span>
           </>
         )
       )
