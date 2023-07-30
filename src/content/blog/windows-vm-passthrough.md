@@ -8,7 +8,7 @@ In early 2021, I transitioned my personal computers to Arch Linux and while the 
 
 This led to the decision to use Windows for these as well as anything else not supported well by linux. At this point you might be asking why I'm not just dual-booting for simplicity. The main reasons are that I've gotten annoyed with a lot of the telemetry, excess, and clunkiness of running Windows natively on my desktop as well as for the sake of getting some experience with QEMU/KVM on Linux. Note that this won't be a full guide to the process, but more of a showcase on how I set it up for myself.
 
-Feel free to use anything mentioned here for yourself and be sure to follow along with the files mentioned by viewing them yourself on my [github](https://github.com/kleidibujari/virt-machine). Without further rambling, let's get into the important parts.
+Feel free to use anything mentioned here for yourself and be sure to follow along with the files mentioned by viewing them yourself on my [github](https://github.com/kbujari/virt-machine). Without further rambling, let's get into the important parts.
 
 ## Hardware & Specifications
 
