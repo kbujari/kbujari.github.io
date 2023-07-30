@@ -10,6 +10,8 @@ This led to the decision to use Windows for these as well as anything else not s
 
 Feel free to use anything mentioned here for yourself and be sure to follow along with the files mentioned by viewing them yourself on my [github](https://github.com/kbujari/virt-machine). Without further rambling, let's get into the important parts.
 
+## Table of Contents
+
 ## Hardware & Specifications
 
 **CPU:** AMD Ryzen 7 3700x <br>
