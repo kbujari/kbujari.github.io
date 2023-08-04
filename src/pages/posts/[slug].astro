@@ -18,13 +18,13 @@ const { Content } = await post.render();
 ---
 
 <Layout title={post.data.title}>
-  <section class="mb-8 border-b border-neutral-700">
+  <div class="mb-8 border-b border-neutral-700 pb-4 md:hidden">
     <h1>{post.data.title}</h1>
     <span class="text-medium flex items-center gap-2">
       <Icon name="clarity:date-line" size="24" />
       <FormattedDate date={post.data.pubDate} />
     </span>
-  </section>
+  </div>
   <article class="[&_img]:mx-auto [&_a]:link">
     <Content />
   </article>

@@ -1,6 +1,6 @@
 ---
 title: "Automate LaTeX builds with GH Actions"
-description: "Using GitHub Actions CI to build LaTeX projects with automatic tagging and releases"
+description: "Using GitHub Actions CI to build LaTeX projects with automatic tagging and releases."
 pubDate: "July 29 2023"
 ---
 

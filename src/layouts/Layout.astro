@@ -1,8 +1,12 @@
 ---
 import Header from "@components/Header.astro";
+import Sidebar from "@components/Sidebar.astro";
 import Footer from "@components/Footer.astro";
 import Breadcrumbs from "@components/Breadcrumbs.astro";
 import { SITE } from "@consts";
+
+import "@fontsource/fira-sans"
+
 import "@assets/css/global.css";
 
 export interface Props {
@@ -37,11 +41,16 @@ let show_path = true/* Astro.url.pathname === "/" */;
     <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
-    <Header />
     {!show_path && <Breadcrumbs />}
-    <main class="mt-10">
-      <slot />
-    </main>
-    <Footer />
+    <div class="flex">
+      <Sidebar text={title} />
+      <div class="w-full">
+        <Header />
+        <main class="mt-8 contain">
+          <slot />
+        </main>
+        <Footer />
+      </div>
+    </div>
   </body>
 </html>

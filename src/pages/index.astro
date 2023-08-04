@@ -5,14 +5,14 @@ import { Icon } from "astro-icon";
 ---
 
 <Layout title="Home">
-  <section class="border-b border-neutral-700">
+  <section>
     <h1 class="flex items-center gap-2">
       Welcome! <Icon name="charm:rocket" size={32} />
     </h1>
     <p>This is my minimal blog, portfolio and website for personal use.</p>
   </section>
   <section>
-    <h2 class="pb-4">Recent Posts</h2>
-    <Posts take={2} />
+    <h2>Recent Posts</h2>
+    <Posts take={3} />
   </section>
 </Layout>
