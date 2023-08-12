@@ -11,7 +11,7 @@
     "lint:write": "prettier --write ."
   },
   "dependencies": {
-    "@astrojs/rss": "2.4.3",
+    "@astrojs/rss": "2.4.4",
     "@astrojs/sitemap": "2.0.1",
     "@astrojs/tailwind": "4.0.0",
     "@fontsource/fira-sans": "5.0.8",
