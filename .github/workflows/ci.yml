@@ -3,25 +3,26 @@ name: ci
 on:
   workflow_dispatch:
   pull_request:
-    branches: ["main"]
+    branches: "main"
   push:
-    branches: ["main"]
+    branches: "main"
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ "16", "18", "latest" ]
+    name: Building with Node ${{ matrix.node }}
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Using latest Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: latest
+          node-version: ${{ matrix.node }}
           cache: "npm"
 
-      - name: Clean install node dependcies
+      - name: Clean install dependencies
         run: npm ci
 
-      - name: Build
+      - name: Test build
         run: npm run build --if-present
