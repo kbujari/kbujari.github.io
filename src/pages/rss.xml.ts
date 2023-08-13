@@ -7,7 +7,7 @@ export const get = async () => {
   return rss({
     title: "RSS Feed | Kleidi Bujari",
     description: SITE.description,
-    site: SITE.website,
+    site: import.meta.env.SITE,
     items: posts.map((post) => ({
       ...post.data,
       link: `/posts/${post.slug}/`,

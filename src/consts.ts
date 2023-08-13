@@ -2,7 +2,6 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const SITE = {
-  website: import.meta.env.SITE,
   author: "Kleidi Bujari",
   description: "Minimal blog, portfolio and personal website.",
   title: "Kleidi Bujari",

@@ -12,7 +12,7 @@
   }
 
   section {
-    @apply last:pb-16 pb-6 w-full border-b border-b-neutral-700 last:border-none;
+    @apply last:pb-16 last:border-none pb-6 w-full border-b border-b-neutral-700;
   }
 
   h1 {
@@ -23,31 +23,29 @@
     @apply my-6 font-mono text-3xl font-semibold text-neutral-300;
   }
 
-  p,
-  ul,
-  ol {
-    @apply mb-8 leading-relaxed;
+  p {
+    @apply mb-8 text-justify hyphens-auto;
   }
 
   ol {
-    @apply list-inside list-decimal;
+    @apply list-inside list-decimal mb-8;
   }
   ul {
-    @apply list-inside list-disc;
+    @apply list-inside list-disc mb-8;
   }
 
   pre {
-    @apply mb-8 rounded p-4 font-mono text-sm md:text-base;
+    @apply mb-8 p-4 font-mono text-sm md:text-base;
   }
 
   .link {
     @apply bg-emerald-200/5 underline inline
-    text-emerald-200 underline-offset-2 hover:bg-emerald-200/10;
+      text-emerald-200 underline-offset-2 hover:bg-emerald-200/10;
   }
 
   .route {
     @apply font-mono font-bold hover:underline
-    decoration-2 underline-offset-4 decoration-dashed
-    text-neutral-300;
+      decoration-2 underline-offset-4 decoration-dashed
+      text-neutral-300;
   }
 }

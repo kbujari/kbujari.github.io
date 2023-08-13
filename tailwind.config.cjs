@@ -10,7 +10,7 @@ module.exports = {
     },
     fontFamily: {
       mono: [def.fontFamily.mono],
-      sans: ["Fira Sans", ...def.fontFamily.sans],
+      sans: ["Overpass", ...def.fontFamily.sans],
     },
   },
 };
