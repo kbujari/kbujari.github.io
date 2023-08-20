@@ -12,20 +12,19 @@ export const getStaticPaths = async () => {
   }));
 };
 
-const post = Astro.props;
-
-const { Content } = await post.render();
+const { title, pubDate } = Astro.props.data;
+const { Content } = await Astro.props.render();
 ---
 
-<Layout title={post.data.title}>
-  <div class="mb-8 border-b border-neutral-700 pb-4 md:hidden">
-    <h1>{post.data.title}</h1>
+<Layout title={title}>
+  <div class="mb-8 border-b border-neutral-700 pb-4">
+    <h1>{title}</h1>
     <span class="text-medium flex items-center gap-2">
       <Icon name="clarity:date-line" size="24" />
-      <FormattedDate date={post.data.pubDate} />
+      <FormattedDate date={pubDate} />
     </span>
   </div>
-  <article class="[&_img]:mx-auto [&_a]:link">
+  <article class="[&_img]:mx-auto [&_a]:link [&_pre]">
     <Content />
   </article>
 </Layout>

@@ -1,11 +1,9 @@
 ---
 import Header from "@components/Header.astro";
-import Sidebar from "@components/Sidebar.astro";
 import Footer from "@components/Footer.astro";
-import Breadcrumbs from "@components/Breadcrumbs.astro";
+// import Sidebar from "@components/sidebar/Sidebar.astro";
 import { SITE } from "@consts";
 
-import "@fontsource/overpass";
 import "@assets/css/global.css";
 
 export interface Props {
@@ -19,9 +17,6 @@ const {
   author = SITE.author,
   description = SITE.description,
 } = Astro.props;
-
-// Not shown for now
-let show_path = true/* Astro.url.pathname === "/" */;
 ---
 
 <!DOCTYPE html>
@@ -40,16 +35,12 @@ let show_path = true/* Astro.url.pathname === "/" */;
     <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
-    {!show_path && <Breadcrumbs />}
-    <div class="flex">
-      <Sidebar text={title} />
-      <div class="w-full">
-        <Header />
-        <main class="mt-8 contain">
-          <slot />
-        </main>
-        <Footer />
-      </div>
+    <div class="container">
+      <Header />
+      <main class="mt-8">
+        <slot />
+      </main>
+      <Footer />
     </div>
   </body>
 </html>

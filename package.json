@@ -5,17 +5,15 @@
   "version": "2.0.0",
   "scripts": {
     "dev": "astro dev --host",
-    "build": "astro check && tsc --noEmit && astro build",
+    "build": "astro build",
+    "check": "astro check && tsc --noEmit && prettier --check .",
     "preview": "astro preview --host",
-    "lint:check": "prettier --check .",
-    "lint:write": "prettier --write ."
+    "lint": "prettier --write ."
   },
   "dependencies": {
-    "@astrojs/prefetch": "^0.3.0",
     "@astrojs/rss": "2.4.4",
     "@astrojs/sitemap": "2.0.1",
     "@astrojs/tailwind": "4.0.0",
-    "@fontsource/overpass": "5.0.8",
     "astro": "2.10.7",
     "astro-compress": "2.0.8",
     "astro-icon": "0.8.1",

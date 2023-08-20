@@ -4,11 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-neutral-900 font-sans text-base text-stone-400 md:text-lg;
-  }
-
-  .contain {
-    @apply mx-auto md:w-5/6 max-w-5xl px-4;
+    @apply bg-neutral-950 font-sans text-base md:text-lg text-neutral-400;
   }
 
   section {
@@ -16,20 +12,21 @@
   }
 
   h1 {
-    @apply mb-6 font-mono text-4xl font-semibold text-neutral-300;
+    @apply mb-6 text-4xl/none text-neutral-300;
   }
 
   h2 {
-    @apply my-6 font-mono text-3xl font-semibold text-neutral-300;
+    @apply my-6 text-3xl/none text-neutral-300;
   }
 
   p {
-    @apply mb-8 text-justify hyphens-auto;
+    @apply mb-8 leading-normal;
   }
 
   ol {
     @apply list-inside list-decimal mb-8;
   }
+
   ul {
     @apply list-inside list-disc mb-8;
   }
@@ -39,12 +36,12 @@
   }
 
   .link {
-    @apply bg-emerald-200/5 underline inline
+    @apply bg-emerald-200/5 underline
       text-emerald-200 underline-offset-2 hover:bg-emerald-200/10;
   }
 
   .route {
-    @apply font-mono font-bold hover:underline
+    @apply font-semibold hover:underline font-mono
       decoration-2 underline-offset-4 decoration-dashed
       text-neutral-300;
   }

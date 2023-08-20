@@ -1,16 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 
-const def = require("tailwindcss/defaultTheme");
-
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    screens: {
-      md: "720px",
+    container: {
+      center: true,
+      padding: "1rem",
     },
-    fontFamily: {
-      mono: [def.fontFamily.mono],
-      sans: ["Overpass", ...def.fontFamily.sans],
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
     },
   },
 };

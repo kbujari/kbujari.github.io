@@ -21,14 +21,14 @@ const { take = posts.length } = Astro.props;
         href={`/posts/${post.slug}`}
         class="flex flex-col gap-2"
       >
-        <span class="link w-fit text-xl">{post.data.title}</span>
+        <span class="link w-fit">{post.data.title}</span>
         <div>
-          <span class="text-medium flex items-center gap-2">
+          <span class="flex items-center gap-2">
             <Icon name="clarity:date-line" size="24" />
             <FormattedDate date={post.data.pubDate} />
           </span>
         </div>
-        <p class="mb-0 line-clamp-3">{post.data.description}</p>
+        <p class="mb-0 line-clamp-2">{post.data.description}</p>
       </a>
     ))
   }

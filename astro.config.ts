@@ -2,7 +2,6 @@ import { AstroUserConfig, defineConfig } from "astro/config";
 
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
-import prefetch from "@astrojs/prefetch";
 import compress from "astro-compress";
 import robotsTxt from "astro-robots-txt";
 
@@ -17,16 +16,8 @@ const config: AstroUserConfig = {
     },
     remarkPlugins: [remarkToc],
   },
-  experimental: {
-    assets: true,
-  },
-  integrations: [
-    sitemap(),
-    tailwind(),
-    robotsTxt(),
-    prefetch(),
-    compress({ img: false }),
-  ],
+  experimental: { assets: true },
+  integrations: [sitemap(), tailwind(), robotsTxt(), compress({ img: false })],
 };
 
 export default defineConfig(config);
