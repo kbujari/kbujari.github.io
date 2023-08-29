@@ -1,8 +1,8 @@
 ---
+import Icon from "astro-icon";
 import { LINKS } from "@consts";
-import { Icon } from "astro-icon";
 ---
 
-<div class="flex gap-2">
-  {LINKS.map(l => <Icon name={`lucide:${l.icon}`} size={28} />)}
-</div>
+<span class="inline-flex gap-2">
+  {LINKS.map(({ href, title, icon }) => <a {href} {title}><Icon name={icon} size="32" /></a>)}
+</span>

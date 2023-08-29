@@ -1,25 +1,27 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Posts from "@components/Posts.astro";
-import IconLinks from "@components/IconLinks.astro";
 ---
 
 <Layout title="Home">
+  <section>
   <fieldset class="border-2 border-accent rounded">
-    <legend class="ml-3 px-2 text-3xl border-2 border-accent rounded">Welcome!</legend>
+    <legend class="ml-3 px-2 text-3xl border-2 border-accent rounded">
+      <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-violet-500">Welcome!</span>
+    </legend>
     <div class="p-3">
       <p>
         This is my personal site where I can practice web development, post some writeups, and see how creative I can get with a static website.
       </p>
-      <ul>
+      <ul class="mb-0">
         <span>Some of my interests:</span>
         <li>Rust; compilers in general</li>
         <li>Online privacy & security</li>
         <li>Signal processing related to images/audio</li>
       </ul>
-      <IconLinks />
     </div>
   </fieldset>
+  </section>
   <section>
     <h2>Recent Posts</h2>
     <Posts take={3} />

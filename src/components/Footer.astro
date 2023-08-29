@@ -1,17 +1,13 @@
 ---
+import IconLinks from "@components/IconLinks.astro";
 const year = new Date().getFullYear();
 ---
 
 <footer class="mb-12 border-t border-neutral-700 pt-8">
   <div class="contain flex justify-between items-center">
-    <ul class="basis-1/4 hidden md:block">
-      <li>
-        <a href="/rss.xml" class="route">rss</a>
-      </li>
-      <li>
-        <a href="/sitemap-0.xml" class="route">sitemap</a>
-      </li>
-    </ul>
+    <div class="basis-1/4 hidden md:block">
+      <IconLinks />
+    </div>
 
     <div class="text-center md:basis-2/4">
       <span>&copy; {year} Kleidi Bujari</span>
