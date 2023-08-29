@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
   body {
-    @apply bg-neutral-950 font-sans text-base md:text-lg text-neutral-400;
+    @apply bg-bg font-sans text-base md:text-lg text-fg;
   }
 
   section {

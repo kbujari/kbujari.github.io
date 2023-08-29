@@ -1,7 +1,11 @@
 ---
-title: "Automate LaTeX builds with GH Actions"
+title: "CI/CD for a LaTeX Git repository"
 description: "Using GitHub Actions CI to build LaTeX projects with automatic tagging and releases."
 pubDate: "July 29 2023"
+tags:
+  - CI/CD
+  - Actions
+  - LaTeX
 ---
 
 After managing a few documents I realized the benefit in proper version control and CI/CD

@@ -7,10 +7,11 @@ module.export = {
   useTabs: false,
   tabWidth: 2,
   semi: true,
-  singleQuote: true,
+  singleQuote: false,
   trailingComma: "none",
   printWidth: 80,
   pluginSearchDirs: false,
-  jsxSingleQuote: true,
+  proseWrap: "always",
   bracketSpacing: true,
+  bracketSameLine: true,
 };

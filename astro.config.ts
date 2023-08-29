@@ -1,4 +1,8 @@
-import { AstroUserConfig, defineConfig } from "astro/config";
+import {
+  sharpImageService as sharp,
+  type AstroUserConfig,
+  defineConfig,
+} from "astro/config";
 
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
@@ -7,7 +11,7 @@ import robotsTxt from "astro-robots-txt";
 
 import remarkToc from "remark-toc";
 
-const config: AstroUserConfig = {
+const config = {
   site: "https://kleidi.ca",
   markdown: {
     shikiConfig: {
@@ -16,8 +20,17 @@ const config: AstroUserConfig = {
     },
     remarkPlugins: [remarkToc],
   },
+  image: {
+    service: sharp(),
+    domains: ["unsplash.com"],
+  },
   experimental: { assets: true },
-  integrations: [sitemap(), tailwind(), robotsTxt(), compress({ img: false })],
-};
+  integrations: [
+    tailwind(),
+    sitemap(),
+    robotsTxt(),
+    compress({ Image: false, Logger: 1 }),
+  ],
+} satisfies AstroUserConfig;
 
 export default defineConfig(config);

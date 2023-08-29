@@ -1,30 +1,40 @@
 ---
-import { getCollection } from "astro:content";
+import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import FormattedDate from "@components/FormattedDate.astro";
+import { Image } from "astro:assets";
 import { Icon } from "astro-icon";
 
 export const getStaticPaths = async () => {
-  const posts = await getCollection("blog");
+  const posts = await getCollection("posts");
   return posts.map((post) => ({
     params: { slug: post.slug },
-    props: post,
+    props: { post },
   }));
 };
 
-const { title, pubDate } = Astro.props.data;
-const { Content } = await Astro.props.render();
+interface Props {
+  post: CollectionEntry<"posts">;
+}
+
+const { title, pubDate, cover } = Astro.props.post.data;
+const { Content } = await Astro.props.post.render();
 ---
 
 <Layout title={title}>
+  <div class="bg-bg mb-4">
+    {cover && <Image src={cover.url} alt={cover.alt} class="w-full aspect-video object-contain" />}
+  </div>
   <div class="mb-8 border-b border-neutral-700 pb-4">
     <h1>{title}</h1>
-    <span class="text-medium flex items-center gap-2">
-      <Icon name="clarity:date-line" size="24" />
+    <span class="inline-flex items-center gap-2">
       <FormattedDate date={pubDate} />
+      <a href="/rss.xml">
+        <Icon name="lucide:rss" size="24" />
+      </a>
     </span>
   </div>
-  <article class="[&_img]:mx-auto [&_a]:link [&_pre]">
+  <article class="[&_img]:mx-auto [&_a]:link [&_pre] bg-fixed">
     <Content />
   </article>
 </Layout>

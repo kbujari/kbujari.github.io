@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import { SITE } from "@consts";
 
 export const get = async () => {
-  const posts = await getCollection("blog");
+  const posts = await getCollection("posts");
   return rss({
     title: "RSS Feed | Kleidi Bujari",
     description: SITE.description,

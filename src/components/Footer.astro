@@ -1,7 +1,4 @@
 ---
-import { Icon } from "astro-icon";
-import { LINKS } from "@consts";
-
 const year = new Date().getFullYear();
 ---
 
@@ -20,18 +17,8 @@ const year = new Date().getFullYear();
       <span>&copy; {year} Kleidi Bujari</span>
     </div>
 
-    <div class="md:basis-1/4 flex gap-2 justify-end">
-      {LINKS.map((link) => (
-      <a
-      href={link.href}
-      target="_blank"
-      rel="noreferrer noopener"
-      title={link.title}
-      class="route"
-      >
-      <Icon pack="lucide" name={link.icon} size="24" />
-      </a>
-      ))}
+    <div class="text-end md:basis-1/4">
+      <a href="#" >Back to top</a>
     </div>
   </div>
 </footer>

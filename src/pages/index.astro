@@ -1,16 +1,25 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Posts from "@components/Posts.astro";
-import { Icon } from "astro-icon";
+import IconLinks from "@components/IconLinks.astro";
 ---
 
 <Layout title="Home">
-  <section>
-    <h1 class="flex items-center gap-2">
-      Welcome! <Icon name="charm:rocket" size={32} />
-    </h1>
-    <p>This is my minimal blog, portfolio and website for personal use.</p>
-  </section>
+  <fieldset class="border-2 border-accent rounded">
+    <legend class="ml-3 px-2 text-3xl border-2 border-accent rounded">Welcome!</legend>
+    <div class="p-3">
+      <p>
+        This is my personal site where I can practice web development, post some writeups, and see how creative I can get with a static website.
+      </p>
+      <ul>
+        <span>Some of my interests:</span>
+        <li>Rust; compilers in general</li>
+        <li>Online privacy & security</li>
+        <li>Signal processing related to images/audio</li>
+      </ul>
+      <IconLinks />
+    </div>
+  </fieldset>
   <section>
     <h2>Recent Posts</h2>
     <Posts take={3} />
