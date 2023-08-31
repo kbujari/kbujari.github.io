@@ -11,7 +11,7 @@
     "lint": "prettier --write ."
   },
   "dependencies": {
-    "@astrojs/rss": "2.4.4",
+    "@astrojs/rss": "3.0.0",
     "@astrojs/sitemap": "2.0.2",
     "@astrojs/tailwind": "4.0.0",
     "astro": "2.10.14",
