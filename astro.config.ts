@@ -1,5 +1,4 @@
 import {
-  sharpImageService as sharp,
   type AstroUserConfig,
   defineConfig,
 } from "astro/config";
@@ -20,11 +19,6 @@ const config = {
     },
     remarkPlugins: [remarkToc],
   },
-  image: {
-    service: sharp(),
-    domains: ["unsplash.com"],
-  },
-  experimental: { assets: true },
   integrations: [
     tailwind(),
     sitemap(),
