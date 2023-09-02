@@ -12,6 +12,7 @@ import remarkToc from "remark-toc";
 
 const config = {
   site: "https://kleidi.ca",
+  server: { port: 3000 },
   markdown: {
     shikiConfig: {
       theme: "vitesse-dark",
