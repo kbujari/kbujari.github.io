@@ -12,7 +12,7 @@ export interface Props {
 }
 
 const {
-  title = SITE.title,
+  title,
   author = SITE.author,
   description = SITE.description,
 } = Astro.props;
@@ -24,8 +24,9 @@ const {
     <meta charset="utf-8" />
     <meta property="locale" content="en_US" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="sitemap" href="/sitemap-index.xml">
 
-    <title>{`${title} | KB`}</title>
+    <title>{`${title} ${SITE.title_suffix}`}</title>
     <meta name="author" content={author} />
     <meta name="description" content={description} />
 
