@@ -1,6 +1,7 @@
 ---
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
+import { ViewTransitions, fade } from "astro:transitions";
 import { SITE } from "@consts";
 
 import "@assets/css/global.css";
@@ -34,11 +35,13 @@ const {
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+
+    <ViewTransitions />
   </head>
   <body>
     <div class="container">
-      <Header />
-      <main class="mt-8">
+      <Header transition:persist/>
+      <main class="mt-8" transition:animate="fade">
         <slot />
       </main>
       <Footer />
