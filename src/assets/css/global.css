@@ -3,13 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    @apply scroll-smooth;
-  }
-  body {
-    @apply bg-bg font-sans text-base md:text-lg text-fg;
-  }
-
   section {
     @apply last:pb-16 pb-6;
   }
@@ -23,7 +16,7 @@
   }
 
   p {
-    @apply mb-8 leading-normal;
+    @apply mb-8 md:text-justify hyphens-auto;
   }
 
   ol {
@@ -35,11 +28,11 @@
   }
 
   pre {
-    @apply mb-8 p-4 font-mono text-sm md:text-base;
+    @apply mb-8 p-4 rounded;
   }
 
   .link {
-    @apply bg-emerald-200/5 underline
+    @apply bg-emerald-200/10 underline
       text-emerald-200 underline-offset-2 hover:bg-emerald-200/10;
   }
 

@@ -25,7 +25,7 @@ practices.
 The result:
 
 ```yaml
-name: Build LaTex
+name: Build LaTeX
 
 on:
   workflow_dispatch:

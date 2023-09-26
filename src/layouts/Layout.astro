@@ -1,10 +1,12 @@
 ---
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
-import { ViewTransitions, fade } from "astro:transitions";
+import { ViewTransitions } from "astro:transitions";
 import { SITE } from "@consts";
 
 import "@assets/css/global.css";
+import "@fontsource-variable/jetbrains-mono";
+import JBMono from "@fontsource-variable/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2"
 
 export interface Props {
   title: string;
@@ -20,12 +22,13 @@ const {
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta property="locale" content="en_US" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="sitemap" href="/sitemap-index.xml">
+    <link rel="preload" href={JBMono} as="font" type="font/woff2" crossorigin>
 
     <title>{`${title} // KB`}</title>
     <meta name="author" content={author} />
@@ -38,7 +41,7 @@ const {
 
     <ViewTransitions />
   </head>
-  <body>
+  <body class="bg-bg font-sans text-base/relaxed text-fg font-medium">
     <div class="container">
       <Header transition:persist/>
       <main class="mt-8" transition:animate="fade">

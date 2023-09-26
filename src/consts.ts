@@ -5,6 +5,14 @@ export const SITE = {
 };
 
 export const LINKS = [
-  { href: 'https://github.com/kbujari', title: 'GitHub', icon: 'lucide:github' },
-  { href: 'https://www.linkedin.com/in/kleidib', title: 'LinkedIn', icon: 'lucide:linkedin' },
+  {
+    href: "https://github.com/kbujari",
+    title: "GitHub",
+    icon: "lucide:github",
+  },
+  {
+    href: "https://www.linkedin.com/in/kleidib",
+    title: "LinkedIn",
+    icon: "lucide:linkedin",
+  },
 ];

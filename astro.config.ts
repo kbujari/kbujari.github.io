@@ -1,7 +1,4 @@
-import {
-  type AstroUserConfig,
-  defineConfig,
-} from "astro/config";
+import { type AstroUserConfig, defineConfig } from "astro/config";
 
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
@@ -10,12 +7,11 @@ import robotsTxt from "astro-robots-txt";
 
 import remarkToc from "remark-toc";
 
-
 const config = {
   site: "https://kleidi.ca",
   markdown: {
     shikiConfig: {
-      theme: "vitesse-dark",
+      theme: "poimandres",
       wrap: false,
     },
     remarkPlugins: [remarkToc],
