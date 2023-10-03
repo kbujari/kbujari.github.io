@@ -1,13 +1,13 @@
 ---
 import CommonHead from "@layouts/CommonHead.astro";
-import BasePage from "@layouts/BasePage.astro";
+import Page from "@layouts/Page.astro";
 import { Icon } from "astro-icon";
 ---
 
 <CommonHead />
-<BasePage title="404">
+<Page title="404">
   <section class="flex flex-col items-center gap-6">
     <Icon name="lucide:frown" size={72} />
     <h1>Error 404!</h1>
   </section>
-</BasePage>
+</Page>
