@@ -1,33 +1,55 @@
 ---
-import Layout from "@layouts/Layout.astro";
+import Page from "@layouts/Page.astro";
+import Posts from "@components/Posts.astro";
 ---
 
-<Layout title="About">
-  <h2>Info</h2>
-  <p>
-    I'm a Computer Engineering student in Toronto, CA interested in online
-    privacy, cryptography, and RF communications. The majority of my free time
-    is spent hacking on personal projects mainly involving networks and Rust,
-    otherwise I'll be working out or playing basketball.
-  </p>
+<Page title="About">
+  <section>
+    <fieldset class="border-2 border-accent rounded">
+      <legend class="ml-3 px-2 text-3xl border-2 border-accent rounded">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-violet-500">Welcome!</span>
+      </legend>
+      <div class="p-3">
+        <p>
+          This is my personal site where I can practice web development, post some writeups, and see how creative I can get with a static website.
+        </p>
+        <span>Some of my interests (currently):</span>
+        <ul class="mb-0">
+          <li>Rust; compilers in general</li>
+          <li>Graphics programming and generative art</li>
+          <li>Signal processing related to images/audio</li>
+        </ul>
+      </div>
+    </fieldset>
+  </section>
 
-  <h2>Contact</h2>
-  <p>You can email me with: mail [AT] kleidi [DOT] ca</p>
+  <section>
+    <h2>Info</h2>
+    <p>
+      I'm a Computer Engineering student in Toronto, passionate about electronics and their applications.
+      For any communication, use: mail [AT] kleidi [dot] ca
+    </p>
 
-  <h2>Disclaimer</h2>
-  <p>
-    Any opinons here are my own and do not reflect those of my employer or
-    school. Feel free to use anything on this site for reference, but please
-    give credit when appropriate.
-    <br /><br />
+    <h2>Disclaimer</h2>
+    <p>
+      Any opinons here are my own and do not reflect those of my employer or
+      school. Feel free to use anything on this site for reference, but please
+      give credit when appropriate.
+      <br /><br />
 
-    This site is built using AstroJS and is
-    <a
-      href="https://github.com/kbujari/kleidi.ca"
-      target="_blank"
-      rel="noreferrer noopener"
-      title="Source"
-      class="link">open-source</a
-    >.
-  </p>
-</Layout>
+      This site is built using Astro and is
+      <a
+        href="https://github.com/kbujari/kleidi.ca"
+        target="_blank"
+        rel="noreferrer noopener"
+        title="Source"
+        class="link">open-source</a
+      >.
+    </p>
+  </section>
+
+  <section>
+    <h2>Recent Posts</h2>
+    <Posts take={3} />
+  </section>
+</Page>

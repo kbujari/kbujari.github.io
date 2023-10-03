@@ -20,7 +20,10 @@ const config = {
     tailwind(),
     sitemap(),
     robotsTxt(),
-    compress({ Image: false, Logger: 1 }),
+    compress({
+      Image: false,
+      Logger: 1,
+    }),
   ],
 } satisfies AstroUserConfig;
 

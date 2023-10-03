@@ -37,7 +37,7 @@
   }
 
   .route {
-    @apply font-semibold hover:underline font-mono
+    @apply font-semibold hover:underline
       decoration-2 underline-offset-4 decoration-dashed
       text-neutral-300;
   }

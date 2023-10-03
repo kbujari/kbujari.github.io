@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
-import Layout from "@layouts/Layout.astro";
+import Page from "@layouts/Page.astro";
 import FormattedDate from "@components/FormattedDate.astro";
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon";
@@ -21,7 +21,7 @@ const { title, pubDate, cover } = Astro.props.post.data;
 const { Content } = await Astro.props.post.render();
 ---
 
-<Layout title={title}>
+<Page title={title}>
   <div class="bg-bg mb-4">
     {cover && <Image src={cover.url} alt={cover.alt} class="w-full aspect-video object-contain" />}
   </div>
@@ -37,4 +37,4 @@ const { Content } = await Astro.props.post.render();
   <article class="[&_img]:mx-auto [&_a]:link [&_code]:font-mono">
     <Content />
   </article>
-</Layout>
+</Page>

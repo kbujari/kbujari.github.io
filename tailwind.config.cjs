@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Jetbrains Mono Variable"],
+        mono: ["Jetbrains Mono Variable"],
       },
       colors: {
         accent: "#404040",
