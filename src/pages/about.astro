@@ -1,34 +1,26 @@
 ---
-import Page from "@layouts/Page.astro";
-import Posts from "@components/Posts.astro";
+import Layout from "@components/Layout.astro";
+import Section from "@components/page/Section.svelte";
+import FormattedDate from "@components/FormattedDate.astro";
+
+const title = "About";
 ---
 
-<Page title="About">
-  <section>
-    <fieldset class="border-2 border-accent rounded">
-      <legend class="ml-3 px-2 text-3xl border-2 border-accent rounded">
-        <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-violet-500">Welcome!</span>
-      </legend>
-      <div class="p-3">
-        <p>
-          This is my personal site where I can practice web development, post some writeups, and see how creative I can get with a static website.
-        </p>
-        <span>Some of my interests (currently):</span>
-        <ul class="mb-0">
-          <li>Rust; compilers in general</li>
-          <li>Graphics programming and generative art</li>
-          <li>Signal processing related to images/audio</li>
-        </ul>
-      </div>
-    </fieldset>
-  </section>
+<Layout {title}>
+  <Section {title}>
 
-  <section>
     <h2>Info</h2>
     <p>
       I'm a Computer Engineering student in Toronto, passionate about electronics and their applications.
       For any communication, use: mail [AT] kleidi [dot] ca
     </p>
+
+    <span>Some of my interests (currently):</span>
+    <ul>
+      <li>Rust; compilers in general</li>
+      <li>Graphics programming and generative art</li>
+      <li>Signal processing related to images/audio</li>
+    </ul>
 
     <h2>Disclaimer</h2>
     <p>
@@ -37,19 +29,14 @@ import Posts from "@components/Posts.astro";
       give credit when appropriate.
       <br /><br />
 
-      This site is built using Astro and is
+      This site was generated on [<FormattedDate date={new Date()} />] using Astro and is
       <a
         href="https://github.com/kbujari/kleidi.ca"
         target="_blank"
-        rel="noreferrer noopener"
+        rel="noreferrer"
         title="Source"
         class="link">open-source</a
       >.
     </p>
-  </section>
-
-  <section>
-    <h2>Recent Posts</h2>
-    <Posts take={3} />
-  </section>
-</Page>
+  </Section>
+</Layout>

@@ -5,22 +5,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mono: ["Jetbrains Mono Variable"],
+        pixel: ["FreePixel"],
       },
-      colors: {
-        accent: "#404040",
-        bg: "#0a0a0a",
-        fg: "#a3a3a3",
-      },
+    },
+    screens: {
+      sm: "640px",
+      md: "1024px",
     },
     container: {
       center: true,
       padding: "1rem",
-    },
-    screens: {
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
     },
   },
 };

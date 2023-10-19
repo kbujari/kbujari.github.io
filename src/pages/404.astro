@@ -1,13 +1,11 @@
 ---
-import CommonHead from "@layouts/CommonHead.astro";
-import Page from "@layouts/Page.astro";
+import Layout from "@components/Layout.astro";
 import { Icon } from "astro-icon";
 ---
 
-<CommonHead />
-<Page title="404">
+<Layout title="404">
   <section class="flex flex-col items-center gap-6">
-    <Icon name="lucide:frown" size={72} />
+    <Icon name="pixelarticons:downasaur" size={72} />
     <h1>Error 404!</h1>
   </section>
-</Page>
+</Layout>

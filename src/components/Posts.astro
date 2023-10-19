@@ -1,6 +1,6 @@
 ---
 import FormattedDate from "@components/FormattedDate.astro";
-import { CollectionEntry, getCollection } from "astro:content";
+import { type CollectionEntry, getCollection } from "astro:content";
 
 export interface Props {
   take?: number;
@@ -19,7 +19,7 @@ type Post = CollectionEntry<"posts">
     posts.slice(0, take).map((post: Post) => (
       <div class="py-6 first:pt-0 last:pb-0 flex flex-col md:flex-row gap-3">
         <div class="basis-1/4">
-          <FormattedDate class="text-neutral-200 text-lg" date={post.data.pubDate} />
+          <FormattedDate class="text-neutral-200" date={post.data.pubDate} />
           <div class="flex flex-wrap gap-4">
             {post.data.tags.map((t: string) => <span>{t}</span>)}
           </div>
@@ -28,11 +28,17 @@ type Post = CollectionEntry<"posts">
           <a
           href={`/posts/${post.slug}`}
           class="block space-y-4">
-            <span class="link w-fit text-xl">{post.data.title}</span>
-            <p class="my-0">{post.data.description}</p>
+            <span class="link w-fit">{post.data.title}</span>
+            <p class="my-0 line-clamp-2">{post.data.description}</p>
           </a>
         </div>
       </div>
     ))
   }
 </div>
+
+{ take === undefined &&
+<div class="mt-4">
+  <a href="/posts" class="link">See more >></a>
+</div>
+}
