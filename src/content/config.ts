@@ -23,4 +23,18 @@ const posts = defineCollection({
     }),
 });
 
-export const collections = { posts };
+const resources = defineCollection({
+  type: "data",
+  schema: z.object({
+    name: z.string(),
+    links: z.array(
+      z.object({
+        name: z.string(),
+        description: z.string(),
+        href: z.string(),
+      }),
+    ),
+  }),
+});
+
+export const collections = { posts, resources };

@@ -1,15 +1,15 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
-import Page from "@layouts/Page.astro";
+import Layout from "@components/Layout.astro";
+import Section from "@components/page/Section.svelte";
 import FormattedDate from "@components/FormattedDate.astro";
 import { Image } from "astro:assets";
-import { Icon } from "astro-icon";
 
 export const getStaticPaths = async () => {
   const posts = await getCollection("posts");
   return posts.map((post) => ({
     params: { slug: post.slug },
-    props: { post },
+    props: { post, },
   }));
 };
 
@@ -21,20 +21,22 @@ const { title, pubDate, cover } = Astro.props.post.data;
 const { Content } = await Astro.props.post.render();
 ---
 
-<Page title={title}>
-  <div class="bg-bg mb-4">
-    {cover && <Image src={cover.url} alt={cover.alt} class="w-full aspect-video object-contain" />}
-  </div>
-  <div class="mb-8 border-b border-neutral-700 pb-4">
-    <h1>{title}</h1>
-    <span class="inline-flex items-center gap-2">
-      <FormattedDate date={pubDate} />
-      <a href="/feed.xml">
-        <Icon name="lucide:rss" size="24" />
-      </a>
-    </span>
-  </div>
-  <article class="[&_img]:mx-auto [&_a]:link [&_code]:font-mono">
-    <Content />
-  </article>
-</Page>
+<Layout {title}>
+  <Section>
+    <div class="bg-bg mb-4">
+      {cover && <Image src={cover.url} alt={cover.alt} class="w-full aspect-video object-contain" />}
+    </div>
+    <div class="mb-8 border-b border-neutral-700 pb-4">
+      <h1>{title}</h1>
+      <span class="inline-flex items-center gap-2">
+        <FormattedDate date={pubDate} /> |
+        <a href="/feed.xml" class="link">RSS Feed</a>
+      </span>
+    </div>
+    <article class="[&_img]:mx-auto [&_a]:link">
+      <Content />
+
+      <span>-- <br> end</span>
+    </article>
+  </Section>
+</Layout>

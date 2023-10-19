@@ -1,0 +1,15 @@
+{
+  "name": "Programming",
+  "links": [
+    {
+      "name": "First Person Game in 2KB with Rust",
+      "description": "Basic 3D rendering that compiles to WASM",
+      "href": "https://grantshandy.github.io/posts/raycasting/"
+    },
+    {
+      "name": "Image compression algorithm made by NASA JPL",
+      "description": "Wavelet-base image compressor used on the MER mission",
+      "href": "https://ipnpr.jpl.nasa.gov/progress_report/42-155/155J.pdf"
+    }
+  ]
+}
