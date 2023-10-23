@@ -24,7 +24,7 @@ jobs:
       - name: Publish
         uses: cloudflare/pages-action@1
         with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
+          apiToken: ${{ secrets.CF_API_KEY }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           projectName: kleidi-ca
           directory: 'dist'
