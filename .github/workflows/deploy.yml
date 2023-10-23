@@ -19,7 +19,7 @@ jobs:
           cache: npm
 
       - name: Build
-      - run: npm ci && npm run build
+        run: npm ci && npm run build
 
       - name: Publish
         uses: cloudflare/pages-action@1
