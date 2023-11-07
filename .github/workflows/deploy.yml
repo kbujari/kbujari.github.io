@@ -27,5 +27,5 @@ jobs:
           apiToken: ${{ secrets.CF_API_KEY }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           projectName: kleidi-ca
-          directory: 'dist'
+          directory: "dist"
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
