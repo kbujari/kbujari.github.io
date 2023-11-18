@@ -13,9 +13,9 @@ const config = {
   markdown: {
     shikiConfig: {
       theme: "material-theme-ocean",
-      wrap: false,
+      wrap: false
     },
-    remarkPlugins: [remarkToc],
+    remarkPlugins: [remarkToc]
   },
   integrations: [
     svelte(),
@@ -24,9 +24,9 @@ const config = {
     robotsTxt(),
     compress({
       Image: false,
-      Logger: 1,
-    }),
-  ],
+      Logger: 1
+    })
+  ]
 } satisfies AstroUserConfig;
 
 export default defineConfig(config);

@@ -4,5 +4,11 @@ import { LINKS } from "@consts";
 ---
 
 <span class="inline-flex gap-2">
-  {LINKS.map(({ href, title, icon }) => <a {href} {title}><Icon name={icon} size="24" /></a>)}
+  {
+    LINKS.map(({ href, title, icon }) => (
+      <a {href} {title}>
+        <Icon name={icon} size="24" />
+      </a>
+    ))
+  }
 </span>

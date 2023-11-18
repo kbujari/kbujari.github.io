@@ -6,7 +6,7 @@
 
 {#each data as entry}
   <h2>{entry.data.name}</h2>
-  {#each entry.data.links as {name, description, href}}
+  {#each entry.data.links as { name, description, href }}
     <a {href} class="link" target="_blank" rel="noreferrer">{name}</a>
     <p>{description}</p>
   {/each}

@@ -16,11 +16,11 @@ const posts = defineCollection({
       cover: z
         .object({
           url: image(),
-          alt: z.string(),
+          alt: z.string()
         })
         .optional(),
-      tags: z.array(z.string()),
-    }),
+      tags: z.array(z.string())
+    })
 });
 
 const resources = defineCollection({
@@ -31,10 +31,10 @@ const resources = defineCollection({
       z.object({
         name: z.string(),
         description: z.string(),
-        href: z.string(),
-      }),
-    ),
-  }),
+        href: z.string()
+      })
+    )
+  })
 });
 
 export const collections = { posts, resources };

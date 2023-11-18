@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "FreePixel";
+    src: url("/FreePixel.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+
+  pre {
+    @apply mb-8 p-4 text-sm font-pixel overflow-hidden;
+  }
+
+  h1 {
+    @apply mb-6 text-4xl/none text-neutral-300;
+  }
+  h2 {
+    @apply mb-6 text-3xl/none text-neutral-300 font-medium;
+  }
+
+  ol {
+    @apply list-inside list-decimal mb-8;
+  }
+  ul {
+    @apply list-inside list-disc mb-8;
+  }
+
+  p {
+    @apply mb-8 last:mb-0;
+  }
+
+  .link {
+    @apply underline text-red-400 hover:text-red-500 underline-offset-2;
+  }
+
+  .route {
+    @apply font-semibold hover:underline
+    decoration-2 underline-offset-4 decoration-dashed
+    text-neutral-300;
+  }
+}

@@ -1,6 +1,8 @@
 ---
 title: "CI/CD for a LaTeX Git repository"
-description: "Using GitHub Actions CI to build LaTeX projects with automatic tagging and releases."
+description:
+  "Using GitHub Actions CI to build LaTeX projects with automatic tagging and
+  releases."
 pubDate: "July 29 2023"
 tags:
   - CI/CD
@@ -8,17 +10,18 @@ tags:
   - LaTeX
 ---
 
-After managing a few documents I realized the benefit in proper version control and CI/CD
-can also be applied to LaTeX projects. Using GitHub features like pull requests and CI
-testing as well as building and serving PDFs with releases allows for stricter adherence
-to your project's standards and facilitates faster development.
+After managing a few documents I realized the benefit in proper version control
+and CI/CD can also be applied to LaTeX projects. Using GitHub features like pull
+requests and CI testing as well as building and serving PDFs with releases
+allows for stricter adherence to your project's standards and facilitates faster
+development.
 
-While there are plenty of guides that already accomplish this, I wanted to showcase a
-modification I made that makes use of [mathieudutour/github-tag-action][repo link] to
-create a new tag for each commit I push, bypassing the need to explicitly tag commits.
-Usually, this isn't good practice to promote with git, however, for private projects
-done alone, I prefer to prioritize faster iteration rather than always conforming to best
-practices.
+While there are plenty of guides that already accomplish this, I wanted to
+showcase a modification I made that makes use of
+[mathieudutour/github-tag-action][repo link] to create a new tag for each commit
+I push, bypassing the need to explicitly tag commits. Usually, this isn't good
+practice to promote with git, however, for private projects done alone, I prefer
+to prioritize faster iteration rather than always conforming to best practices.
 
 [repo link]: https://github.com/mathieudutour/github-tag-action
 

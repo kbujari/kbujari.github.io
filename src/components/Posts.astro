@@ -11,7 +11,7 @@ const posts = (await getCollection("posts")).sort(
 );
 
 const { take = posts.length } = Astro.props;
-type Post = CollectionEntry<"posts">
+type Post = CollectionEntry<"posts">;
 ---
 
 <div class="divide-y divide-solid divide-neutral-700">
@@ -21,13 +21,13 @@ type Post = CollectionEntry<"posts">
         <div class="basis-1/4">
           <FormattedDate class="text-neutral-200" date={post.data.pubDate} />
           <div class="flex flex-wrap gap-4">
-            {post.data.tags.map((t: string) => <span>{t}</span>)}
+            {post.data.tags.map((t: string) => (
+              <span>{t}</span>
+            ))}
           </div>
         </div>
         <div class="basis-3/4">
-          <a
-          href={`/posts/${post.slug}`}
-          class="block space-y-4">
+          <a href={`/posts/${post.slug}`} class="block space-y-4">
             <span class="link w-fit">{post.data.title}</span>
             <p class="my-0 line-clamp-2">{post.data.description}</p>
           </a>
@@ -37,8 +37,12 @@ type Post = CollectionEntry<"posts">
   }
 </div>
 
-{ take === undefined &&
-<div class="mt-4">
-  <a href="/posts" class="link">See more >></a>
-</div>
+{
+  take === undefined && (
+    <div class="mt-4">
+      <a href="/posts" class="link">
+        See more >>
+      </a>
+    </div>
+  )
 }

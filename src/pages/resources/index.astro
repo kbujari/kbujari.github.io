@@ -1,7 +1,7 @@
 ---
 import Layout from "@components/Layout.astro";
 import Section from "@components/page/Section.svelte";
-import Resources from "./Resources.svelte"
+import Resources from "./_Resources.svelte";
 import { getCollection } from "astro:content";
 
 const data = await getCollection("resources");
@@ -10,7 +10,9 @@ const title = "Links";
 
 <Layout {title}>
   <Section {title}>
-    <p> A collection of resources I found interesting or helpful enough to keep. </p>
+    <p>
+      A collection of resources I found interesting or helpful enough to keep.
+    </p>
     <Resources {data} />
   </Section>
 </Layout>

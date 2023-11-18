@@ -1,15 +1,19 @@
 /** @type {import("prettier").Config} */
 const config = {
-  plugins: [
-    "prettier-plugin-astro",
-  ],
+  plugins: ["prettier-plugin-astro", "prettier-plugin-svelte"],
   overrides: [
     {
       files: "*.astro",
       options: {
-        parser: "astro",
-      },
+        parser: "astro"
+      }
     },
+    {
+      files: "*.svelte",
+      options: {
+        parser: "svelte"
+      }
+    }
   ],
   useTabs: false,
   tabWidth: 2,
@@ -19,7 +23,7 @@ const config = {
   printWidth: 80,
   proseWrap: "always",
   bracketSpacing: true,
-  bracketSameLine: true,
+  bracketSameLine: true
 };
 
 export default config;
