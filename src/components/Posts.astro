@@ -7,7 +7,7 @@ export interface Props {
 }
 
 const posts = (await getCollection("posts")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
 const { take = posts.length } = Astro.props;

@@ -2,7 +2,7 @@
   const routes = [
     { href: "/", name: "kleidi.ca" },
     { href: "/posts", name: "Posts" },
-    { href: "/about", name: "About" }
+    { href: "/about", name: "About" },
   ];
 </script>
 

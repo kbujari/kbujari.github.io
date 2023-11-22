@@ -25,7 +25,28 @@
   "devDependencies": {
     "prettier": "3.1.0",
     "prettier-plugin-astro": "0.12.1",
-    "prettier-plugin-svelte": "3.1.0",
+    "prettier-plugin-svelte": "^3.1.0",
     "svgo": "2.8.0"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-astro",
+      "prettier-plugin-svelte"
+    ],
+    "overrides": [
+      {
+        "files": "*.astro",
+        "options": {
+          "parser": "astro"
+        }
+      },
+      {
+        "files": "*.svelte",
+        "options": {
+          "parser": "svelte"
+        }
+      }
+    ],
+    "proseWrap": "always"
   }
 }

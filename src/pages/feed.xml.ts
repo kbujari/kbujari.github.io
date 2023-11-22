@@ -10,7 +10,7 @@ export const GET = async () => {
     site: import.meta.env.SITE,
     items: posts.map((post) => ({
       ...post.data,
-      link: `/posts/${post.slug}/`
-    }))
+      link: `/posts/${post.slug}/`,
+    })),
   });
 };

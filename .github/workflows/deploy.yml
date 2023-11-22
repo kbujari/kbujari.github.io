@@ -24,7 +24,7 @@ jobs:
           cache: npm
 
       - uses: actions/configure-pages@v3
-      
+
       - name: Build
         run: npm ci && npm run build
 
