@@ -5,8 +5,7 @@
   "version": "2.0.0",
   "scripts": {
     "dev": "astro dev --host",
-    "build": "astro build",
-    "check": "astro check && tsc --noEmit && prettier --check .",
+    "build": "astro check && astro build",
     "preview": "astro preview --host",
     "lint": "prettier --write ."
   },
@@ -23,9 +22,10 @@
     "tailwindcss": "3.3.5"
   },
   "devDependencies": {
+    "@astrojs/check": "0.3.1",
     "prettier": "3.1.0",
     "prettier-plugin-astro": "0.12.1",
-    "prettier-plugin-svelte": "^3.1.0",
+    "prettier-plugin-svelte": "3.1.0",
     "svgo": "2.8.0"
   },
   "prettier": {
