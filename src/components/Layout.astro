@@ -1,24 +1,26 @@
 ---
-// import Header from "@components/page/Header.svelte";
-// import Footer from "@components/page/Footer.astro";
-import Nav from "@components/page/Nav.svelte";
-import { ViewTransitions } from "astro:transitions";
+import Nav from "@components/Nav.svelte";
 import { SITE } from "@consts";
-import stars from "@assets/stars.png";
 
 import "@assets/styles/global.css";
+import "@assets/styles/code.css";
 
-export interface Props {
+interface LayoutProps {
   title?: string;
   author?: string;
   description?: string;
+}
+
+interface Props extends LayoutProps {
+  children: any; // Force something to be passed to slot
+  frontmatter?: LayoutProps; // Typed markdown frontmatter
 }
 
 const {
   title,
   author = SITE.author,
   description = SITE.description,
-} = Astro.props;
+} = Astro.props.frontmatter || Astro.props;
 ---
 
 <!doctype html>
@@ -28,6 +30,7 @@ const {
     <meta property="locale" content="en_US" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <title>{title ? `${title} | kleidi.ca` : "kleidi.ca"}</title>
     <meta name="author" content={author} />
     <meta name="description" content={description} />
 
@@ -38,33 +41,19 @@ const {
       type="font/woff"
       crossorigin="anonymous"
     />
-    <link
-      rel="preload"
-      as="image"
-      href="/stars.png"
-      type="image/png"
-      crossorigin="anonymous"
-    />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <title>{title ? `${title} | kleidi.ca` : "kleidi.ca"}</title>
-
-    <ViewTransitions />
   </head>
 
-  <body
-    class="px-4 mx-auto max-w-7xl bg-fixed bg-black bg-repeat text-stone-400 text-fg font-pixel text-lg/snug"
-    style={`background-image: url(${stars.src});`}
-  >
-    <!-- <Header /> -->
-    <div class="flex flex-col-reverse gap-4 mt-4 md:flex-row md:items-start">
-      <main class="overflow-hidden">
+  <body class="bg-neutral-900 text-stone-400 text-fg font-pixel text-lg md:text-xl">
+    <div class="px-4 mx-auto max-w-4xl">
+      <Nav />
+      <main class="">
         <slot />
       </main>
-      <Nav />
     </div>
   </body>
 </html>

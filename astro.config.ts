@@ -11,11 +11,11 @@ import remarkToc from "remark-toc";
 const config = {
   site: "https://kleidi.ca",
   markdown: {
-    shikiConfig: {
-      theme: "material-theme-ocean",
-      wrap: false,
-    },
+    syntaxHighlight: "prism",
     remarkPlugins: [remarkToc],
+  },
+  redirects: {
+    "/posts": "/",
   },
   integrations: [
     svelte(),

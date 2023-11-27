@@ -1,15 +1,13 @@
 ---
 import Layout from "@components/Layout.astro";
-import Posts from "@components/Posts.astro";
-import Section from "@components/page/Section.svelte";
+import Posts from "@components/Posts.svelte";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("posts");
 ---
 
 <Layout>
-  <Section title="Welcome!">
-    <p>This is my small website written from scratch. More features coming!</p>
-  </Section>
+  <p>This is my small website written from scratch. More features coming!</p>
 
-  <Section title="Recent Posts">
-    <Posts take={3} />
-  </Section>
+  <Posts {posts} />
 </Layout>
