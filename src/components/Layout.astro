@@ -51,7 +51,7 @@ const {
   <body class="bg-neutral-900 text-stone-400 text-fg font-pixel text-lg md:text-xl">
     <div class="px-4 mx-auto max-w-4xl">
       <Nav />
-      <main class="">
+      <main class={Astro.props.frontmatter ? "[&_a]:link" : ""}>
         <slot />
       </main>
     </div>
