@@ -10,7 +10,7 @@
     "lint": "prettier --write ."
   },
   "dependencies": {
-    "@astrojs/rss": "3.0.0",
+    "@astrojs/rss": "4.0.0",
     "@astrojs/sitemap": "3.0.3",
     "@astrojs/svelte": "4.0.4",
     "@astrojs/tailwind": "5.0.2",
