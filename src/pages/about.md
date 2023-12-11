@@ -1,6 +1,6 @@
 ---
 layout: "../components/Layout.astro"
-title: "About"
+title: "about"
 ---
 
 ## Info
@@ -19,4 +19,4 @@ Any opinons here are my own and do not reflect those of my employer or school.
 Feel free to use anything on this site for reference, but please give credit
 when appropriate.
 
-This site is [open-source](https://github.com/kbujari/kleidi.ca).
+This site is [open-source](https://github.com/knbu/kleidi.ca).

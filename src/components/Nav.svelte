@@ -3,7 +3,7 @@
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Resources", href: "/resources" },
-    { name: "GitHub", href: "https://github.com/kbujari" },
+    { name: "GitHub", href: "https://github.com/knbu" },
   ];
 
   const is_external = (href: string) => href.at(0) != "/";

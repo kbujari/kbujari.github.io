@@ -1,0 +1,9 @@
+---
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("posts");
+---
+
+<menu>
+  {posts.map((p) => <li>{p.data.title}</li>)}
+</menu>

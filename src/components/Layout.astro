@@ -29,7 +29,7 @@ const {
     <meta property="locale" content="en_US" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>{title ? `${title} | kleidi.ca` : "kleidi.ca"}</title>
+    <title>{title ? `${title} :: kleidi.ca` : "kleidi.ca"}</title>
     <meta name="author" content={author} />
     <meta name="description" content={description} />
 
@@ -47,7 +47,7 @@ const {
     <link rel="manifest" href="/site.webmanifest" />
   </head>
 
-  <body class="bg-neutral-900 text-stone-400 text-fg font-pixel text-lg md:text-xl">
+  <body class="text-lg bg-neutral-900 md:text-xl text-stone-400 text-fg font-pixel">
     <div class="px-4 mx-auto max-w-4xl">
       <Nav />
       <main class={Astro.props.frontmatter ? "[&_a]:link" : ""}>

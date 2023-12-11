@@ -4,8 +4,8 @@
 
 @layer base {
   @font-face {
-    font-family: "FreePixel";
-    src: url("/FreePixel.woff") format("woff");
+    font-family: "W95";
+    src: url("/w95fa.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -16,7 +16,7 @@
   }
 
   code {
-    @apply font-pixel;
+    @apply font-mono text-sm;
   }
 
   h1 {

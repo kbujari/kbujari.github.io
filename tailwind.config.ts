@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        pixel: ["FreePixel"],
+        pixel: ["W95"],
       },
     },
     screens: {

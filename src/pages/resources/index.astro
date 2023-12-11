@@ -4,10 +4,9 @@ import Resources from "./_Resources.svelte";
 import { getCollection } from "astro:content";
 
 const data = await getCollection("resources");
-const title = "Links";
 ---
 
-<Layout {title}>
+<Layout title="links">
   <p>
     A collection of resources I found interesting or helpful enough to keep.
   </p>
