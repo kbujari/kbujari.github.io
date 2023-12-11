@@ -16,7 +16,7 @@
   }
 
   code {
-    @apply font-pixel text-base;
+    @apply font-pixel;
   }
 
   h1 {

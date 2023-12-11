@@ -19,7 +19,7 @@ only once with full optimizations will cache them for all future builds since
 you are likely not changing the versions often.
 
 You can enable compiling your dependencies with any opt-level even for dev
-builds by adding the following to your Cargo.toml: This is `inline`.
+builds by adding the following to your Cargo.toml:
 
 ```toml
 [profile.dev.package."*"]

@@ -11,7 +11,7 @@ import remarkToc from "remark-toc";
 const config = {
   site: "https://kleidi.ca",
   markdown: {
-    syntaxHighlight: "prism",
+    shikiConfig: { theme: "vitesse-dark" },
     remarkPlugins: [remarkToc],
   },
   redirects: {
