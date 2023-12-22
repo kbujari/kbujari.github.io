@@ -4,12 +4,13 @@ import Posts from "@components/Posts.svelte";
 import { getCollection } from "astro:content";
 
 const posts = await getCollection("posts");
+const take = 3;
 ---
 
 <Layout>
   <p>This is my small website written from scratch. More features coming!</p>
-  <div class="bg-red-300">
-    <span class="text-center">knter space</span>
-  </div>
-  <Posts {posts} />
+  <section>
+    <h2>Recent Posts</h2>
+    <Posts {posts} {take} />
+  </section>
 </Layout>

@@ -1,9 +1,12 @@
 ---
 import { getCollection } from "astro:content";
+import Posts from "@components/Posts.svelte";
+import Layout from "@components/Layout.astro";
 
 const posts = await getCollection("posts");
 ---
 
-<menu>
-  {posts.map((p) => <li>{p.data.title}</li>)}
-</menu>
+<Layout title="posts">
+  <p>Collection of notes and posts that I occasionally write.</p>
+  <Posts {posts} />
+</Layout>

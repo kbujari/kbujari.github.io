@@ -36,8 +36,8 @@ const {
     <link
       rel="preload"
       as="font"
-      href="/FreePixel.woff"
-      type="font/woff"
+      href="/w95fa.woff2"
+      type="font/woff2"
       crossorigin="anonymous"
     />
 
@@ -47,10 +47,12 @@ const {
     <link rel="manifest" href="/site.webmanifest" />
   </head>
 
-  <body class="text-lg bg-neutral-900 md:text-xl text-stone-400 text-fg font-pixel">
+  <body
+    class="text-lg md:text-xl bg-neutral-900 text-stone-400 text-fg font-pixel"
+  >
     <div class="px-4 mx-auto max-w-4xl">
       <Nav />
-      <main class={Astro.props.frontmatter ? "[&_a]:link" : ""}>
+      <main class:list={[Astro.props.frontmatter ? "[&_a]:link" : "", "mt-4"]}>
         <slot />
       </main>
     </div>

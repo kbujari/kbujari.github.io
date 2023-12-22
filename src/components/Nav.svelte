@@ -2,14 +2,15 @@
   const links: { name: string; href: string }[] = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
+    { name: "Posts", href: "/posts" },
     { name: "Resources", href: "/resources" },
-    { name: "GitHub", href: "https://github.com/knbu" },
+    { name: "GitHub", href: "https://github.com/kbujari" },
   ];
 
   const is_external = (href: string) => href.at(0) != "/";
 </script>
 
-<div class="">
+<div class="mt-2">
   <nav>
     <menu class="flex flex-wrap gap-3">
       {#each links as { name, href }}

@@ -14,9 +14,6 @@ const config = {
     shikiConfig: { theme: "vitesse-dark" },
     remarkPlugins: [remarkToc],
   },
-  redirects: {
-    "/posts": "/",
-  },
   integrations: [
     svelte(),
     tailwind(),

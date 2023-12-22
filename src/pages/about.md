@@ -6,7 +6,7 @@ title: "about"
 ## Info
 
 I'm a Computer Engineering student in Toronto, passionate about electronics and
-their applications. For any communication, use: mail [AT] kleidi [dot] ca
+their applications. For any communication, use: mail [AT] kleidi [DOT] ca
 
 Some of my interests:
 - Rust; compilers in general
