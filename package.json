@@ -15,7 +15,7 @@
     "@astrojs/svelte": "4.0.4",
     "@astrojs/tailwind": "5.0.4",
     "astro": "3.6.4",
-    "astro-compress": "2.2.3",
+    "astro-compress": "2.2.5",
     "astro-icon": "0.8.2",
     "astro-robots-txt": "1.0.0",
     "remark-toc": "9.0.0",
