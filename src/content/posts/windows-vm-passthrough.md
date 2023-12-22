@@ -28,8 +28,8 @@ showcase on how I set it up for myself.
 
 Feel free to use anything mentioned here for yourself and be sure to follow
 along with the files mentioned by viewing them yourself on my
-[github](https://github.com/knbu/virt-machine). Without further rambling,
-let's get into the important parts.
+[github](https://github.com/knbu/virt-machine). Without further rambling, let's
+get into the important parts.
 
 ## Table of Contents
 
