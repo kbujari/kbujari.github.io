@@ -1,4 +1,8 @@
-import { type AstroUserConfig, defineConfig } from "astro/config";
+import {
+  type AstroUserConfig,
+  defineConfig,
+  squooshImageService,
+} from "astro/config";
 
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
@@ -14,6 +18,7 @@ const config = {
     shikiConfig: { theme: "vitesse-dark" },
     remarkPlugins: [remarkToc],
   },
+  image: { service: squooshImageService() },
   integrations: [
     svelte(),
     tailwind(),

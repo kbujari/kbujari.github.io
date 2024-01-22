@@ -5,9 +5,6 @@ description:
   simulations, and more. Includes single-GPU passthrough for graphics intensive
   applications."
 pubDate: "Jan 15 2022"
-tags:
-  - Virtualization
-  - Linux
 ---
 
 In early 2021, I transitioned my personal computers to Arch Linux and while the
@@ -17,7 +14,6 @@ and software I need to use for school (Multisim). While these can be "run" using
 wine, I found that the experience left a lot to be desired, and for school
 especially, I wanted to make sure I was in an environment supported by my
 classes.
-
 This led to the decision to use Windows for these as well as anything else not
 supported well by linux. At this point you might be asking why I'm not just
 dual-booting for simplicity. The main reasons are that I've gotten annoyed with

@@ -10,8 +10,8 @@
   const is_external = (href: string) => href.at(0) != "/";
 </script>
 
-<div class="mt-2">
-  <nav>
+<div class="pt-2">
+  <nav class="flex justify-between">
     <menu class="flex flex-wrap gap-3">
       {#each links as { name, href }}
         <li>

@@ -3,16 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  @font-face {
-    font-family: "W95";
-    src: url("/w95fa.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-  }
-
   pre {
-    @apply mb-8 p-4 overflow-hidden;
+    @apply mb-8 p-4;
   }
 
   code {
@@ -40,11 +32,5 @@
 
   .link {
     @apply underline text-red-400 hover:text-red-500 underline-offset-2;
-  }
-
-  .route {
-    @apply font-semibold hover:underline
-    decoration-2 underline-offset-4 decoration-dashed
-    text-neutral-300;
   }
 }

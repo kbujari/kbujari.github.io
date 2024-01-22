@@ -12,7 +12,6 @@ const posts = defineCollection({
       .string()
       .optional()
       .transform((str) => (str ? new Date(str) : undefined)),
-    tags: z.array(z.string()),
   }),
 });
 
