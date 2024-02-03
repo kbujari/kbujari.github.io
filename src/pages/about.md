@@ -3,10 +3,10 @@ layout: "../components/Layout.astro"
 title: "about"
 ---
 
-## Info
+## _about_
 
 I'm a Computer Engineering student in Toronto, passionate about electronics and
-their applications. For any communication, use: mail [AT] kleidi [DOT] ca
+their applications. For any communication, use kleidi@mailbox.org.
 
 Some of my interests:
 
@@ -16,7 +16,7 @@ Some of my interests:
 
 ## Disclaimer
 
-Any opinons here are my own and do not reflect those of my employer or school.
+Any opinions here are my own and do not reflect those of my employer or school.
 Feel free to use anything on this site for reference, but please give credit
 when appropriate.
 

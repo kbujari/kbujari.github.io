@@ -1,9 +1,5 @@
 ---
 title: "Building a QEMU VM with GPU passthrough"
-description:
-  "Configuring a high performance QEMU Windows 10 VM for gaming, CAD
-  simulations, and more. Includes single-GPU passthrough for graphics intensive
-  applications."
 pubDate: "Jan 15 2022"
 ---
 
@@ -13,13 +9,12 @@ software compatibility department, mainly with a few games (League of Legends)
 and software I need to use for school (Multisim). While these can be "run" using
 wine, I found that the experience left a lot to be desired, and for school
 especially, I wanted to make sure I was in an environment supported by my
-classes.
-This led to the decision to use Windows for these as well as anything else not
-supported well by linux. At this point you might be asking why I'm not just
-dual-booting for simplicity. The main reasons are that I've gotten annoyed with
-a lot of the telemetry, excess, and clunkiness of running Windows natively on my
-desktop as well as for the sake of getting some experience with QEMU/KVM on
-Linux. Note that this won't be a full guide to the process, but more of a
+classes. This led to the decision to use Windows for these as well as anything
+else not supported well by linux. At this point you might be asking why I'm not
+just dual-booting for simplicity. The main reasons are that I've gotten annoyed
+with a lot of the telemetry, excess, and clunkiness of running Windows natively
+on my desktop as well as for the sake of getting some experience with QEMU/KVM
+on Linux. Note that this won't be a full guide to the process, but more of a
 showcase on how I set it up for myself.
 
 Feel free to use anything mentioned here for yourself and be sure to follow

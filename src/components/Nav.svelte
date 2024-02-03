@@ -10,19 +10,15 @@
   const is_external = (href: string) => href.at(0) != "/";
 </script>
 
-<div class="pt-2">
-  <nav class="flex justify-between">
-    <menu class="flex flex-wrap gap-3">
-      {#each links as { name, href }}
-        <li>
-          <a
-            {href}
-            class="link"
-            rel={is_external(href) ? "noreferrer" : ""}
-            target={is_external(href) ? "_blank" : ""}>{name}</a
-          >
-        </li>
-      {/each}
-    </menu>
-  </nav>
-</div>
+<nav>
+  <h1>web.4kb.net</h1>
+  {#each links as { name, href }}
+    <a
+      {href}
+      class="link"
+      rel={is_external(href) ? "noreferrer" : ""}
+      target={is_external(href) ? "_blank" : ""}>{name}</a
+    >
+  {/each}
+  <hr />
+</nav>

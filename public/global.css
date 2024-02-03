@@ -1,0 +1,32 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: serif;
+  padding: 0 0.5em;
+  max-width: 44em;
+  margin: auto;
+}
+
+nav {
+  text-align: center;
+}
+
+nav > a {
+  padding: 0 0.5em;
+}
+
+nav > h1 {
+  line-height: 0;
+}
+
+a[href^="https"]:where(:not([href*="web.4kb.net/"]))::after {
+    content: "\219d";
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

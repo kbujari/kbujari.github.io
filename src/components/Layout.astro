@@ -1,9 +1,6 @@
 ---
 import Nav from "@components/Nav.svelte";
-import Footer from "@components/Footer.astro";
 import { SITE } from "@consts";
-
-import "@assets/styles/global.css";
 
 interface LayoutProps {
   title?: string;
@@ -30,7 +27,7 @@ const {
     <meta property="locale" content="en_US" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>{title ? `${title} :: kleidi.ca` : "kleidi.ca"}</title>
+    <title>{title ? `${title} :: web.4kb.net` : "web.4kb.net"}</title>
     <meta name="author" content={author} />
     <meta name="description" content={description} />
 
@@ -38,15 +35,74 @@ const {
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <!-- <link rel="stylesheet" href="/global.css" /> -->
   </head>
 
-  <body class="font-sans bg-neutral-900 text-neutral-400">
-    <div class="px-4 mx-auto max-w-4xl">
-      <Nav />
-      <main class:list={[Astro.props.frontmatter ? "[&_a]:link" : "", "mt-6"]}>
-        <slot />
-      </main>
-      <Footer />
-    </div>
+  <body>
+    <Nav />
+    <main class:list={[Astro.props.frontmatter ? "[&_a]:link" : "", "mt-6"]}>
+      <slot />
+    </main>
+    <footer>
+      <hr />
+      <span>&#x00a9; {new Date().getFullYear()} Kleidi Bujari</span>
+    </footer>
   </body>
 </html>
+
+<style is:global>
+  :root {
+    --bg: #181616;
+    --fg: #c5c9c5;
+    --link: #76946a;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: serif;
+    padding: 0 0.75em;
+    max-width: 48em;
+    margin: auto;
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  footer {
+    margin: 3em auto;
+    text-align: center;
+  }
+
+  a,
+  a:link {
+    color: var(--link);
+  }
+
+  nav {
+    text-align: center;
+  }
+
+  nav > a {
+    padding: 0 0.5em;
+  }
+
+  nav > h1 {
+    line-height: 0;
+  }
+
+  p {
+    line-height: 1.4em;
+  }
+
+  a[href^="https"]:where(:not([href*="web.4kb.net/"]))::after {
+    content: " \2934";
+  }
+
+  img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+</style>
