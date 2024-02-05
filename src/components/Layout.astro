@@ -55,10 +55,12 @@ const {
     --bg: #181616;
     --fg: #c5c9c5;
     --link: #76946a;
+    --linkhover: #98bb6c;
   }
 
   html {
     scroll-behavior: smooth;
+    color-scheme: dark;
   }
 
   body {
@@ -68,6 +70,21 @@ const {
     margin: auto;
     background: var(--bg);
     color: var(--fg);
+  }
+
+  th,
+  td {
+    padding: 0.2em 0.4em;
+    border: thin solid;
+  }
+
+  table {
+    border: thin solid;
+    border-collapse: collapse;
+  }
+
+  article {
+    padding-top: 1em;
   }
 
   footer {
@@ -80,7 +97,12 @@ const {
     color: var(--link);
   }
 
+  a:hover {
+    color: var(--linkhover);
+  }
+
   nav {
+    margin-top: 2em;
     text-align: center;
   }
 
@@ -88,21 +110,27 @@ const {
     padding: 0 0.5em;
   }
 
-  nav > h1 {
+  nav > * {
     line-height: 0;
   }
 
   p {
-    line-height: 1.4em;
+    line-height: 1.5em;
   }
 
   a[href^="https"]:where(:not([href*="web.4kb.net/"]))::after {
     content: " \2934";
   }
 
-  img {
-    max-width: 100%;
-    height: 100%;
+  article img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+    height: auto;
     object-fit: contain;
+  }
+
+  pre {
+    padding: 1em;
   }
 </style>

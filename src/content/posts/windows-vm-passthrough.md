@@ -53,7 +53,7 @@ Because of this, a new vBios is given to the VM to use. Next, to add the GPU
 alongside any other devices such as a USB controller, I had to get the relevant
 IOMMU groups. Here's an example of what the GPU group looked like on my system:
 
-```sh
+```
 $ lspci -k
 
 07:00.0 VGA compatible controller NVIDIA Corporation TU104 GeForce RTX 2080 Rev. A (rev al)
@@ -117,7 +117,7 @@ The last major optimization I included was HugePages. Without going into too
 much detail, it is an alternate way of providing memory to the VM, which results
 in a massive difference in performance according to my testing. It is manually
 allocated using the scripts triggered at startup and deallocated upon closing
-the VM. I stronly recommend looking into HugePages if you decide to use a setup
+the VM. I strongly recommend looking into HugePages if you decide to use a setup
 like this. There were a few other small optimizations that I applied and you
 might be able to find in the xml file, but they didn't provide enough of a
 difference to be meaningful in my opinion.
