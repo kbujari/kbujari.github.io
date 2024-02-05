@@ -1,9 +1,5 @@
 ---
 title: "Building a QEMU VM with GPU passthrough"
-description:
-  "Configuring a high performance QEMU Windows 10 VM for gaming, CAD
-  simulations, and more. Includes single-GPU passthrough for graphics intensive
-  applications."
 pubDate: "Jan 15 2022"
 ---
 
@@ -13,13 +9,12 @@ software compatibility department, mainly with a few games (League of Legends)
 and software I need to use for school (Multisim). While these can be "run" using
 wine, I found that the experience left a lot to be desired, and for school
 especially, I wanted to make sure I was in an environment supported by my
-classes.
-This led to the decision to use Windows for these as well as anything else not
-supported well by linux. At this point you might be asking why I'm not just
-dual-booting for simplicity. The main reasons are that I've gotten annoyed with
-a lot of the telemetry, excess, and clunkiness of running Windows natively on my
-desktop as well as for the sake of getting some experience with QEMU/KVM on
-Linux. Note that this won't be a full guide to the process, but more of a
+classes. This led to the decision to use Windows for these as well as anything
+else not supported well by linux. At this point you might be asking why I'm not
+just dual-booting for simplicity. The main reasons are that I've gotten annoyed
+with a lot of the telemetry, excess, and clunkiness of running Windows natively
+on my desktop as well as for the sake of getting some experience with QEMU/KVM
+on Linux. Note that this won't be a full guide to the process, but more of a
 showcase on how I set it up for myself.
 
 Feel free to use anything mentioned here for yourself and be sure to follow
@@ -58,7 +53,7 @@ Because of this, a new vBios is given to the VM to use. Next, to add the GPU
 alongside any other devices such as a USB controller, I had to get the relevant
 IOMMU groups. Here's an example of what the GPU group looked like on my system:
 
-```sh
+```
 $ lspci -k
 
 07:00.0 VGA compatible controller NVIDIA Corporation TU104 GeForce RTX 2080 Rev. A (rev al)
@@ -122,7 +117,7 @@ The last major optimization I included was HugePages. Without going into too
 much detail, it is an alternate way of providing memory to the VM, which results
 in a massive difference in performance according to my testing. It is manually
 allocated using the scripts triggered at startup and deallocated upon closing
-the VM. I stronly recommend looking into HugePages if you decide to use a setup
+the VM. I strongly recommend looking into HugePages if you decide to use a setup
 like this. There were a few other small optimizations that I applied and you
 might be able to find in the xml file, but they didn't provide enough of a
 difference to be meaningful in my opinion.

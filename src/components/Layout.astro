@@ -1,9 +1,6 @@
 ---
 import Nav from "@components/Nav.svelte";
-import Footer from "@components/Footer.astro";
 import { SITE } from "@consts";
-
-import "@assets/styles/global.css";
 
 interface LayoutProps {
   title?: string;
@@ -30,7 +27,7 @@ const {
     <meta property="locale" content="en_US" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>{title ? `${title} :: kleidi.ca` : "kleidi.ca"}</title>
+    <title>{title ? `${title} :: web.4kb.net` : "web.4kb.net"}</title>
     <meta name="author" content={author} />
     <meta name="description" content={description} />
 
@@ -38,15 +35,102 @@ const {
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <!-- <link rel="stylesheet" href="/global.css" /> -->
   </head>
 
-  <body class="font-sans bg-neutral-900 text-neutral-400">
-    <div class="px-4 mx-auto max-w-4xl">
-      <Nav />
-      <main class:list={[Astro.props.frontmatter ? "[&_a]:link" : "", "mt-6"]}>
-        <slot />
-      </main>
-      <Footer />
-    </div>
+  <body>
+    <Nav />
+    <main class:list={[Astro.props.frontmatter ? "[&_a]:link" : "", "mt-6"]}>
+      <slot />
+    </main>
+    <footer>
+      <hr />
+      <span>&#x00a9; {new Date().getFullYear()} Kleidi Bujari</span>
+    </footer>
   </body>
 </html>
+
+<style is:global>
+  :root {
+    --bg: #181616;
+    --fg: #c5c9c5;
+    --link: #76946a;
+    --linkhover: #98bb6c;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: serif;
+    padding: 0 0.75em;
+    max-width: 48em;
+    margin: auto;
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  th,
+  td {
+    padding: 0.2em 0.4em;
+    border: thin solid;
+  }
+
+  table {
+    border: thin solid;
+    border-collapse: collapse;
+  }
+
+  article {
+    padding-top: 1em;
+  }
+
+  footer {
+    margin: 3em auto;
+    text-align: center;
+  }
+
+  a,
+  a:link {
+    color: var(--link);
+  }
+
+  a:hover {
+    color: var(--linkhover);
+  }
+
+  nav {
+    margin-top: 2em;
+    text-align: center;
+  }
+
+  nav > a {
+    padding: 0 0.5em;
+  }
+
+  nav > * {
+    line-height: 0;
+  }
+
+  p {
+    line-height: 1.5em;
+  }
+
+  a[href^="https"]:where(:not([href*="web.4kb.net/"]))::after {
+    content: " \2934";
+  }
+
+  article img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  pre {
+    padding: 1em;
+  }
+</style>

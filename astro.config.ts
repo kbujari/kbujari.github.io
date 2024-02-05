@@ -5,7 +5,6 @@ import {
 } from "astro/config";
 
 import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
 import svelte from "@astrojs/svelte";
 import compress from "astro-compress";
 import robotsTxt from "astro-robots-txt";
@@ -21,7 +20,6 @@ const config = {
   image: { service: squooshImageService() },
   integrations: [
     svelte(),
-    tailwind(),
     sitemap(),
     robotsTxt(),
     compress({
