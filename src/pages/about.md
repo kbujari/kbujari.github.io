@@ -34,7 +34,7 @@ Some of my interests:
 For any communication, use <mail@kleidi.ca>. If you use my [PGP key], take care
 to attach a pubkey and I will respond accordingly.
 
-[PGP key]: https://github.com/kbujari.gpg
+[PGP key]: /key.txt
 
 ## This site
 
