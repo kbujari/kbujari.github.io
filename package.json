@@ -16,7 +16,7 @@
     "astro": "4.2.4",
     "astro-compress": "2.2.8",
     "astro-robots-txt": "1.0.0",
-    "remark-toc": "9.0.0",
+    "remark-toc": "9.0.0"
   },
   "devDependencies": {
     "prettier": "3.2.4",
