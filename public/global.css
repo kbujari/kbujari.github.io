@@ -22,7 +22,7 @@ nav > h1 {
 }
 
 a[href^="https"]:where(:not([href*="knter.net/"]))::after {
-    content: "\219d";
+  content: "\219d";
 }
 
 img {
