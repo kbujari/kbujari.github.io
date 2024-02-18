@@ -14,12 +14,12 @@ my undergraduate classes.
 
 ## Projects
 
-I like to host my projects and do most of my development at [git.4kb.net]. I'm
+I like to host my projects and do most of my development at [git.knter.net]. I'm
 also on [GitHub] for public contributions and anything else. My work is a bit
 split up between the two until I figure out a mirroring solution, but if I want
 to show something off I'll usually post it to GitHub as well.
 
-[git.4kb.net]: https://git.4kb.net
+[git.knter.net]: https://git.knter.net
 [GitHub]: https://github.com/kbujari
 
 Some of my interests:

@@ -8,7 +8,7 @@
 </script>
 
 <nav>
-  <h1>4kb.net</h1>
+  <h1>knter.net</h1>
   {#each links as { name, href }}
     <a {href} class="link">{name}</a>
   {/each}

@@ -21,7 +21,7 @@ nav > h1 {
   line-height: 0;
 }
 
-a[href^="https"]:where(:not([href*="web.4kb.net/"]))::after {
+a[href^="https"]:where(:not([href*="knter.net/"]))::after {
     content: "\219d";
 }
 

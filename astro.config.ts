@@ -12,7 +12,7 @@ import robotsTxt from "astro-robots-txt";
 import remarkToc from "remark-toc";
 
 const config = {
-  site: "https://web.4kb.net",
+  site: "https://knter.net",
   markdown: {
     shikiConfig: { theme: "vitesse-dark" },
     remarkPlugins: [remarkToc],
