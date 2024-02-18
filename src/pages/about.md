@@ -31,7 +31,7 @@ Some of my interests:
 
 ## Contact
 
-For any communication, use <mail@kleidi.ca>. If you use my [PGP key], take care
+For any communication, use <mail@knter.net>. If you use my [PGP key], take care
 to attach a pubkey and I will respond accordingly.
 
 [PGP key]: /key.txt
