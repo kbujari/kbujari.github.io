@@ -19,7 +19,7 @@
     "remark-toc": "9.0.0"
   },
   "devDependencies": {
-    "prettier": "3.2.4",
+    "prettier": "3.2.5",
     "prettier-plugin-astro": "0.13.0",
     "prettier-plugin-svelte": "3.2.1"
   },
