@@ -15,11 +15,11 @@ interface Props {
   post: CollectionEntry<"posts">;
 }
 
-const { title, pubDate, description } = Astro.props.post.data;
+const { title, pubDate } = Astro.props.post.data;
 const { Content } = await Astro.props.post.render();
 ---
 
-<Layout {title} {description}>
+<Layout {title}>
   <div class="pb-4 mb-4 border-b border-neutral-700">
     <h1>{title}</h1>
     <span class="inline-flex gap-2 items-center">
