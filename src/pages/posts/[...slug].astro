@@ -20,14 +20,14 @@ const { Content } = await Astro.props.post.render();
 ---
 
 <Layout {title}>
-  <div class="pb-4 mb-4 border-b border-neutral-700">
+  <div>
     <h1>{title}</h1>
-    <span class="inline-flex gap-2 items-center">
+    <span>
       <FormattedDate date={pubDate} /> |
       <a href="/feed.xml" class="link">RSS Feed</a>
     </span>
   </div>
-  <article class="[&_img]:mx-auto [&_a]:link">
+  <article>
     <Content />
   </article>
 </Layout>
