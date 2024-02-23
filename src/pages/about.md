@@ -31,8 +31,8 @@ Some of my interests:
 
 ## Contact
 
-For any communication, use <mail@4kb.net>. If you use my [PGP key], take care
-to attach a pubkey and I will respond accordingly.
+For any communication, use <mail@4kb.net>. If you use my [PGP key], take care to
+attach a pubkey and I will respond accordingly.
 
 [PGP key]: /key.txt
 

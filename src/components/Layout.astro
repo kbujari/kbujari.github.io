@@ -13,6 +13,8 @@ interface Props extends LayoutProps {
   frontmatter?: LayoutProps; // Typed markdown frontmatter
 }
 
+// const site = import.meta.env.SITE;
+const site = import.meta.env.SITE.slice("https://".length);
 const {
   title,
   author = SITE.author,
@@ -27,7 +29,7 @@ const {
     <meta property="locale" content="en_US" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>{title ? `${title} :: 4kb.net` : "4kb.net"}</title>
+    <title>{title ? `${title} :: ${site}` : site}</title>
     <meta name="author" content={author} />
     <meta name="description" content={description} />
 

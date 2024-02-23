@@ -1,4 +1,5 @@
 <script>
+  const site = import.meta.env.SITE.slice("https://".length);
   const links = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
@@ -8,7 +9,7 @@
 </script>
 
 <nav>
-  <h1>4kb.net</h1>
+  <h1>{site}</h1>
   {#each links as { name, href }}
     <a {href} class="link">{name}</a>
   {/each}
