@@ -14,12 +14,12 @@ my undergraduate classes.
 
 ## Projects
 
-I like to host my projects and do most of my development at [git.knter.net]. I'm
+I like to host my projects and do most of my development at [git.4kb.net]. I'm
 also on [GitHub] for public contributions and anything else. My work is a bit
 split up between the two until I figure out a mirroring solution, but if I want
 to show something off I'll usually post it to GitHub as well.
 
-[git.knter.net]: https://git.knter.net
+[git.4kb.net]: https://git.4kb.net
 [GitHub]: https://github.com/kbujari
 
 Some of my interests:
@@ -31,7 +31,7 @@ Some of my interests:
 
 ## Contact
 
-For any communication, use <mail@knter.net>. If you use my [PGP key], take care
+For any communication, use <mail@4kb.net>. If you use my [PGP key], take care
 to attach a pubkey and I will respond accordingly.
 
 [PGP key]: /key.txt
