@@ -1,6 +1,5 @@
 ---
 import Layout from "@components/Layout.astro";
-import Resources from "./_Resources.svelte";
 import { getCollection } from "astro:content";
 
 const data = await getCollection("resources");
@@ -10,5 +9,19 @@ const data = await getCollection("resources");
   <p>
     A collection of resources I found interesting or helpful enough to keep.
   </p>
-  <Resources {data} />
+  {
+    data.map((entry) => (
+      <>
+        <h2>{entry.data.name}</h2>
+        {entry.data.links.map(({ name, description, href }) => (
+          <>
+            <a {href} class="link" target="_blank" rel="noreferrer">
+              {name}
+            </a>
+            <p>{description}</p>
+          </>
+        ))}
+      </>
+    ))
+  }
 </Layout>
