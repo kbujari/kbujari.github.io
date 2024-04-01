@@ -16,4 +16,5 @@ USER static
 WORKDIR /home/static
 COPY --from=builder /app/dist .
 
+EXPOSE 80
 CMD ["busybox", "httpd", "-fvp", "80"]
