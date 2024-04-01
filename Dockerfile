@@ -8,13 +8,5 @@ COPY . .
 RUN npm install
 RUN npm run build
 
-FROM busybox:1.36
-
-RUN adduser -D static
-USER static
-
-WORKDIR /home/static
+FROM lipanski/docker-static-website:2.2.1
 COPY --from=builder /app/dist .
-
-EXPOSE 80
-CMD ["busybox", "httpd", "-fvp", "80"]
