@@ -62,7 +62,7 @@ jobs:
         id: meta
         with:
           tags: |
-            type=sha,format=short
+            type=sha,prefix=,format=short,
             type=raw,value=latest
           images: |
             ghcr.io/${{ github.actor }}/site
