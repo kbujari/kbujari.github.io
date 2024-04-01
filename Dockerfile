@@ -1,8 +1,8 @@
-FROM alpine:latest AS builder
+FROM alpine:3.19 AS builder
 
 RUN apk add -U nodejs npm git
-WORKDIR /app
 
+WORKDIR /app
 COPY . .
 
 RUN npm install
@@ -12,8 +12,8 @@ FROM busybox:1.36
 
 RUN adduser -D static
 USER static
-WORKDIR /home/static
 
+WORKDIR /home/static
 COPY --from=builder /app/dist .
 
-CMD ["busybox", "httpd", "-f", "-v", "-p", "3000"]
+CMD ["busybox", "httpd", "-fvp", "3000"]
