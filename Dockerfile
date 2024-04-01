@@ -16,4 +16,4 @@ USER static
 WORKDIR /home/static
 COPY --from=builder /app/dist .
 
-CMD ["busybox", "httpd", "-fvp", "3000"]
+CMD ["busybox", "httpd", "-fvp", "80"]
