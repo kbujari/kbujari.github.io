@@ -32,7 +32,8 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           path: dist
-  deploy:
+  pages:
+    name: deploy to github pages
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -44,14 +45,13 @@ jobs:
         uses: actions/deploy-pages@v2
 
   container:
-    name: Build continer and push to ghcr.io
+    name: deploy to ghcr.io
     runs-on: ubuntu-latest
     permissions:
       packages: write
       contents: read
     steps:
       - uses: actions/checkout@v4
-
       - uses: docker/login-action@465a07811f14bebb1938fbed4728c6a1ff8901fc
         with:
           registry: ghcr.io
