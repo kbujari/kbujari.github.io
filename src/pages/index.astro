@@ -1,6 +1,6 @@
 ---
 import Layout from "@components/Layout.astro";
-import Posts from "@components/Posts.svelte";
+import Posts from "@components/Posts.astro";
 import { getCollection } from "astro:content";
 
 const posts = await getCollection("posts");

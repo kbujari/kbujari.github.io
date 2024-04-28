@@ -12,7 +12,6 @@
   "dependencies": {
     "@astrojs/rss": "4.0.5",
     "@astrojs/sitemap": "3.1.1",
-    "@astrojs/svelte": "5.2.0",
     "astro": "4.4.12",
     "astro-compress": "2.2.11",
     "astro-robots-txt": "1.0.0",
@@ -20,25 +19,17 @@
   },
   "devDependencies": {
     "prettier": "3.2.5",
-    "prettier-plugin-astro": "0.13.0",
-    "prettier-plugin-svelte": "3.2.2"
+    "prettier-plugin-astro": "0.13.0"
   },
   "prettier": {
     "plugins": [
-      "prettier-plugin-astro",
-      "prettier-plugin-svelte"
+      "prettier-plugin-astro"
     ],
     "overrides": [
       {
         "files": "*.astro",
         "options": {
           "parser": "astro"
-        }
-      },
-      {
-        "files": "*.svelte",
-        "options": {
-          "parser": "svelte"
         }
       }
     ],

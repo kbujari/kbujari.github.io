@@ -1,7 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "@components/Layout.astro";
-import FormattedDate from "@components/FormattedDate.svelte";
+import FormattedDate from "@components/FormattedDate.astro";
 
 export const getStaticPaths = async () => {
   const posts = await getCollection("posts");
@@ -15,7 +15,7 @@ interface Props {
   post: CollectionEntry<"posts">;
 }
 
-const { title, pubDate } = Astro.props.post.data;
+const { title, pubDate: date } = Astro.props.post.data;
 const { Content } = await Astro.props.post.render();
 ---
 
@@ -23,7 +23,7 @@ const { Content } = await Astro.props.post.render();
   <div>
     <h1>{title}</h1>
     <span>
-      <FormattedDate date={pubDate} /> |
+      <FormattedDate {date} /> |
       <a href="/feed.xml" class="link">RSS Feed</a>
     </span>
   </div>

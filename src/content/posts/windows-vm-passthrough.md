@@ -1,6 +1,6 @@
 ---
 title: "Building a QEMU VM with GPU passthrough"
-pubDate: "Jan 15 2022"
+pubDate: "January 15 2022"
 ---
 
 In early 2021, I transitioned my personal computers to Arch Linux and while the

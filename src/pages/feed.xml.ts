@@ -9,6 +9,7 @@ export const GET = async () => {
     description: SITE.description,
     site: import.meta.env.SITE,
     items: posts.map((post) => ({
+      pubDate: post.data.date,
       ...post.data,
       link: `/posts/${post.slug}/`,
     })),
