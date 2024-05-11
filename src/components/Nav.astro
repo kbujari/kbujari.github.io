@@ -12,9 +12,7 @@ const links = [
   <h1>{site}</h1>
   {
     links.map(({ name, href }) => (
-      <a {href} class="link">
-        {name}
-      </a>
+      <a {href} class="link">{name}</a>
     ))
   }
   <hr />

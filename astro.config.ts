@@ -11,7 +11,7 @@ import robotsTxt from "astro-robots-txt";
 import remarkToc from "remark-toc";
 
 const config = {
-  site: "https://4kb.net",
+  site: "https://bujari.net",
   markdown: {
     shikiConfig: { theme: "vitesse-dark" },
     remarkPlugins: [remarkToc],
