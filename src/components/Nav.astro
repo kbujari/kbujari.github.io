@@ -1,19 +1,15 @@
 ---
-const site = import.meta.env.SITE.slice("https://".length);
 const links = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
   { name: "Posts", href: "/posts" },
   { name: "Resources", href: "/resources" },
 ];
 ---
 
 <nav>
-  <h1>{site}</h1>
-  {
-    links.map(({ name, href }) => (
-      <a {href} class="link">{name}</a>
-    ))
-  }
-  <hr />
+  <h2>Kleidi Bujari</h2>
+  <div class="links">
+    {links.map(({ name, href }) => <a {href}>{name}</a>)}
+  </div>
 </nav>
+<hr />

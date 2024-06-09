@@ -1,6 +1,6 @@
 ---
 title: "Building a QEMU VM with GPU passthrough"
-pubDate: "January 15 2022"
+date: "January 15 2022"
 ---
 
 In early 2021, I transitioned my personal computers to Arch Linux and while the
@@ -21,8 +21,6 @@ Feel free to use anything mentioned here for yourself and be sure to follow
 along with the files mentioned by viewing them yourself on my
 [github](https://github.com/knbu/virt-machine). Without further rambling, let's
 get into the important parts.
-
-## Table of Contents
 
 ## Hardware & Specifications
 

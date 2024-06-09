@@ -3,7 +3,7 @@ import { defineCollection, z } from "astro:content";
 const posts = defineCollection({
   schema: z.object({
     title: z.string(),
-    pubDate: z
+    date: z
       .string()
       .or(z.date())
       .transform((val) => new Date(val)),
@@ -24,4 +24,4 @@ const resources = defineCollection({
   }),
 });
 
-export const collections = { posts, resources };
+export const collections = { posts, resources, extra: defineCollection({}) };

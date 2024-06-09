@@ -4,20 +4,23 @@ import type { CollectionEntry } from "astro:content";
 
 interface Props {
   posts: CollectionEntry<"posts">[];
-  take: number;
+  take?: number;
 }
 
 const { posts, take = posts.length } = Astro.props;
 ---
 
 {
-  posts.slice(0, take).map(({ slug, data }) => (
-    <div style="margin: 1em auto;">
-      <a href={`/posts/${slug}`}>{data.title}</a>
-      <br />
-      <FormattedDate date={data.pubDate} />
-    </div>
-  ))
+  posts
+    .slice(0, take)
+    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+    .map(({ slug, data }) => (
+      <div style="margin: 1em auto;">
+        <a href={`/posts/${slug}`}>{data.title}</a>
+        <br />
+        <FormattedDate date={data.date} />
+      </div>
+    ))
 }
 
 {take < posts.length && <a href="/posts">More &#x21E2</a>}

@@ -5,16 +5,13 @@ import {
 } from "astro/config";
 
 import sitemap from "@astrojs/sitemap";
-import compress from "astro-compress";
 import robotsTxt from "astro-robots-txt";
-
-import remarkToc from "remark-toc";
+import compress from "astro-compress";
 
 const config = {
-  site: "https://bujari.net",
+  site: "https://4kb.net",
   markdown: {
     shikiConfig: { theme: "vitesse-dark" },
-    remarkPlugins: [remarkToc],
   },
   image: { service: squooshImageService() },
   integrations: [

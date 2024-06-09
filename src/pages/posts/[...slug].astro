@@ -15,7 +15,7 @@ interface Props {
   post: CollectionEntry<"posts">;
 }
 
-const { title, pubDate: date } = Astro.props.post.data;
+const { title, date } = Astro.props.post.data;
 const { Content } = await Astro.props.post.render();
 ---
 
@@ -24,7 +24,7 @@ const { Content } = await Astro.props.post.render();
     <h1>{title}</h1>
     <span>
       <FormattedDate {date} /> |
-      <a href="/feed.xml" class="link">RSS Feed</a>
+      <a href="/posts/feed.xml" class="link">RSS Feed</a>
     </span>
   </div>
   <article>

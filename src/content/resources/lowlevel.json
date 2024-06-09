@@ -3,7 +3,7 @@
   "links": [
     {
       "name": "\"Modern\" Computer Memory",
-      "description": "Excellent paper on memory architechture that still holds up today",
+      "description": "Excellent paper on memory architecture that still holds up today",
       "href": "https://people.freebsd.org/~lstewart/articles/cpumemory.pdf"
     }
   ]

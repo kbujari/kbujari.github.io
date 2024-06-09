@@ -13,8 +13,7 @@ interface Props extends LayoutProps {
   frontmatter?: LayoutProps; // Typed markdown frontmatter
 }
 
-// const site = import.meta.env.SITE;
-const site = import.meta.env.SITE.slice("https://".length);
+const default_title = "Kleidi Bujari";
 const {
   title,
   author = SITE.author,
@@ -29,7 +28,7 @@ const {
     <meta property="locale" content="en_US" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>{title ? `${title} :: ${site}` : site}</title>
+    <title>{title ? `${title} - ${default_title}` : default_title}</title>
     <meta name="author" content={author} />
     <meta name="description" content={description} />
 
@@ -105,11 +104,13 @@ const {
 
   nav {
     margin-top: 2em;
-    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5em;
   }
 
-  nav > a {
-    padding: 0 0.5em;
+  nav > .links > a {
+    margin-right: 0.75em;
   }
 
   nav > * {

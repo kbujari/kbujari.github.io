@@ -4,7 +4,7 @@
     {
       "name": "First Person Game in 2KB with Rust",
       "description": "Basic 3D rendering that compiles to WASM",
-      "href": "https://grantshandy.github.io/posts/raycasting/"
+      "href": "https://grantshandy.github.io/raycasting/"
     },
     {
       "name": "Image compression algorithm made by NASA JPL",
