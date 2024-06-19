@@ -2,6 +2,7 @@
 
 I'm a computer engineering student in Toronto,
 passionate about digital electronics and their applications.
+I love `rust`!
 
 Contact me: <mail@4kb.net>
 

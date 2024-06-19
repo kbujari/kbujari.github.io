@@ -1,11 +1,10 @@
 ---
 import Layout from "@components/Layout.astro";
 import Posts from "@components/Posts.astro";
-import { getCollection, getEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import { Content } from "src/content/extra/about.md";
 
 const posts = await getCollection("posts");
-const about = await getEntry("extra", "about");
-const { Content } = await about.render();
 ---
 
 <Layout>

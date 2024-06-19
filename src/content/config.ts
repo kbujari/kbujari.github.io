@@ -24,4 +24,4 @@ const resources = defineCollection({
   }),
 });
 
-export const collections = { posts, resources, extra: defineCollection({}) };
+export const collections = { posts, resources };

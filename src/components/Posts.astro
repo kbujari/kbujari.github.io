@@ -12,8 +12,8 @@ const { posts, take = posts.length } = Astro.props;
 
 {
   posts
-    .slice(0, take)
     .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+    .slice(0, take)
     .map(({ slug, data }) => (
       <div style="margin: 1em auto;">
         <a href={`/posts/${slug}`}>{data.title}</a>
