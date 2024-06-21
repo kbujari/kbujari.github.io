@@ -7,11 +7,13 @@ interface Props {
   take?: number;
 }
 
+const devmode = import.meta.env.DEV;
 const { posts, take = posts.length } = Astro.props;
 ---
 
 {
   posts
+    .filter(({ data }) => devmode || !data.title.startsWith("[draft]"))
     .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
     .slice(0, take)
     .map(({ slug, data }) => (
