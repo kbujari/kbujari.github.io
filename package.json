@@ -31,7 +31,6 @@
           "parser": "astro"
         }
       }
-    ],
-    "proseWrap": "always"
+    ]
   }
 }

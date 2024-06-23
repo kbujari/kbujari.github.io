@@ -4,7 +4,9 @@ import Posts from "@components/Posts.astro";
 import { getCollection } from "astro:content";
 import { Content } from "src/content/extra/about.md";
 
-const posts = await getCollection("posts");
+const posts = await getCollection("posts", ({ data }) => {
+  return import.meta.env.DEV || !data.title.startsWith("[draft]");
+});
 ---
 
 <Layout>
