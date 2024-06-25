@@ -10,7 +10,7 @@
     "lint": "prettier --write ."
   },
   "dependencies": {
-    "@astrojs/rss": "4.0.5",
+    "@astrojs/rss": "4.0.7",
     "@astrojs/sitemap": "3.1.1",
     "astro": "4.11.1",
     "astro-compress": "2.2.11",
