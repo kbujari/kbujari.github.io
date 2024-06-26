@@ -1,13 +1,14 @@
 ---
 import FormattedDate from "@components/FormattedDate.astro";
-import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
 
 interface Props {
-  posts: CollectionEntry<"posts">[];
   take?: number;
 }
-
-const { posts, take = posts.length } = Astro.props;
+const posts = await getCollection("posts", ({ data }) => {
+  return import.meta.env.DEV || !data.title.startsWith("[draft]");
+});
+const { take = posts.length } = Astro.props;
 ---
 
 {

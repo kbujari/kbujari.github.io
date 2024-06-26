@@ -1,18 +1,13 @@
 ---
 import Layout from "@components/Layout.astro";
 import Posts from "@components/Posts.astro";
-import { getCollection } from "astro:content";
 import { Content } from "src/content/extra/about.md";
-
-const posts = await getCollection("posts", ({ data }) => {
-  return import.meta.env.DEV || !data.title.startsWith("[draft]");
-});
 ---
 
 <Layout>
   <Content />
   <section>
     <h2>Recent Posts</h2>
-    <Posts {posts} take={3} />
+    <Posts take={3} />
   </section>
 </Layout>

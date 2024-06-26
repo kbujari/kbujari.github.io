@@ -44,32 +44,32 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
 
-  container:
-    name: deploy to ghcr.io
-    runs-on: ubuntu-latest
-    permissions:
-      packages: write
-      contents: read
-    steps:
-      - uses: actions/checkout@v4
-      - uses: docker/login-action@465a07811f14bebb1938fbed4728c6a1ff8901fc
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
-        id: meta
-        with:
-          tags: |
-            type=sha,prefix=,format=short,
-            type=raw,value=latest
-          images: |
-            ghcr.io/${{ github.actor }}/site
-
-      - uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
-        with:
-          context: .
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+  # container:
+  #   name: deploy to ghcr.io
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     packages: write
+  #     contents: read
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: docker/login-action@465a07811f14bebb1938fbed4728c6a1ff8901fc
+  #       with:
+  #         registry: ghcr.io
+  #         username: ${{ github.actor }}
+  #         password: ${{ secrets.GITHUB_TOKEN }}
+  #
+  #     - uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
+  #       id: meta
+  #       with:
+  #         tags: |
+  #           type=sha,prefix=,format=short,
+  #           type=raw,value=latest
+  #         images: |
+  #           ghcr.io/${{ github.actor }}/site
+  #
+  #     - uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
+  #       with:
+  #         context: .
+  #         push: true
+  #         tags: ${{ steps.meta.outputs.tags }}
+  #         labels: ${{ steps.meta.outputs.labels }}
