@@ -3,8 +3,13 @@
   "links": [
     {
       "name": "\"Modern\" Computer Memory",
-      "description": "Excellent paper on memory architecture that still holds up today",
+      "description": "Excellent paper on memory architecture that still holds up today.",
       "href": "https://people.freebsd.org/~lstewart/articles/cpumemory.pdf"
+    },
+    {
+      "name": "Writing an OS in Rust",
+      "description": "More than the title suggests, goes in depth into computer architecture and explains big topics very clearly.",
+      "href": "https://os.phil-opp.com/"
     }
   ]
 }
