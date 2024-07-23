@@ -1,7 +1,6 @@
 import {
   type AstroUserConfig,
   defineConfig,
-  squooshImageService,
 } from "astro/config";
 
 import sitemap from "@astrojs/sitemap";
@@ -13,7 +12,6 @@ const config = {
   markdown: {
     shikiConfig: { theme: "vitesse-dark" },
   },
-  image: { service: squooshImageService() },
   integrations: [
     sitemap(),
     robotsTxt(),
