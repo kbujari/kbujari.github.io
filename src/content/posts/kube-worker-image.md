@@ -1,5 +1,5 @@
 ---
-title: "[draft]: One image, many workers"
+title: "Deterministic network hostnames"
 date: "April 20 2024"
 ---
 
@@ -14,7 +14,7 @@ already own. Running the cluster from an SD card is not recommended due to the
 not-so-great reliability of the flash used by most manufacturers, so I wanted to
 try PXE booting each Pi to save money rather than purchasing an SSD for each
 one. The compute blades do support an NVMe disk, but I plan to use those for a
-CEPH cluster later, so they need to remain empty.
+storage cluster later, so they need to remain empty.
 
 ## Base image
 
@@ -56,11 +56,6 @@ using a `sha1sum`, which is already present on our Alpine base system:
 sha1sum /sys/class/net/eth0/address | head -c 6 | awk '{print "worker-" $0}'
 ```
 
-The VM I tested with looks outputs `worker-e2fae8`. Pretty clean result, and if
-you want to know the physical node that maps to each hostname, you can take note
-of the MAC address beforehand and generate the same hash on another computer to
-match them up.
-
 ### Applying the new name
 
 Ideally, the node should apply its generated hostname before reaching out for an
@@ -79,11 +74,7 @@ iface eth0 inet dhcp
 ...
 ```
 
-## Getting K8S
-
-Now that the node is running a live system with networking, the next step in the
-chain for a real worker node is to join the cluster. In the spirit of Alpine and
-minimal resource usage, I decided to use popular <https://k3s.io> as the
-kubernetes distribution for my cluster. K3s is distributed as a fairly simple
-[sh script](https://get.k3s.io), which seems to detect the type of system it's
-running on and fetch the binary from the latest GitHub release.
+The VM I tested with looks outputs `worker-e2fae8`. Pretty clean result, and if
+you want to know the physical node that maps to each hostname, you can take note
+of the MAC address beforehand and generate the same hash on another computer to
+match them up.
