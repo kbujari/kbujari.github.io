@@ -1,5 +1,5 @@
 ---
-title: "Deterministic network hostnames"
+title: "Deterministic and unique network hostnames"
 date: "April 20 2024"
 ---
 
