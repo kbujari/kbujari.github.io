@@ -20,5 +20,5 @@ Some of my interests in the field:
 - Memory-safe programming
 - Online privacy and security
 
-[src.web.4kb.net]: https://git.4kb.net
+[src.web.4kb.net]: https://src.web.4kb.net
 [github]: https://github.com/kbujari
